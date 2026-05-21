@@ -1,0 +1,47 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+
+# Addressables and generated artifacts
+Assets/AddressableAssetsData/*/*.bin*
+Assets/StreamingAssets/aa.meta
+Assets/StreamingAssets/aa/
+
+# Visual Studio and Rider
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity generated files
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.xcodeproj
+*.xcworkspace
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.pidb.meta
+*.pdb.meta
+
+# OS files
+.DS_Store
+Thumbs.db
