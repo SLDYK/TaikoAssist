@@ -1,15 +1,15 @@
 using UnityEngine;
-namespace PrsEditor
+namespace TaikoAssist
 {
     public class Timer : Singleton<Timer>
     {
         [SerializeField] private float ElapsedTime;
-        private float StartTime;
-        public float DelayTime = 0;
-        public float Length;
-        public bool Paused = false;
-        public float Multiplier = 1;
-        private float TargetTime;
+        [SerializeField] private float StartTime;
+        [SerializeField] private float DelayTime = 0;
+        [SerializeField] private float Length;
+        [SerializeField] private bool Paused = false;
+        [SerializeField] private float Multiplier = 1;
+        [SerializeField] private float TargetTime;
         
         void Start()
         {
@@ -42,42 +42,38 @@ namespace PrsEditor
         private void FixedUpdate()
         {
             if (Paused)
-            {
                 ElapsedTime += (TargetTime - ElapsedTime) / 7f;
-            }
         }
         
-        public void SetRatio(float Ratio)
+        public static void SetMultiplier(float Multiplier)
         {
-            bool wasPaused = Paused;
+            bool PrePaused = Instance.Paused;
             PauseTimer();
-            Multiplier = Ratio;
-            if (!wasPaused)
-            {
+            Instance.Multiplier = Multiplier;
+            if (!PrePaused)
                 ResumeTimer();
-            }
         }
         
-        public void PauseTimer()
+        public static void PauseTimer()
         {
-            Paused = true;
+            Instance.Paused = true;
         }
         
-        public void ResumeTimer()
+        public static void ResumeTimer()
         {
-            Paused = false;
-            StartTime = Time.time - ElapsedTime / Multiplier;
+            Instance.Paused = false;
+            Instance.StartTime = Time.time - Instance.ElapsedTime / Instance.Multiplier;
         }
         
-        public void SetTimer(float SetTime)
+        public static void SetTimer(float SetTime)
         {
             PauseTimer();
-            TargetTime = Mathf.Max(SetTime, 0);
+            Instance.TargetTime = Mathf.Max(SetTime, 0);
         }
         
-        public float GetElapsedTime()
+        public static float GetElapsedTime()
         {
-            return ElapsedTime;
+            return Instance.ElapsedTime;
         }
     }
 }

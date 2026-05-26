@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 namespace TaikoAssist
 {
-    public class FPS : MonoBehaviour
+    public class FPS : Singleton<FPS>
     {
-        public Text FrameRate;
-        private Queue<float> frameTimes = new Queue<float>();
+        public Text FPSText;
+        private Queue<float> Frame = new Queue<float>();
 
         void Update()
         {
-            frameTimes.Enqueue(Time.deltaTime);
-            while (frameTimes.Sum() > 1)
+            Frame.Enqueue(Time.deltaTime);
+            while (Frame.Sum() > 1)
             {
-                frameTimes.Dequeue();
+                Frame.Dequeue();
             }
-            FrameRate.text = $"FPS: {frameTimes.Count}";
+            FPSText.text = $"FPS: {Frame.Count}";
         }
     }
 }
