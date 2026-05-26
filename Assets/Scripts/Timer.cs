@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 namespace TaikoAssist
 {
     public class Timer : Singleton<Timer>
@@ -26,7 +27,7 @@ namespace TaikoAssist
                 ElapsedTime = (Time.time - StartTime) * Multiplier;
                 TargetTime = ElapsedTime;
             }
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 if (Paused)
                 {
