@@ -1,0 +1,4381 @@
+fileFormatVersion: 2
+guid: 237b18796b1644c9589ce63a9ea98e8e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9184791999874145738
+    second: Console_Font_Small_0
+  - first:
+      213: 2011955287697128694
+    second: Console_Font_Small_1
+  - first:
+      213: -890261228470944316
+    second: Console_Font_Small_2
+  - first:
+      213: -5971597622751234223
+    second: Console_Font_Small_3
+  - first:
+      213: -7028626197904748688
+    second: Console_Font_Small_4
+  - first:
+      213: 4495417666785519948
+    second: Console_Font_Small_5
+  - first:
+      213: 3606129454387319835
+    second: Console_Font_Small_6
+  - first:
+      213: -4839368025730966955
+    second: Console_Font_Small_7
+  - first:
+      213: -8814313102647830159
+    second: Console_Font_Small_8
+  - first:
+      213: 7770824814714350570
+    second: Console_Font_Small_9
+  - first:
+      213: 7845004669499551304
+    second: Console_Font_Small_10
+  - first:
+      213: -3806093964967069725
+    second: Console_Font_Small_11
+  - first:
+      213: 3799560118541360392
+    second: Console_Font_Small_12
+  - first:
+      213: 1384244544644628923
+    second: Console_Font_Small_13
+  - first:
+      213: 7928736992742431215
+    second: Console_Font_Small_14
+  - first:
+      213: -8356393595719859436
+    second: Console_Font_Small_15
+  - first:
+      213: 1044743280140122228
+    second: Console_Font_Small_16
+  - first:
+      213: 8571230326339033193
+    second: Console_Font_Small_17
+  - first:
+      213: 4232269969747366604
+    second: Console_Font_Small_18
+  - first:
+      213: -3586949284061492836
+    second: Console_Font_Small_19
+  - first:
+      213: -97458313151497961
+    second: Console_Font_Small_20
+  - first:
+      213: -6173583850083180365
+    second: Console_Font_Small_21
+  - first:
+      213: -1922828006479249638
+    second: Console_Font_Small_22
+  - first:
+      213: -4212716799733662630
+    second: Console_Font_Small_23
+  - first:
+      213: -7914378948327127273
+    second: Console_Font_Small_24
+  - first:
+      213: -1055024272055121142
+    second: Console_Font_Small_25
+  - first:
+      213: -6209531613268103840
+    second: Console_Font_Small_26
+  - first:
+      213: -6660137106434627177
+    second: Console_Font_Small_27
+  - first:
+      213: 6125062315456268768
+    second: Console_Font_Small_28
+  - first:
+      213: 1927912361730430867
+    second: Console_Font_Small_29
+  - first:
+      213: -6366516811046436123
+    second: Console_Font_Small_30
+  - first:
+      213: -1802706588004305266
+    second: Console_Font_Small_31
+  - first:
+      213: 3599386081617503640
+    second: Console_Font_Small_32
+  - first:
+      213: -7861035244859704917
+    second: Console_Font_Small_33
+  - first:
+      213: 1928211693493383197
+    second: Console_Font_Small_34
+  - first:
+      213: -3951161880537395967
+    second: Console_Font_Small_35
+  - first:
+      213: 1272376866686059588
+    second: Console_Font_Small_36
+  - first:
+      213: 2769937222584555612
+    second: Console_Font_Small_37
+  - first:
+      213: -5387032079442150017
+    second: Console_Font_Small_38
+  - first:
+      213: 6428695323529752664
+    second: Console_Font_Small_39
+  - first:
+      213: 103400468392928498
+    second: Console_Font_Small_40
+  - first:
+      213: 277830368602031305
+    second: Console_Font_Small_41
+  - first:
+      213: 1922818087753743956
+    second: Console_Font_Small_42
+  - first:
+      213: 6436479322860820848
+    second: Console_Font_Small_43
+  - first:
+      213: -1546173177627713329
+    second: Console_Font_Small_44
+  - first:
+      213: -4068814780837167852
+    second: Console_Font_Small_45
+  - first:
+      213: -4084147428840932390
+    second: Console_Font_Small_46
+  - first:
+      213: 3226026099294219541
+    second: Console_Font_Small_47
+  - first:
+      213: -7365054017600904320
+    second: Console_Font_Small_48
+  - first:
+      213: 6858313463841797335
+    second: Console_Font_Small_49
+  - first:
+      213: 395717071801571109
+    second: Console_Font_Small_50
+  - first:
+      213: -987675165531022188
+    second: Console_Font_Small_51
+  - first:
+      213: 6260458938382770728
+    second: Console_Font_Small_52
+  - first:
+      213: -3493112899880208626
+    second: Console_Font_Small_53
+  - first:
+      213: -4556275880870503340
+    second: Console_Font_Small_54
+  - first:
+      213: -9065969548111594426
+    second: Console_Font_Small_55
+  - first:
+      213: -1268679072098454666
+    second: Console_Font_Small_56
+  - first:
+      213: 9176302281791217362
+    second: Console_Font_Small_57
+  - first:
+      213: -4250600022274316787
+    second: Console_Font_Small_58
+  - first:
+      213: 1663168717258219069
+    second: Console_Font_Small_59
+  - first:
+      213: -99418916320798752
+    second: Console_Font_Small_60
+  - first:
+      213: -6248656371435375981
+    second: Console_Font_Small_61
+  - first:
+      213: -2402890328594533421
+    second: Console_Font_Small_62
+  - first:
+      213: 7883484107527964733
+    second: Console_Font_Small_63
+  - first:
+      213: 6803252542880794462
+    second: Console_Font_Small_64
+  - first:
+      213: 5713082818935820080
+    second: Console_Font_Small_65
+  - first:
+      213: 4358531585190442782
+    second: Console_Font_Small_66
+  - first:
+      213: 7128098069376756505
+    second: Console_Font_Small_67
+  - first:
+      213: 1455245011925243155
+    second: Console_Font_Small_68
+  - first:
+      213: 7036637332892641873
+    second: Console_Font_Small_69
+  - first:
+      213: -2173802871995373753
+    second: Console_Font_Small_70
+  - first:
+      213: -8715935532799714529
+    second: Console_Font_Small_71
+  - first:
+      213: -5964562372027430883
+    second: Console_Font_Small_72
+  - first:
+      213: 4877269987365332110
+    second: Console_Font_Small_73
+  - first:
+      213: -1283334092847748175
+    second: Console_Font_Small_74
+  - first:
+      213: 5189061502314494400
+    second: Console_Font_Small_75
+  - first:
+      213: 2781183208575728833
+    second: Console_Font_Small_76
+  - first:
+      213: 3770145359956476972
+    second: Console_Font_Small_77
+  - first:
+      213: 5700518548146877391
+    second: Console_Font_Small_78
+  - first:
+      213: 7290262322036277322
+    second: Console_Font_Small_79
+  - first:
+      213: -9079338194193999625
+    second: Console_Font_Small_80
+  - first:
+      213: 9009975958727016778
+    second: Console_Font_Small_81
+  - first:
+      213: 3288043868506495883
+    second: Console_Font_Small_82
+  - first:
+      213: 6445694801380689533
+    second: Console_Font_Small_83
+  - first:
+      213: 2229824954350349682
+    second: Console_Font_Small_84
+  - first:
+      213: 8373314893435391604
+    second: Console_Font_Small_85
+  - first:
+      213: -7225618311410291615
+    second: Console_Font_Small_86
+  - first:
+      213: -794633563662974811
+    second: Console_Font_Small_87
+  - first:
+      213: 6121476245839892791
+    second: Console_Font_Small_88
+  - first:
+      213: -6463542055028419770
+    second: Console_Font_Small_89
+  - first:
+      213: 844660643951620246
+    second: Console_Font_Small_90
+  - first:
+      213: 5565062303547790008
+    second: Console_Font_Small_91
+  - first:
+      213: 3788107027984070296
+    second: Console_Font_Small_92
+  - first:
+      213: -8137031950472275620
+    second: Console_Font_Small_93
+  - first:
+      213: -5311500156185961201
+    second: Console_Font_Small_94
+  - first:
+      213: 7594488612918670009
+    second: Console_Font_Small_95
+  - first:
+      213: 8114375728529716307
+    second: Console_Font_Small_96
+  - first:
+      213: 6665394530080557638
+    second: Console_Font_Small_97
+  - first:
+      213: -5656632049193714831
+    second: Console_Font_Small_98
+  - first:
+      213: -21159807275860419
+    second: Console_Font_Small_99
+  - first:
+      213: 5130407077454614559
+    second: Console_Font_Small_100
+  - first:
+      213: 1550944656188857271
+    second: Console_Font_Small_101
+  - first:
+      213: -5202301390417623866
+    second: Console_Font_Small_102
+  - first:
+      213: 1642510282339083818
+    second: Console_Font_Small_103
+  - first:
+      213: 5144341940830043694
+    second: Console_Font_Small_104
+  - first:
+      213: -6985878028464295642
+    second: Console_Font_Small_105
+  - first:
+      213: 2255547496136345645
+    second: Console_Font_Small_106
+  - first:
+      213: 5653256907248848251
+    second: Console_Font_Small_107
+  - first:
+      213: 2977209493524341151
+    second: Console_Font_Small_108
+  - first:
+      213: -3061466300632445694
+    second: Console_Font_Small_109
+  - first:
+      213: -8370878321762235894
+    second: Console_Font_Small_110
+  - first:
+      213: -5556884186644607188
+    second: Console_Font_Small_111
+  - first:
+      213: -4624103107377589690
+    second: Console_Font_Small_112
+  - first:
+      213: 5478006625599330003
+    second: Console_Font_Small_113
+  - first:
+      213: -4536044521923410241
+    second: Console_Font_Small_114
+  - first:
+      213: -2742341925486896190
+    second: Console_Font_Small_115
+  - first:
+      213: 3821104153839781730
+    second: Console_Font_Small_116
+  - first:
+      213: 2538029066369202331
+    second: Console_Font_Small_117
+  - first:
+      213: -4172980357196660174
+    second: Console_Font_Small_118
+  - first:
+      213: 1615324893526308532
+    second: Console_Font_Small_119
+  - first:
+      213: 5515188475629356609
+    second: Console_Font_Small_120
+  - first:
+      213: -1254657082664867191
+    second: Console_Font_Small_121
+  - first:
+      213: 7852836831919788713
+    second: Console_Font_Small_122
+  - first:
+      213: 4457377849675928779
+    second: Console_Font_Small_123
+  - first:
+      213: -1051465051890327415
+    second: Console_Font_Small_124
+  - first:
+      213: 8937976157774233954
+    second: Console_Font_Small_125
+  - first:
+      213: 6520779741506354987
+    second: Console_Font_Small_126
+  - first:
+      213: -6802103985986573287
+    second: Console_Font_Small_127
+  - first:
+      213: -860253622131158139
+    second: Console_Font_Small_128
+  - first:
+      213: -8914274068579897480
+    second: Console_Font_Small_129
+  - first:
+      213: 3176964373928477956
+    second: Console_Font_Small_130
+  - first:
+      213: 6956784973344998224
+    second: Console_Font_Small_131
+  - first:
+      213: 850391484131727986
+    second: Console_Font_Small_132
+  - first:
+      213: -1310239628183400922
+    second: Console_Font_Small_133
+  - first:
+      213: 5665599212640291751
+    second: Console_Font_Small_134
+  - first:
+      213: 3148792130253258996
+    second: Console_Font_Small_135
+  - first:
+      213: 1012600362474523972
+    second: Console_Font_Small_136
+  - first:
+      213: 1043888977818622831
+    second: Console_Font_Small_137
+  - first:
+      213: -168017494882168553
+    second: Console_Font_Small_138
+  - first:
+      213: 609651427588097506
+    second: Console_Font_Small_139
+  - first:
+      213: 8168430079257909080
+    second: Console_Font_Small_140
+  - first:
+      213: 2706601798830007952
+    second: Console_Font_Small_141
+  - first:
+      213: 3856202845261184749
+    second: Console_Font_Small_142
+  - first:
+      213: -9063142571363076598
+    second: Console_Font_Small_143
+  - first:
+      213: -5726041553582547288
+    second: Console_Font_Small_144
+  - first:
+      213: 179800380028978367
+    second: Console_Font_Small_145
+  - first:
+      213: 4911637578276038788
+    second: Console_Font_Small_146
+  - first:
+      213: 5933843895396482149
+    second: Console_Font_Small_147
+  - first:
+      213: 8411572693350032135
+    second: Console_Font_Small_148
+  - first:
+      213: -5145442467586006958
+    second: Console_Font_Small_149
+  - first:
+      213: -7083768174842986012
+    second: Console_Font_Small_150
+  - first:
+      213: -5420911777151416556
+    second: Console_Font_Small_151
+  - first:
+      213: 3760795156396751728
+    second: Console_Font_Small_152
+  - first:
+      213: 7918380690160060626
+    second: Console_Font_Small_153
+  - first:
+      213: -788087019314173099
+    second: Console_Font_Small_154
+  - first:
+      213: -3127878849762500907
+    second: Console_Font_Small_155
+  - first:
+      213: 2335547279803425770
+    second: Console_Font_Small_156
+  - first:
+      213: 3578931236045144211
+    second: Console_Font_Small_157
+  - first:
+      213: -6905656741242653924
+    second: Console_Font_Small_158
+  - first:
+      213: -315544082890377602
+    second: Console_Font_Small_159
+  - first:
+      213: 9142467547943609498
+    second: Console_Font_Small_160
+  - first:
+      213: -7867992697846715645
+    second: Console_Font_Small_161
+  - first:
+      213: 6020189879269880370
+    second: Console_Font_Small_162
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Console_Font_Small_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 240
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd195829afe67f70800000000000000
+      internalID: 9184791999874145738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 241
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcf723aca6ebeb10800000000000000
+      internalID: 2011955287697128694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_2
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 248
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cdbfa7212825a3f0800000000000000
+      internalID: -890261228470944316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 241
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157785ad99f902da0800000000000000
+      internalID: -5971597622751234223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 241
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f02e656bd457e90800000000000000
+      internalID: -7028626197904748688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 242
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4924c9dc8ee26e30800000000000000
+      internalID: 4495417666785519948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_6
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 242
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1454d6f1ab8b0230800000000000000
+      internalID: 3606129454387319835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_7
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 239
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a1ce0bb6c17dcb0800000000000000
+      internalID: -4839368025730966955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_8
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 241
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 179da91fee44da580800000000000000
+      internalID: -8814313102647830159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_9
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 240
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aebe6d45ff387db60800000000000000
+      internalID: 7770824814714350570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_10
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 241
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e2dcaae2e0fdc60800000000000000
+      internalID: 7845004669499551304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_11
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 248
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e7316454b90e2bc0800000000000000
+      internalID: -3806093964967069725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_12
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 241
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d16600ccfbab430800000000000000
+      internalID: 3799560118541360392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 241
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb1c0dd4413d53310800000000000000
+      internalID: 1384244544644628923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_14
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 242
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe959e16948880e60800000000000000
+      internalID: 7928736992742431215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_15
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 242
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413c4cb7c40280c80800000000000000
+      internalID: -8356393595719859436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_16
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 239
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4787a3e5a7caf7e00800000000000000
+      internalID: 1044743280140122228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_17
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 241
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9685e79c19023f670800000000000000
+      internalID: 8571230326339033193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2585c2d1b0cba30800000000000000
+      internalID: 4232269969747366604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_19
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 225
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c994c2071a8983ec0800000000000000
+      internalID: -3586949284061492836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_20
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 225
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71932383e22c5aef0800000000000000
+      internalID: -97458313151497961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_21
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 225
+        width: 41
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b024b88236035aa0800000000000000
+      internalID: -6173583850083180365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_22
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 225
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1fb1ad9d1eb055e0800000000000000
+      internalID: -1922828006479249638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_23
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 223
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cfd8cf36c6985c0800000000000000
+      internalID: -4212716799733662630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_24
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 225
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717c127574a7a2290800000000000000
+      internalID: -7914378948327127273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_25
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 228
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b4dbaa30dcb51f0800000000000000
+      internalID: -1055024272055121142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 225
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06da891b5ef43d9a0800000000000000
+      internalID: -6209531613268103840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_27
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 225
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799e09fa6907293a0800000000000000
+      internalID: -6660137106434627177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_28
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 225
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e907e359b7900550800000000000000
+      internalID: 6125062315456268768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_29
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 225
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397d607141251ca10800000000000000
+      internalID: 1927912361730430867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_30
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 225
+        width: 41
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2460d01b695a7a0800000000000000
+      internalID: -6366516811046436123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_31
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 225
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e863fbbc8ef7bf6e0800000000000000
+      internalID: -1802706588004305266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_32
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 223
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 895eb44229693f130800000000000000
+      internalID: 3599386081617503640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_33
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 225
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9bf47281ef7e290800000000000000
+      internalID: -7861035244859704917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_34
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 228
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d107d62b15262ca10800000000000000
+      internalID: 1928211693493383197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 225
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d018c2437aa29c0800000000000000
+      internalID: -3951161880537395967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_36
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 225
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4444f37d40468a110800000000000000
+      internalID: 1272376866686059588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 73
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58d84a6a3bc07620800000000000000
+      internalID: 2769937222584555612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_38
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 209
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d773f8dda6d35b0800000000000000
+      internalID: -5387032079442150017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_39
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 209
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 850b4380650573950800000000000000
+      internalID: 6428695323529752664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_40
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 192
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f46b2c9d2a5f6100800000000000000
+      internalID: 103400468392928498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_41
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 192
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4075c8f3d0bd300800000000000000
+      internalID: 277830368602031305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_42
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 209
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ef1400dd83faa10800000000000000
+      internalID: 1922818087753743956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_43
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 209
+        width: 82
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079144b97d7f25950800000000000000
+      internalID: 6436479322860820848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_44
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 209
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0634adfa3ea8ae0800000000000000
+      internalID: -1546173177627713329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_45
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 209
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d775ba38aa887c0800000000000000
+      internalID: -4068814780837167852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_46
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 192
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb7c9d5d813257c0800000000000000
+      internalID: -4084147428840932390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_47
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 192
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51d229425a525cc20800000000000000
+      internalID: 3226026099294219541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_48
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 209
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083a55984621ac990800000000000000
+      internalID: -7365054017600904320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_49
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 209
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4b19a22cf9d2f50800000000000000
+      internalID: 6858313463841797335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 193
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5275a48849edd7500800000000000000
+      internalID: 395717071801571109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_51
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 193
+        width: 50
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c5c0d7ba21b42f0800000000000000
+      internalID: -987675165531022188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_52
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82269313c3e91e650800000000000000
+      internalID: 6260458938382770728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_53
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 202
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e073e4a2358f58fc0800000000000000
+      internalID: -3493112899880208626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_54
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 191
+        width: 49
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c980ef93bd4c0c0800000000000000
+      internalID: -4556275880870503340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_55
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 193
+        width: 50
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cbc44cab43f2280800000000000000
+      internalID: -9065969548111594426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_56
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673799d0b1fb46ee0800000000000000
+      internalID: -1268679072098454666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_57
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 202
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de95c1ae46c85f70800000000000000
+      internalID: 9176302281791217362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_58
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 186
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d066216ecc5d205c0800000000000000
+      internalID: -4250600022274316787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_59
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 177
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ed7b1f223c41710800000000000000
+      internalID: 1663168717258219069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_60
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 177
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e79eb8b50bce9ef0800000000000000
+      internalID: -99418916320798752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_61
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 177
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 392fc1113205849a0800000000000000
+      internalID: -6248656371435375981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_62
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 177
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3b6e92af737aed0800000000000000
+      internalID: -2402890328594533421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_63
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 177
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3844adf603c76d60800000000000000
+      internalID: 7883484107527964733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_64
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 176
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57ceaf74220a6e50800000000000000
+      internalID: 6803252542880794462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_65
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 177
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03f8e0bfd82f84f40800000000000000
+      internalID: 5713082818935820080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_66
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 175
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17b89d526d9c7c30800000000000000
+      internalID: 4358531585190442782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_67
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 159
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b69558d671ce260800000000000000
+      internalID: 7128098069376756505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_68
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 177
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31596fcc0a1123410800000000000000
+      internalID: 1455245011925243155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_69
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 177
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a61506f5827a160800000000000000
+      internalID: 7036637332892641873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_70
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 177
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747edf22ec915d1e0800000000000000
+      internalID: -2173802871995373753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_71
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 186
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b944adfc6ca0780800000000000000
+      internalID: -8715935532799714529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_72
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 177
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18c4aecf1e993da0800000000000000
+      internalID: -5964562372027430883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_73
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 177
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84a59e663b8fa340800000000000000
+      internalID: 4877269987365332110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_74
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 177
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb69a3217ea03ee0800000000000000
+      internalID: -1283334092847748175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_75
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 177
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c93c1b81ff330840800000000000000
+      internalID: 5189061502314494400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_76
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 177
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ccff62946fb89620800000000000000
+      internalID: 2781183208575728833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_77
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 176
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c240bc3da3f325430800000000000000
+      internalID: 3770145359956476972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_78
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 177
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3f1d9ba6f4c1f40800000000000000
+      internalID: 5700518548146877391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_79
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 175
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a400368d4f63c2560800000000000000
+      internalID: 7290262322036277322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_80
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 159
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f81e6b4406bff180800000000000000
+      internalID: -9079338194193999625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_81
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 177
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41cbb6c56dd90d70800000000000000
+      internalID: 9009975958727016778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_82
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 177
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b1b344a7a71ad20800000000000000
+      internalID: 3288043868506495883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_83
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 177
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76c0e66545b37950800000000000000
+      internalID: 6445694801380689533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27daa5b5bfde1fe10800000000000000
+      internalID: 2229824954350349682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_85
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 159
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e44b7288df33470800000000000000
+      internalID: 8373314893435391604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_86
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 161
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ce4d1cd6279bb90800000000000000
+      internalID: -7225618311410291615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_87
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 161
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a00447ebf4e8f4f0800000000000000
+      internalID: -794633563662974811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_88
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 161
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731574e663ad3f450800000000000000
+      internalID: 6121476245839892791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_89
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 161
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6439b3b0fb2ec46a0800000000000000
+      internalID: -6463542055028419770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_90
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 161
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6903d766166d8bb00800000000000000
+      internalID: 844660643951620246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_91
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 161
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b212eb1ea21b3d40800000000000000
+      internalID: 5565062303547790008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_92
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 159
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896b62e854f029430800000000000000
+      internalID: 3788107027984070296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_93
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 160
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59981a8d84731f80800000000000000
+      internalID: -8137031950472275620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_94
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 160
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d9a1edfb2c946b0800000000000000
+      internalID: -5311500156185961201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_95
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 170
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b234c7f72b056960800000000000000
+      internalID: 7594488612918670009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_96
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 159
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 354b019bbbd0c9070800000000000000
+      internalID: 8114375728529716307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_97
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 159
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a8845a20d308c50800000000000000
+      internalID: 6665394530080557638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_98
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 161
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bf7b21f1b9f71b0800000000000000
+      internalID: -5656632049193714831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_99
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 161
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e7ec37443d4bff0800000000000000
+      internalID: -21159807275860419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_100
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 161
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1015dc0e0ed23740800000000000000
+      internalID: 5130407077454614559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_101
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 161
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb5d6292ff068510800000000000000
+      internalID: 1550944656188857271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_102
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 161
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c403a9c276bdc7b0800000000000000
+      internalID: -5202301390417623866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_103
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 161
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a266fbe366e5bc610800000000000000
+      internalID: 1642510282339083818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_104
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 159
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e71524dbf546740800000000000000
+      internalID: 5144341940830043694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_105
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 160
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621fd2522fc2d0f90800000000000000
+      internalID: -6985878028464295642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_106
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 160
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d288a315f705d4f10800000000000000
+      internalID: 2255547496136345645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_107
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 170
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d47947437647e40800000000000000
+      internalID: 5653256907248848251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_108
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 112
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91607ba24c215920800000000000000
+      internalID: 2977209493524341151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_109
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 113
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d49f2be9c7385d0800000000000000
+      internalID: -3061466300632445694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_110
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 120
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a0855648aa4db80800000000000000
+      internalID: -8370878321762235894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_111
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 113
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f001d164bf1e2b0800000000000000
+      internalID: -5556884186644607188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_112
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 113
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6429aff29b2e3dfb0800000000000000
+      internalID: -4624103107377589690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_113
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 114
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d69514900ac50c40800000000000000
+      internalID: 5478006625599330003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_114
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 114
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb606615a8bbc01c0800000000000000
+      internalID: -4536044521923410241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_115
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 111
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb51be5c8e31f9d0800000000000000
+      internalID: -2742341925486896190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_116
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 113
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267c36b9bf9470530800000000000000
+      internalID: 3821104153839781730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b987d822df3e83320800000000000000
+      internalID: 2538029066369202331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_118
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 97
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2324c9a79789616c0800000000000000
+      internalID: -4172980357196660174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_119
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 97
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b63b7bae69ca6610800000000000000
+      internalID: 1615324893526308532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_120
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 97
+        width: 41
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1464737a2b2e98c40800000000000000
+      internalID: 5515188475629356609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_121
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 97
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a25d0e700969ee0800000000000000
+      internalID: -1254657082664867191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_122
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 95
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2dea51e71eafc60800000000000000
+      internalID: 7852836831919788713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_123
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 97
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4d0afb989cbdd30800000000000000
+      internalID: 4457377849675928779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_124
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 100
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980e6503b127861f0800000000000000
+      internalID: -1051465051890327415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_125
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 97
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2614b07c5f11a0c70800000000000000
+      internalID: 8937976157774233954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_126
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 97
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2fbc0750a67e7a50800000000000000
+      internalID: 6520779741506354987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_127
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 73
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c600eb6721a91a0800000000000000
+      internalID: -6802103985986573287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_128
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 81
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583112473e3cf04f0800000000000000
+      internalID: -860253622131158139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_129
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 81
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87fa1d7e6f22a4480800000000000000
+      internalID: -8914274068579897480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_130
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 64
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 405041c0448d61c20800000000000000
+      internalID: 3176964373928477956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_131
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 64
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053010b13177b8060800000000000000
+      internalID: 6956784973344998224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_132
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 81
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a50bb9c823dcb00800000000000000
+      internalID: 850391484131727986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_133
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 81
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e0d77000811dde0800000000000000
+      internalID: -1310239628183400922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_134
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab482d577040ae40800000000000000
+      internalID: 5665599212640291751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_135
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 65
+        width: 50
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f08a4b62c1c2bb20800000000000000
+      internalID: 3148792130253258996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_136
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44dc9b82aaa7d0e00800000000000000
+      internalID: 1012600362474523972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_137
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 74
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b13db9e73ac7e00800000000000000
+      internalID: 1043888977818622831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_138
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 58
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7115f758af41badf0800000000000000
+      internalID: -168017494882168553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_139
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 49
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5c23a4ebae57800800000000000000
+      internalID: 609651427588097506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_140
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 49
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85798cef0e71c5170800000000000000
+      internalID: 8168430079257909080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_141
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 49
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09622bfeef7cf8520800000000000000
+      internalID: 2706601798830007952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_142
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 49
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deeb4a58e0cf38530800000000000000
+      internalID: 3856202845261184749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_143
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 49
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a06fe2599df393280800000000000000
+      internalID: -9063142571363076598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_144
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 48
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae169d7b830980b0800000000000000
+      internalID: -5726041553582547288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_145
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 49
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb48b163e77ce7200800000000000000
+      internalID: 179800380028978367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_146
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 47
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4886a9eba54a92440800000000000000
+      internalID: 4911637578276038788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_147
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 31
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c3ab1859f395250800000000000000
+      internalID: 5933843895396482149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_148
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 49
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70321855cc8ebb470800000000000000
+      internalID: 8411572693350032135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_149
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 49
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250a3536657b798b0800000000000000
+      internalID: -5145442467586006958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_150
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 49
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e1444b506661bd90800000000000000
+      internalID: -7083768174842986012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_151
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 417882cb57d05c4b0800000000000000
+      internalID: -5420911777151416556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_152
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 31
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bb90ae447013430800000000000000
+      internalID: 3760795156396751728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_153
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 33
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d88d49c84db3ed60800000000000000
+      internalID: 7918380690160060626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_154
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 33
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55baea908072015f0800000000000000
+      internalID: -788087019314173099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_155
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 33
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ded27322ca8794d0800000000000000
+      internalID: -3127878849762500907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_156
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 33
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae320d070e7896020800000000000000
+      internalID: 2335547279803425770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_157
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 33
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39045084ffaeaa130800000000000000
+      internalID: 3578931236045144211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_158
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 33
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13337518cd2a20a0800000000000000
+      internalID: -6905656741242653924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_159
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 31
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76b7541456fe9bf0800000000000000
+      internalID: -315544082890377602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_160
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 32
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9427b5cbc190ee70800000000000000
+      internalID: 9142467547943609498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_161
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 32
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30baa75e3564fc290800000000000000
+      internalID: -7867992697846715645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Console_Font_Small_162
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 42
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23278428cc20c8350800000000000000
+      internalID: 6020189879269880370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Console_Font_Small_0: 9184791999874145738
+      Console_Font_Small_1: 2011955287697128694
+      Console_Font_Small_10: 7845004669499551304
+      Console_Font_Small_100: 5130407077454614559
+      Console_Font_Small_101: 1550944656188857271
+      Console_Font_Small_102: -5202301390417623866
+      Console_Font_Small_103: 1642510282339083818
+      Console_Font_Small_104: 5144341940830043694
+      Console_Font_Small_105: -6985878028464295642
+      Console_Font_Small_106: 2255547496136345645
+      Console_Font_Small_107: 5653256907248848251
+      Console_Font_Small_108: 2977209493524341151
+      Console_Font_Small_109: -3061466300632445694
+      Console_Font_Small_11: -3806093964967069725
+      Console_Font_Small_110: -8370878321762235894
+      Console_Font_Small_111: -5556884186644607188
+      Console_Font_Small_112: -4624103107377589690
+      Console_Font_Small_113: 5478006625599330003
+      Console_Font_Small_114: -4536044521923410241
+      Console_Font_Small_115: -2742341925486896190
+      Console_Font_Small_116: 3821104153839781730
+      Console_Font_Small_117: 2538029066369202331
+      Console_Font_Small_118: -4172980357196660174
+      Console_Font_Small_119: 1615324893526308532
+      Console_Font_Small_12: 3799560118541360392
+      Console_Font_Small_120: 5515188475629356609
+      Console_Font_Small_121: -1254657082664867191
+      Console_Font_Small_122: 7852836831919788713
+      Console_Font_Small_123: 4457377849675928779
+      Console_Font_Small_124: -1051465051890327415
+      Console_Font_Small_125: 8937976157774233954
+      Console_Font_Small_126: 6520779741506354987
+      Console_Font_Small_127: -6802103985986573287
+      Console_Font_Small_128: -860253622131158139
+      Console_Font_Small_129: -8914274068579897480
+      Console_Font_Small_13: 1384244544644628923
+      Console_Font_Small_130: 3176964373928477956
+      Console_Font_Small_131: 6956784973344998224
+      Console_Font_Small_132: 850391484131727986
+      Console_Font_Small_133: -1310239628183400922
+      Console_Font_Small_134: 5665599212640291751
+      Console_Font_Small_135: 3148792130253258996
+      Console_Font_Small_136: 1012600362474523972
+      Console_Font_Small_137: 1043888977818622831
+      Console_Font_Small_138: -168017494882168553
+      Console_Font_Small_139: 609651427588097506
+      Console_Font_Small_14: 7928736992742431215
+      Console_Font_Small_140: 8168430079257909080
+      Console_Font_Small_141: 2706601798830007952
+      Console_Font_Small_142: 3856202845261184749
+      Console_Font_Small_143: -9063142571363076598
+      Console_Font_Small_144: -5726041553582547288
+      Console_Font_Small_145: 179800380028978367
+      Console_Font_Small_146: 4911637578276038788
+      Console_Font_Small_147: 5933843895396482149
+      Console_Font_Small_148: 8411572693350032135
+      Console_Font_Small_149: -5145442467586006958
+      Console_Font_Small_15: -8356393595719859436
+      Console_Font_Small_150: -7083768174842986012
+      Console_Font_Small_151: -5420911777151416556
+      Console_Font_Small_152: 3760795156396751728
+      Console_Font_Small_153: 7918380690160060626
+      Console_Font_Small_154: -788087019314173099
+      Console_Font_Small_155: -3127878849762500907
+      Console_Font_Small_156: 2335547279803425770
+      Console_Font_Small_157: 3578931236045144211
+      Console_Font_Small_158: -6905656741242653924
+      Console_Font_Small_159: -315544082890377602
+      Console_Font_Small_16: 1044743280140122228
+      Console_Font_Small_160: 9142467547943609498
+      Console_Font_Small_161: -7867992697846715645
+      Console_Font_Small_162: 6020189879269880370
+      Console_Font_Small_17: 8571230326339033193
+      Console_Font_Small_18: 4232269969747366604
+      Console_Font_Small_19: -3586949284061492836
+      Console_Font_Small_2: -890261228470944316
+      Console_Font_Small_20: -97458313151497961
+      Console_Font_Small_21: -6173583850083180365
+      Console_Font_Small_22: -1922828006479249638
+      Console_Font_Small_23: -4212716799733662630
+      Console_Font_Small_24: -7914378948327127273
+      Console_Font_Small_25: -1055024272055121142
+      Console_Font_Small_26: -6209531613268103840
+      Console_Font_Small_27: -6660137106434627177
+      Console_Font_Small_28: 6125062315456268768
+      Console_Font_Small_29: 1927912361730430867
+      Console_Font_Small_3: -5971597622751234223
+      Console_Font_Small_30: -6366516811046436123
+      Console_Font_Small_31: -1802706588004305266
+      Console_Font_Small_32: 3599386081617503640
+      Console_Font_Small_33: -7861035244859704917
+      Console_Font_Small_34: 1928211693493383197
+      Console_Font_Small_35: -3951161880537395967
+      Console_Font_Small_36: 1272376866686059588
+      Console_Font_Small_37: 2769937222584555612
+      Console_Font_Small_38: -5387032079442150017
+      Console_Font_Small_39: 6428695323529752664
+      Console_Font_Small_4: -7028626197904748688
+      Console_Font_Small_40: 103400468392928498
+      Console_Font_Small_41: 277830368602031305
+      Console_Font_Small_42: 1922818087753743956
+      Console_Font_Small_43: 6436479322860820848
+      Console_Font_Small_44: -1546173177627713329
+      Console_Font_Small_45: -4068814780837167852
+      Console_Font_Small_46: -4084147428840932390
+      Console_Font_Small_47: 3226026099294219541
+      Console_Font_Small_48: -7365054017600904320
+      Console_Font_Small_49: 6858313463841797335
+      Console_Font_Small_5: 4495417666785519948
+      Console_Font_Small_50: 395717071801571109
+      Console_Font_Small_51: -987675165531022188
+      Console_Font_Small_52: 6260458938382770728
+      Console_Font_Small_53: -3493112899880208626
+      Console_Font_Small_54: -4556275880870503340
+      Console_Font_Small_55: -9065969548111594426
+      Console_Font_Small_56: -1268679072098454666
+      Console_Font_Small_57: 9176302281791217362
+      Console_Font_Small_58: -4250600022274316787
+      Console_Font_Small_59: 1663168717258219069
+      Console_Font_Small_6: 3606129454387319835
+      Console_Font_Small_60: -99418916320798752
+      Console_Font_Small_61: -6248656371435375981
+      Console_Font_Small_62: -2402890328594533421
+      Console_Font_Small_63: 7883484107527964733
+      Console_Font_Small_64: 6803252542880794462
+      Console_Font_Small_65: 5713082818935820080
+      Console_Font_Small_66: 4358531585190442782
+      Console_Font_Small_67: 7128098069376756505
+      Console_Font_Small_68: 1455245011925243155
+      Console_Font_Small_69: 7036637332892641873
+      Console_Font_Small_7: -4839368025730966955
+      Console_Font_Small_70: -2173802871995373753
+      Console_Font_Small_71: -8715935532799714529
+      Console_Font_Small_72: -5964562372027430883
+      Console_Font_Small_73: 4877269987365332110
+      Console_Font_Small_74: -1283334092847748175
+      Console_Font_Small_75: 5189061502314494400
+      Console_Font_Small_76: 2781183208575728833
+      Console_Font_Small_77: 3770145359956476972
+      Console_Font_Small_78: 5700518548146877391
+      Console_Font_Small_79: 7290262322036277322
+      Console_Font_Small_8: -8814313102647830159
+      Console_Font_Small_80: -9079338194193999625
+      Console_Font_Small_81: 9009975958727016778
+      Console_Font_Small_82: 3288043868506495883
+      Console_Font_Small_83: 6445694801380689533
+      Console_Font_Small_84: 2229824954350349682
+      Console_Font_Small_85: 8373314893435391604
+      Console_Font_Small_86: -7225618311410291615
+      Console_Font_Small_87: -794633563662974811
+      Console_Font_Small_88: 6121476245839892791
+      Console_Font_Small_89: -6463542055028419770
+      Console_Font_Small_9: 7770824814714350570
+      Console_Font_Small_90: 844660643951620246
+      Console_Font_Small_91: 5565062303547790008
+      Console_Font_Small_92: 3788107027984070296
+      Console_Font_Small_93: -8137031950472275620
+      Console_Font_Small_94: -5311500156185961201
+      Console_Font_Small_95: 7594488612918670009
+      Console_Font_Small_96: 8114375728529716307
+      Console_Font_Small_97: 6665394530080557638
+      Console_Font_Small_98: -5656632049193714831
+      Console_Font_Small_99: -21159807275860419
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

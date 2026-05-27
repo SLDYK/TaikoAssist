@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: d2cebc4efb87641f1be6051f87958447
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2851376068153033855
+    second: Number_Combo_0
+  - first:
+      213: -5928424902297031183
+    second: Number_Combo_1
+  - first:
+      213: 4537738623009551868
+    second: Number_Combo_2
+  - first:
+      213: 4146422387124332381
+    second: Number_Combo_3
+  - first:
+      213: -4498917924747015692
+    second: Number_Combo_4
+  - first:
+      213: -8147994051383423935
+    second: Number_Combo_5
+  - first:
+      213: 2454599019526419923
+    second: Number_Combo_6
+  - first:
+      213: -8894981927813936151
+    second: Number_Combo_7
+  - first:
+      213: -4945308897096366174
+    second: Number_Combo_8
+  - first:
+      213: -8556686196353229334
+    second: Number_Combo_9
+  - first:
+      213: -8239216180234148522
+    second: Number_Combo_10
+  - first:
+      213: 7704788141675591298
+    second: Number_Combo_11
+  - first:
+      213: -1350347553232955545
+    second: Number_Combo_12
+  - first:
+      213: -8239146127403351680
+    second: Number_Combo_13
+  - first:
+      213: -4775418723095866996
+    second: Number_Combo_14
+  - first:
+      213: 676428130118752218
+    second: Number_Combo_15
+  - first:
+      213: 8567061643695274628
+    second: Number_Combo_16
+  - first:
+      213: -2000941915581519257
+    second: Number_Combo_17
+  - first:
+      213: 1179905859809365664
+    second: Number_Combo_18
+  - first:
+      213: 988398805511511652
+    second: Number_Combo_19
+  - first:
+      213: -2040041582629059742
+    second: Number_Combo_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Number_Combo_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 92
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b30b0c290ed68d0800000000000000
+      internalID: -2851376068153033855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 30
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd610526f00abda0800000000000000
+      internalID: -5928424902297031183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 92
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5fd045c3949fe30800000000000000
+      internalID: 4537738623009551868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 30
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57e541413d0b8930800000000000000
+      internalID: 4146422387124332381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_4
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 92
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f901d5dbf1a091c0800000000000000
+      internalID: -4498917924747015692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_5
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 30
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c8b4784928cee80800000000000000
+      internalID: -8147994051383423935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 92
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5f4e0adcc701220800000000000000
+      internalID: 2454599019526419923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 30
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb8125701dae8480800000000000000
+      internalID: -8894981927813936151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_8
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 92
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a70efb62cbbe5bb0800000000000000
+      internalID: -4945308897096366174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_9
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 30
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed90eb5d3b804980800000000000000
+      internalID: -8556686196353229334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_10
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 92
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6552e7d898c68ad80800000000000000
+      internalID: -8239216180234148522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_11
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 30
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286373e3ef7ecea60800000000000000
+      internalID: 7704788141675591298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_12
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 92
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7675b360e0a924de0800000000000000
+      internalID: -1350347553232955545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_13
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 30
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081869fff3ca8ad80800000000000000
+      internalID: -8239146127403351680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_14
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 92
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c811f1cf8fd4abdb0800000000000000
+      internalID: -4775418723095866996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_15
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 30
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad75fcbecc7236900800000000000000
+      internalID: 676428130118752218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_16
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 92
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ab459bc2154e670800000000000000
+      internalID: 8567061643695274628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_17
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 30
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ae291ede93b34e0800000000000000
+      internalID: -2000941915581519257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_18
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 92
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aec65ac02edf5010800000000000000
+      internalID: 1179905859809365664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_19
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 30
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e1fe21a7f77bd00800000000000000
+      internalID: 988398805511511652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Number_Combo_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 76
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2638e5c3df050b3e0800000000000000
+      internalID: -2040041582629059742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Number_Combo_0: -2851376068153033855
+      Number_Combo_1: -5928424902297031183
+      Number_Combo_10: -8239216180234148522
+      Number_Combo_11: 7704788141675591298
+      Number_Combo_12: -1350347553232955545
+      Number_Combo_13: -8239146127403351680
+      Number_Combo_14: -4775418723095866996
+      Number_Combo_15: 676428130118752218
+      Number_Combo_16: 8567061643695274628
+      Number_Combo_17: -2000941915581519257
+      Number_Combo_18: 1179905859809365664
+      Number_Combo_19: 988398805511511652
+      Number_Combo_2: 4537738623009551868
+      Number_Combo_20: -2040041582629059742
+      Number_Combo_3: 4146422387124332381
+      Number_Combo_4: -4498917924747015692
+      Number_Combo_5: -8147994051383423935
+      Number_Combo_6: 2454599019526419923
+      Number_Combo_7: -8894981927813936151
+      Number_Combo_8: -4945308897096366174
+      Number_Combo_9: -8556686196353229334
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

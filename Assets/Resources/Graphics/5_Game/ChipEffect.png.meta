@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: b1e8ee597cb2944c9a5b15e4301919b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7494974945880382338
+    second: ChipEffect_0
+  - first:
+      213: -7310963601170517743
+    second: ChipEffect_1
+  - first:
+      213: -9169778309051193919
+    second: ChipEffect_2
+  - first:
+      213: 5195016005004358816
+    second: ChipEffect_3
+  - first:
+      213: 8454271433323452492
+    second: ChipEffect_4
+  - first:
+      213: -2591277883113965308
+    second: ChipEffect_5
+  - first:
+      213: 5954610536859415219
+    second: ChipEffect_6
+  - first:
+      213: 4326659497926180131
+    second: ChipEffect_7
+  - first:
+      213: 6488503239882019592
+    second: ChipEffect_8
+  - first:
+      213: -8382967060744864410
+    second: ChipEffect_9
+  - first:
+      213: 4404450218500595930
+    second: ChipEffect_10
+  - first:
+      213: -2006564859347828725
+    second: ChipEffect_11
+  - first:
+      213: 7417653540058263806
+    second: ChipEffect_12
+  - first:
+      213: 4383239986276723475
+    second: ChipEffect_13
+  - first:
+      213: -5766881700321077486
+    second: ChipEffect_14
+  - first:
+      213: 5538348532713275386
+    second: ChipEffect_15
+  - first:
+      213: 7545206221055842240
+    second: ChipEffect_16
+  - first:
+      213: -920633889172281441
+    second: ChipEffect_17
+  - first:
+      213: -4636359189107554202
+    second: ChipEffect_18
+  - first:
+      213: -7795775468077249920
+    second: ChipEffect_19
+  - first:
+      213: -8562821651254825815
+    second: ChipEffect_20
+  - first:
+      213: -6658929707702070905
+    second: ChipEffect_21
+  - first:
+      213: -8907422436321368240
+    second: ChipEffect_22
+  - first:
+      213: 5223865578544657551
+    second: ChipEffect_23
+  - first:
+      213: -7049499231767678473
+    second: ChipEffect_24
+  - first:
+      213: -4339952389721542473
+    second: ChipEffect_25
+  - first:
+      213: 533023579478069181
+    second: ChipEffect_26
+  - first:
+      213: -3024002260679353138
+    second: ChipEffect_27
+  - first:
+      213: 612958472219556554
+    second: ChipEffect_28
+  - first:
+      213: -4349952378086882354
+    second: ChipEffect_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChipEffect_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 272
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b17a1d000830860800000000000000
+      internalID: 7494974945880382338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 285
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111bb62075d3a8a90800000000000000
+      internalID: -7310963601170517743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 285
+        width: 79
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5ebe326376eb080800000000000000
+      internalID: -9169778309051193919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_3
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 267
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4f0cc3887681840800000000000000
+      internalID: 5195016005004358816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_4
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 267
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c481af1731b935570800000000000000
+      internalID: 8454271433323452492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_5
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 285
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4097aa69e7ee90cd0800000000000000
+      internalID: -2591277883113965308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_6
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 285
+        width: 171
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2bd410cb603a250800000000000000
+      internalID: 5954610536859415219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_7
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 267
+        width: 114
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32db5f5c3e16b0c30800000000000000
+      internalID: 4326659497926180131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_8
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 266
+        width: 191
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8039321b15bcb0a50800000000000000
+      internalID: 6488503239882019592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_9
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 286
+        width: 186
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d70848fd7b9ab80800000000000000
+      internalID: -8382967060744864410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 142
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0ae905320cf1d30800000000000000
+      internalID: 4404450218500595930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_11
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 155
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b008ac344ef3724e0800000000000000
+      internalID: -2006564859347828725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_12
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 155
+        width: 79
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef07712289cc0f660800000000000000
+      internalID: 7417653540058263806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_13
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 137
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31bef4b4b8564dc30800000000000000
+      internalID: 4383239986276723475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_14
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 137
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21759a6d5abe7ffa0800000000000000
+      internalID: -5766881700321077486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_15
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 155
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff3ea6a5aa2cdc40800000000000000
+      internalID: 5538348532713275386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_16
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 155
+        width: 171
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7d913f415f5b860800000000000000
+      internalID: 7545206221055842240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_17
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 137
+        width: 114
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9723b30b504933f0800000000000000
+      internalID: -920633889172281441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_18
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 137
+        width: 191
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668402ac1e758afb0800000000000000
+      internalID: -4636359189107554202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_19
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 156
+        width: 181
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a0d8cf387dfc390800000000000000
+      internalID: -7795775468077249920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_20
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 12
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9acaee1731fba2980800000000000000
+      internalID: -8562821651254825815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_21
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 25
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7815f1c16bab693a0800000000000000
+      internalID: -6658929707702070905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_22
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 25
+        width: 79
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05768badc7a726480800000000000000
+      internalID: -8907422436321368240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_23
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 7
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f847b830116ee7840800000000000000
+      internalID: 5223865578544657551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_24
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 7
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1391e6cc52b2e90800000000000000
+      internalID: -7049499231767678473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_25
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 25
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b03a8cab4465c3c0800000000000000
+      internalID: -4339952389721542473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_26
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 25
+        width: 171
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf82b71f1ea56700800000000000000
+      internalID: 533023579478069181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_27
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 7
+        width: 114
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecc9a3c37f59806d0800000000000000
+      internalID: -3024002260679353138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_28
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 7
+        width: 191
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca76be9b7aa18800800000000000000
+      internalID: 612958472219556554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChipEffect_29
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 26
+        width: 181
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec30442fb5dd1a3c0800000000000000
+      internalID: -4349952378086882354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ChipEffect_0: 7494974945880382338
+      ChipEffect_1: -7310963601170517743
+      ChipEffect_10: 4404450218500595930
+      ChipEffect_11: -2006564859347828725
+      ChipEffect_12: 7417653540058263806
+      ChipEffect_13: 4383239986276723475
+      ChipEffect_14: -5766881700321077486
+      ChipEffect_15: 5538348532713275386
+      ChipEffect_16: 7545206221055842240
+      ChipEffect_17: -920633889172281441
+      ChipEffect_18: -4636359189107554202
+      ChipEffect_19: -7795775468077249920
+      ChipEffect_2: -9169778309051193919
+      ChipEffect_20: -8562821651254825815
+      ChipEffect_21: -6658929707702070905
+      ChipEffect_22: -8907422436321368240
+      ChipEffect_23: 5223865578544657551
+      ChipEffect_24: -7049499231767678473
+      ChipEffect_25: -4339952389721542473
+      ChipEffect_26: 533023579478069181
+      ChipEffect_27: -3024002260679353138
+      ChipEffect_28: 612958472219556554
+      ChipEffect_29: -4349952378086882354
+      ChipEffect_3: 5195016005004358816
+      ChipEffect_4: 8454271433323452492
+      ChipEffect_5: -2591277883113965308
+      ChipEffect_6: 5954610536859415219
+      ChipEffect_7: 4326659497926180131
+      ChipEffect_8: 6488503239882019592
+      ChipEffect_9: -8382967060744864410
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
