@@ -4,7 +4,7 @@
 
 ## 开源协议
 
-本项目基于 MIT License 开源，详见 `LICENSE`。
+本项目基于 GNU General Public License v3.0 开源，详见 `LICENSE`。
 
 ## 免责声明
 
