@@ -11,7 +11,7 @@ namespace TaikoAssist
         [SerializeField] private bool Paused = false;
         [SerializeField] private float Multiplier = 1;
         [SerializeField] private float TargetTime;
-        
+
         void Start()
         {
             Time.fixedDeltaTime = 1f / 100f;
@@ -19,7 +19,7 @@ namespace TaikoAssist
             ElapsedTime = Time.time - StartTime;
             PauseTimer();
         }
-        
+
         void Update()
         {
             if (!Paused)
@@ -30,51 +30,53 @@ namespace TaikoAssist
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 if (Paused)
-                {
                     ResumeTimer();
-                }
                 else
-                {
                     PauseTimer();
-                }
             }
         }
-        
+
         private void FixedUpdate()
         {
             if (Paused)
                 ElapsedTime += (TargetTime - ElapsedTime) / 7f;
         }
-        
+
         public static void SetMultiplier(float Multiplier)
         {
             bool PrePaused = Instance.Paused;
             PauseTimer();
             Instance.Multiplier = Multiplier;
+            AudioController.Instance.SetSpeed(Multiplier);
             if (!PrePaused)
                 ResumeTimer();
         }
-        
+
         public static void PauseTimer()
         {
             Instance.Paused = true;
+            AudioController.Instance.Pause();
         }
-        
+
         public static void ResumeTimer()
         {
             Instance.Paused = false;
             Instance.StartTime = Time.time - Instance.ElapsedTime / Instance.Multiplier;
+            AudioController.Instance.Resume(Instance.ElapsedTime);
         }
-        
+
         public static void SetTimer(float SetTime)
         {
             PauseTimer();
             Instance.TargetTime = Mathf.Max(SetTime, 0);
+            AudioController.Instance.SetTime(SetTime);
         }
-        
+
         public static float GetElapsedTime()
         {
-            return Instance.ElapsedTime;
+            if (Instance.Paused)
+                return Instance.ElapsedTime;
+            return (Time.time - Instance.StartTime) * Instance.Multiplier;
         }
     }
 }
