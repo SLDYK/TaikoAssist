@@ -1,9 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace TaikoAssist
 {
-    public class SliderReleaseNotifier : MonoBehaviour, IPointerUpHandler, IEndDragHandler
+    public class SliderNotifier : MonoBehaviour, IPointerUpHandler, IEndDragHandler
     {
         [SerializeField] private Separator Separator;
         private int lastNotifyFrame = -1;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
@@ -6,18 +6,11 @@ using UnityEngine;
 
 namespace TaikoAssist
 {
-    /// <summary>
-    /// TJA ↔ 太鼓JSON谱面（TaikoChartData）双向无损转换器。
-    /// 
-    /// 支持：
-    /// - 标准TJA格式（含 #BPMCHANGE / #SCROLL / #GOGOSTART / #GOGOEND / #BARLINEON / #BARLINEOFF 等指令）
-    /// - 分支谱面（分岐譜面 #BRANCHSTART / #N / #E / #M / #BRANCHEND）
-    /// - 自定义头部字段的保留（通过 extra 字典）
-    /// - 注释的剥离与重建（重建时注释不保留，输出为整洁格式）
-    /// </summary>
+    // TJA 与 TaikoChartData 的转换器。
+    // 解析时会按“难度 + 分支”拆成多个独立谱面对象。
     public class ChartConverter
     {
-        // ---- TJA 字符 ↔ NoteType 映射 ----
+        // 标准 TJA 字符到音符类型的映射。
         private static readonly Dictionary<char, NoteType> CharToNoteType = new()
         {
             {'0', NoteType.Rest},
@@ -46,7 +39,7 @@ namespace TaikoAssist
             {NoteType.Kusudama,   '9'},
         };
 
-        // ---- Ad-lib 字符映射（分岐里谱专用） ----
+        // 分支里谱常见的 Ad-lib 字符映射。
         private static readonly Dictionary<char, (NoteType type, bool isAdlib)> CharToAdlib = new()
         {
             {'A', (NoteType.Don,    true)},
@@ -57,46 +50,56 @@ namespace TaikoAssist
             {'G', (NoteType.BigBalloon, true)},
         };
 
-        // ================================================================
-        //  公开API
-        // ================================================================
 
-        /// <summary>
-        /// 将TJA文本解析为 TaikoChartData 对象。
-        /// </summary>
-        public static TaikoChartData ParseTja(string tjaContent)
+        // 入口：把整份 TJA 文本拆分为多个可播放谱面对象。
+        public static List<TaikoChartData> ParseTjaToCharts(string tjaContent)
         {
             if (string.IsNullOrWhiteSpace(tjaContent))
                 throw new ArgumentException("TJA content is null or empty.");
 
             var lines = SplitLines(tjaContent);
-            var data = new TaikoChartData();
+            var charts = new List<TaikoChartData>();
             int cursor = 0;
 
-            // --- 阶段1：解析头部元数据 ---
-            cursor = ParseMetadata(lines, cursor, data.metadata);
+            // 首段头信息作为所有难度段的默认元数据。
+            var baseMeta = new ChartMetadata();
+            cursor = ParseMetadata(lines, cursor, baseMeta);
 
-            // --- 阶段2：定位 #START ---
             while (cursor < lines.Count)
             {
-                string trimmed = lines[cursor].Trim();
-                if (trimmed.Equals("#START", StringComparison.OrdinalIgnoreCase))
+                var sectionMeta = CloneMetadata(baseMeta);
+                cursor = ParseSectionMetadata(lines, cursor, sectionMeta);
+
+                if (cursor >= lines.Count)
+                    break;
+
+                string marker = lines[cursor].Trim();
+                if (!marker.Equals("#START", StringComparison.OrdinalIgnoreCase))
                 {
                     cursor++;
-                    break;
+                    continue;
                 }
-                cursor++;
+
+                // 进入谱面主体解析。
+                cursor++; // consume #START
+                var parsedBody = ParseChartBody(lines, ref cursor, sectionMeta.bpm, sectionMeta.parsedBalloonHits);
+
+                if (parsedBody.Branches == null)
+                {
+                    charts.Add(BuildChartData(sectionMeta, parsedBody, "Main", "", parsedBody.Measures));
+                }
+                else
+                {
+                    charts.Add(BuildChartData(sectionMeta, parsedBody, "Normal", parsedBody.Branches.Condition, parsedBody.Branches.Normal));
+                    charts.Add(BuildChartData(sectionMeta, parsedBody, "Professional", parsedBody.Branches.Condition, parsedBody.Branches.Professional));
+                    charts.Add(BuildChartData(sectionMeta, parsedBody, "Master", parsedBody.Branches.Condition, parsedBody.Branches.Master));
+                }
             }
 
-            // --- 阶段3：解析谱面主体 (#START ~ #END) ---
-            data.chart = ParseChartBody(lines, ref cursor);
-
-            return data;
+            return charts;
         }
 
-        /// <summary>
-        /// 将 TaikoChartData 对象导出为TJA文本。
-        /// </summary>
+        // 把单个 TaikoChartData 导出为 TJA 文本。
         public static string EmitTja(TaikoChartData data)
         {
             if (data == null)
@@ -104,112 +107,128 @@ namespace TaikoAssist
 
             var sb = new StringBuilder();
 
-            // --- 头部 ---
-            EmitMetadata(sb, data.metadata);
+            EmitMetadata(sb, data.metadata, data.chart);
             sb.AppendLine();
             sb.AppendLine("#START");
             sb.AppendLine();
 
-            // --- 谱面主体 ---
             EmitChartBody(sb, data.chart);
 
             sb.AppendLine("#END");
             return sb.ToString();
         }
 
-        /// <summary>
-        /// 将TJA文本转换为JSON字符串（内部使用 Unity JsonUtility）。
-        /// 注意：由于 JsonUtility 对 Dictionary 等复杂类型支持有限，
-        /// 实际项目中建议使用 Newtonsoft.Json 或自行序列化。
-        /// 此处返回 TaikoChartData 对象，调用方自行选择序列化方式。
-        /// </summary>
-        public static TaikoChartData TjaToJson(string tjaContent)
-        {
-            return ParseTja(tjaContent);
-        }
 
-        /// <summary>
-        /// 将 TaikoChartData 转换回TJA文本。
-        /// </summary>
-        public static string JsonToTja(TaikoChartData data)
-        {
-            return EmitTja(data);
-        }
-
-        // ================================================================
-        //  解析：头部元数据
-        // ================================================================
-
+        // 解析文件头部元数据（直到 #START/#END）。
         private static int ParseMetadata(List<string> lines, int start, ChartMetadata meta)
         {
             for (int i = start; i < lines.Count; i++)
             {
                 string line = lines[i].Trim();
 
-                // 遇到 #START 或 #END 即结束头部解析
                 if (line.StartsWith("#START", StringComparison.OrdinalIgnoreCase) ||
                     line.StartsWith("#END", StringComparison.OrdinalIgnoreCase))
                     return i;
 
-                // 跳过空行和注释
                 if (string.IsNullOrEmpty(line) || line.StartsWith("//"))
                     continue;
 
-                // 解析 KEY:VALUE
                 int colonIdx = line.IndexOf(':');
                 if (colonIdx <= 0) continue;
 
-                string key = line[..colonIdx].Trim().ToUpperInvariant();
-                string value = line[(colonIdx + 1)..].Trim();
-
-                switch (key)
-                {
-                    case "TITLE":       meta.title = value; break;
-                    case "TITLEJA":     meta.titleJa = value; break;
-                    case "SUBTITLE":    meta.subtitle = value; break;
-                    case "SUBTITLEJA":  meta.subtitleJa = value; break;
-                    case "BPM":         meta.bpm = ParseFloat(value, 120f); break;
-                    case "WAVE":        meta.wave = value; break;
-                    case "OFFSET":      meta.offset = ParseFloat(value, 0f); break;
-                    case "DEMOSTART":   meta.demoStart = ParseFloat(value, 0f); break;
-                    case "COURSE":      meta.course = value; break;
-                    case "LEVEL":       meta.level = ParseInt(value, 1); break;
-                    case "BALLOON":
-                        meta.balloonHits = ParseIntList(value);
-                        break;
-                    case "SCOREINIT":   meta.scoreInit = ParseInt(value, 0); break;
-                    case "SCOREDIFF":   meta.scoreDiff = ParseInt(value, 0); break;
-                    case "SONGVOL":     meta.songVol = ParseFloat(value, 1f); break;
-                    case "SEVOL":       meta.seVol = ParseFloat(value, 1f); break;
-                    case "MAKER":       meta.maker = value; break;
-                    case "GENRE":       meta.genre = value; break;
-                    default:
-                        // 保留无法识别的字段以保证无损
-                        meta.extra[key] = value;
-                        break;
-                }
+                ApplyMetadataLine(meta, line);
             }
             return lines.Count;
         }
 
-        // ================================================================
-        //  解析：谱面主体
-        // ================================================================
-
-        private static ChartBody ParseChartBody(List<string> lines, ref int cursor)
+        // 解析某个难度段前置元数据（覆盖 baseMeta）。
+        private static int ParseSectionMetadata(List<string> lines, int start, ChartMetadata meta)
         {
-            var body = new ChartBody();
-            var measures = new List<ChartMeasure>();
+            int i = start;
+            while (i < lines.Count)
+            {
+                string line = lines[i].Trim();
 
-            // 栈：用于处理嵌套分支
+                if (line.Equals("#START", StringComparison.OrdinalIgnoreCase))
+                    return i;
+
+                if (line.Equals("#END", StringComparison.OrdinalIgnoreCase))
+                {
+                    i++;
+                    continue;
+                }
+
+                if (string.IsNullOrEmpty(line) || line.StartsWith("//") || line.StartsWith('#'))
+                {
+                    i++;
+                    continue;
+                }
+
+                ApplyMetadataLine(meta, line);
+                i++;
+            }
+            return i;
+        }
+
+        // 解析单条 KEY:VALUE 到元数据对象。
+        private static void ApplyMetadataLine(ChartMetadata meta, string line)
+        {
+            int colonIdx = line.IndexOf(':');
+            if (colonIdx <= 0) return;
+
+            string key = line[..colonIdx].Trim().ToUpperInvariant();
+            string value = line[(colonIdx + 1)..].Trim();
+
+            switch (key)
+            {
+                case "TITLE":       meta.title = value; break;
+                case "TITLEJA":     meta.titleJa = value; break;
+                case "SUBTITLE":    meta.subtitle = value; break;
+                case "SUBTITLEJA":  meta.subtitleJa = value; break;
+                case "BPM":         meta.bpm = ParseFloat(value, 120f); break;
+                case "WAVE":        meta.wave = value; break;
+                case "OFFSET":      meta.offset = ParseFloat(value, 0f); break;
+                case "DEMOSTART":   meta.demoStart = ParseFloat(value, 0f); break;
+                case "COURSE":      meta.course = value; break;
+                case "LEVEL":       meta.level = ParseInt(value, 1); break;
+                case "BALLOON":     meta.parsedBalloonHits = ParseIntList(value); break;
+                case "SCOREINIT":   meta.scoreInit = ParseInt(value, 0); break;
+                case "SCOREDIFF":   meta.scoreDiff = ParseInt(value, 0); break;
+                case "SONGVOL":     meta.songVol = ParseFloat(value, 1f); break;
+                case "SEVOL":       meta.seVol = ParseFloat(value, 1f); break;
+                case "MAKER":       meta.maker = value; break;
+                case "GENRE":       meta.genre = value; break;
+                default:
+                    meta.extra[key] = value;
+                    break;
+            }
+        }
+
+
+        // 解析 #START 到 #END 的主体。
+        private static ParsedChartBody ParseChartBody(List<string> lines, ref int cursor, float initialBpm, List<int> balloonHits)
+        {
+            var body = new ParsedChartBody
+            {
+                InitialBpm = initialBpm,
+                InitialScroll = 1f,
+                InitialTimeSignature = new[] { 4, 4 }
+            };
+            var measures = new List<ChartMeasure>();
+            var targetBeatOffsets = new Dictionary<List<ChartMeasure>, int>
+            {
+                [measures] = 0
+            };
+
             var branchStack = new Stack<BranchParseState>();
-            var currentBranch = (string)null; // null = 单谱面
+            int balloonHitCursor = 0;
+            // null 表示当前在非分支主轨。
+            var currentBranch = (string)null;
             var currentTarget = measures;
 
-            // 状态变量（随解析推进而更新）
-            float currentBpm = body.initialBpm;
-            float currentScroll = body.initialScroll;
-            int[] currentTimeSig = (int[])body.initialTimeSignature.Clone();
+            float currentBpm = body.InitialBpm;
+            float currentScroll = body.InitialScroll;
+            int[] currentTimeSig = (int[])body.InitialTimeSignature.Clone();
             bool currentGogo = false;
             bool currentBarline = true;
 
@@ -218,15 +237,12 @@ namespace TaikoAssist
                 string line = lines[cursor].Trim();
                 cursor++;
 
-                // --- #END 终止 ---
                 if (line.Equals("#END", StringComparison.OrdinalIgnoreCase))
                     break;
 
-                // --- 跳过空行和注释 ---
                 if (string.IsNullOrEmpty(line) || line.StartsWith("//"))
                     continue;
 
-                // --- 谱面指令 ---
                 if (line.StartsWith('#'))
                 {
                     string[] parts = line.Split(' ', 2, StringSplitOptions.RemoveEmptyEntries);
@@ -264,10 +280,13 @@ namespace TaikoAssist
                             break;
 
                         case "#DELAY":
-                            // DELAY 是同步指令，暂时跳过（谱面中用于同步校准）
                             break;
 
                         case "#BRANCHSTART":
+                            int branchStartBeat = 0;
+                            if (currentTarget != null && targetBeatOffsets.TryGetValue(currentTarget, out int currentOffset))
+                                branchStartBeat = currentOffset;
+
                             branchStack.Push(new BranchParseState
                             {
                                 condition = arg,
@@ -280,6 +299,11 @@ namespace TaikoAssist
                                 savedGogo = currentGogo,
                                 savedBarline = currentBarline,
                             });
+
+                            targetBeatOffsets[branchStack.Peek().normalTarget] = branchStartBeat;
+                            targetBeatOffsets[branchStack.Peek().professionalTarget] = branchStartBeat;
+                            targetBeatOffsets[branchStack.Peek().masterTarget] = branchStartBeat;
+
                             currentTarget = branchStack.Peek().normalTarget;
                             currentBranch = "normal";
                             break;
@@ -320,26 +344,20 @@ namespace TaikoAssist
                                 var st = branchStack.Pop();
                                 if (branchStack.Count == 0)
                                 {
-                                    // 最外层分支结束，填充到 body.branches
-                                    body.branches = new ChartBranches
+                                    body.Branches = new ParsedBranches
                                     {
-                                        condition = st.condition,
-                                        normal = st.normalTarget,
-                                        professional = st.professionalTarget,
-                                        master = st.masterTarget,
+                                        Condition = st.condition,
+                                        Normal = st.normalTarget,
+                                        Professional = st.professionalTarget,
+                                        Master = st.masterTarget,
                                     };
-                                    // 回到单谱面模式
                                     currentTarget = null;
                                     currentBranch = null;
                                 }
                                 else
                                 {
-                                    // 嵌套分支：需要合并到父分支的某个target
-                                    // （嵌套分岐极为罕见，此处做简化处理——
-                                    //   将分支数据合并到父分支的当前target中）
                                     var parent = branchStack.Peek();
                                     var mergedList = GetCurrentBranchTarget(parent, currentBranch);
-                                    // 添加一个占位标记（实际嵌套分岐格式复杂，暂简化）
                                     mergedList.Add(new ChartMeasure
                                     {
                                         beatCount = 0,
@@ -349,8 +367,6 @@ namespace TaikoAssist
                                         gogo = currentGogo,
                                         barline = currentBarline,
                                     });
-                                    // 将子分支信息存储到父分支中（简化处理）
-                                    // 实际场景中嵌套分岐极少，此处不做完整展开
                                 }
                                 RestoreState(branchStack.Count > 0 ? branchStack.Peek() : null, ref currentBpm, ref currentScroll, ref currentTimeSig, ref currentGogo, ref currentBarline);
                                 currentTarget = branchStack.Count > 0 ? GetCurrentBranchTarget(branchStack.Peek(), currentBranch) : measures;
@@ -359,43 +375,52 @@ namespace TaikoAssist
 
                         case "#SECTION":
                         case "#LEVELHOLD":
-                            // 标记性指令，解析时忽略
                             break;
 
                         default:
-                            // 已知自定义指令（如TJAPlayer3的 #SENOTECHANGE 等），忽略
                             break;
                     }
                     continue;
                 }
 
-                // --- 音符行（小节数据）---
                 if (currentTarget != null)
                 {
-                    var measure = ParseMeasureLine(line, currentBpm, currentScroll, currentTimeSig, currentGogo, currentBarline);
+                    if (!targetBeatOffsets.TryGetValue(currentTarget, out int measureBaseBeat))
+                        measureBaseBeat = 0;
+
+                    var measure = ParseMeasureLine(
+                        line,
+                        currentBpm,
+                        currentScroll,
+                        currentTimeSig,
+                        currentGogo,
+                        currentBarline,
+                        measureBaseBeat,
+                        balloonHits,
+                        ref balloonHitCursor);
+
                     if (measure != null)
+                    {
                         currentTarget.Add(measure);
+                        targetBeatOffsets[currentTarget] = measureBaseBeat + measure.beatCount;
+                    }
                 }
             }
 
-            // 如果无分支，直接使用 measures
-            if (body.branches == null)
+            if (body.Branches == null)
             {
-                body.measures = measures;
-                body.initialBpm = currentBpm > 0 ? currentBpm : 120f;
-                body.initialScroll = currentScroll;
-                body.initialTimeSignature = currentTimeSig;
+                body.Measures = measures;
             }
 
             return body;
         }
 
-        /// <summary>解析一行小节数据（TJA音符行）</summary>
+        // 解析单行小节（逗号分拍，拍内按字符解析音符）。
         private static ChartMeasure ParseMeasureLine(
             string line, float bpm, float scroll, int[] timeSig,
-            bool gogo, bool barline)
+            bool gogo, bool barline, int measureBaseBeat,
+            List<int> balloonHits, ref int balloonHitCursor)
         {
-            // 按逗号分割各拍
             string[] beats = line.Split(',');
             if (beats.Length == 0) return null;
 
@@ -414,49 +439,44 @@ namespace TaikoAssist
                 string segment = beats[beat].Trim();
                 if (string.IsNullOrEmpty(segment)) continue;
 
-                // 遍历该拍内的每个字符（通常每拍1个字符，16分音符精度）
                 for (int sub = 0; sub < segment.Length; sub++)
                 {
                     char ch = segment[sub];
 
-                    // 标准音符 0-9
                     if (CharToNoteType.TryGetValue(ch, out NoteType noteType))
                     {
                         if (noteType == NoteType.Rest) continue;
+                        int balloonHitsRequired = TryConsumeBalloonHits(noteType, balloonHits, ref balloonHitCursor);
                         measure.notes.Add(new ChartNote
                         {
-                            beat = beat,  // 主拍位
+                            timing = new List<int> { measureBaseBeat + beat, sub, segment.Length },
                             type = noteType,
-                            hits = 1,
+                            balloonHitsRequired = balloonHitsRequired,
                             isAdlib = false,
                         });
                     }
-                    // Ad-lib 音符 A-F（分岐里谱用）
                     else if (CharToAdlib.TryGetValue(ch, out var adlib))
                     {
                         if (adlib.type == NoteType.Rest) continue;
+                        int balloonHitsRequired = TryConsumeBalloonHits(adlib.type, balloonHits, ref balloonHitCursor);
                         measure.notes.Add(new ChartNote
                         {
-                            beat = beat,
+                            timing = new List<int> { measureBaseBeat + beat, sub, segment.Length },
                             type = adlib.type,
-                            hits = 1,
+                            balloonHitsRequired = balloonHitsRequired,
                             isAdlib = adlib.isAdlib,
                         });
                     }
-                    // 忽略其他字符（空格等）
                 }
             }
 
             return measure;
         }
 
-        // ================================================================
-        //  导出：TJA文本生成
-        // ================================================================
 
-        private static void EmitMetadata(StringBuilder sb, ChartMetadata meta)
+        // 导出头部元信息。
+        private static void EmitMetadata(StringBuilder sb, ChartMetadata meta, ChartBody chart)
         {
-            // ---- 标准字段（按约定顺序输出） ----
             void EmitIfNotEmpty(string key, string value)
             {
                 if (!string.IsNullOrEmpty(value))
@@ -476,8 +496,9 @@ namespace TaikoAssist
             EmitIfNotEmpty("COURSE:", meta.course);
             if (meta.level > 0)
                 sb.AppendLine($"LEVEL:{meta.level}");
-            if (meta.balloonHits.Count > 0)
-                sb.AppendLine($"BALLOON:{string.Join(",", meta.balloonHits)}");
+            var balloonHits = CollectBalloonHits(chart);
+            if (balloonHits.Count > 0)
+                sb.AppendLine($"BALLOON:{string.Join(",", balloonHits)}");
             if (meta.scoreInit > 0)
                 sb.AppendLine($"SCOREINIT:{meta.scoreInit}");
             if (meta.scoreDiff > 0)
@@ -489,35 +510,17 @@ namespace TaikoAssist
             EmitIfNotEmpty("MAKER:", meta.maker);
             EmitIfNotEmpty("GENRE:", meta.genre);
 
-            // ---- 自定义字段（保证无损） ----
             foreach (var kv in meta.extra)
                 sb.AppendLine($"{kv.Key}:{kv.Value}");
         }
 
+        // 导出主体小节。
         private static void EmitChartBody(StringBuilder sb, ChartBody body)
         {
-            if (body.branches != null)
-            {
-                // --- 分支谱面 ---
-                var b = body.branches;
-                sb.AppendLine($"#BRANCHSTART {b.condition}");
-
-                EmitMeasureList(sb, b.normal);
-                sb.AppendLine("#N");
-                EmitMeasureList(sb, b.professional);
-                sb.AppendLine("#E");
-                EmitMeasureList(sb, b.master);
-                sb.AppendLine("#M");
-
-                sb.AppendLine("#BRANCHEND");
-            }
-            else
-            {
-                // --- 单谱面 ---
-                EmitMeasureList(sb, body.measures);
-            }
+            EmitMeasureList(sb, body.measures);
         }
 
+        // 导出小节列表，并按需输出状态切换指令。
         private static void EmitMeasureList(StringBuilder sb, List<ChartMeasure> measures)
         {
             if (measures == null) return;
@@ -526,10 +529,10 @@ namespace TaikoAssist
             float lastScroll = float.NaN;
             bool lastGogo = false;
             bool lastBarline = true;
+            int measureBaseBeat = 0;
 
             foreach (var m in measures)
             {
-                // --- BPM变化 ---
                 if (m.bpm.HasValue && !NearlyEqual(m.bpm.Value, lastBpm))
                 {
                     sb.AppendLine($"#BPMCHANGE {FormatFloat(m.bpm.Value)}");
@@ -540,7 +543,6 @@ namespace TaikoAssist
                     lastBpm = float.NaN;
                 }
 
-                // --- Scroll变化 ---
                 if (m.scroll.HasValue && !NearlyEqual(m.scroll.Value, lastScroll))
                 {
                     sb.AppendLine($"#SCROLL {FormatFloat(m.scroll.Value)}");
@@ -551,49 +553,45 @@ namespace TaikoAssist
                     lastScroll = float.NaN;
                 }
 
-                // --- Go-Go Time ---
                 if (m.gogo.HasValue && m.gogo.Value != lastGogo)
                 {
                     sb.AppendLine(m.gogo.Value ? "#GOGOSTART" : "#GOGOEND");
                     lastGogo = m.gogo.Value;
                 }
 
-                // --- Barline ---
                 if (m.barline.HasValue && m.barline.Value != lastBarline)
                 {
                     sb.AppendLine(m.barline.Value ? "#BARLINEON" : "#BARLINEOFF");
                     lastBarline = m.barline.Value;
                 }
 
-                // --- 时间记号变化 ---
                 if (m.timeSignature != null)
                 {
                     sb.AppendLine($"#MEASURE {m.timeSignature[0]}/{m.timeSignature[1]}");
                 }
 
-                // --- 小节数据 ---
-                sb.AppendLine(EmitMeasureLine(m));
+                sb.AppendLine(EmitMeasureLine(m, measureBaseBeat));
+                measureBaseBeat += m.beatCount;
             }
         }
 
-        /// <summary>将单个ChartMeasure导出为TJA音符行</summary>
-        private static string EmitMeasureLine(ChartMeasure measure)
+        // 把单个小节转成 TJA 音符行。
+        private static string EmitMeasureLine(ChartMeasure measure, int measureBaseBeat)
         {
             if (measure.beatCount <= 0) return ",";
 
-            // 构建每拍的字符表示
             var beatChars = new List<char>[measure.beatCount];
             for (int i = 0; i < measure.beatCount; i++)
                 beatChars[i] = new List<char>();
 
             foreach (var note in measure.notes)
             {
-                if (note.beat < 0 || note.beat >= measure.beatCount) continue;
+                int beatIndex = ResolveBeatIndex(note, measureBaseBeat, measure.beatCount);
+                if (beatIndex < 0 || beatIndex >= measure.beatCount) continue;
 
                 char ch;
                 if (note.isAdlib)
                 {
-                    // Ad-lib 字符映射（A=Don, B=Kat, F=Balloon, G=BigBalloon）
                     ch = note.type switch
                     {
                         NoteType.Don        => 'A',
@@ -610,16 +608,14 @@ namespace TaikoAssist
                     ch = NoteTypeToChar.GetValueOrDefault(note.type, '0');
                 }
 
-                beatChars[note.beat].Add(ch);
+                beatChars[beatIndex].Add(ch);
             }
 
-            // 拼接为TJA行
             var sb = new StringBuilder();
             for (int i = 0; i < measure.beatCount; i++)
             {
                 if (beatChars[i].Count == 0)
                 {
-                    // 该拍无音符，输出0（空拍占位）
                     sb.Append('0');
                 }
                 else
@@ -633,10 +629,8 @@ namespace TaikoAssist
             return sb.ToString();
         }
 
-        // ================================================================
-        //  辅助函数
-        // ================================================================
 
+        // 工具：按行拆分文本。
         private static List<string> SplitLines(string content)
         {
             var lines = new List<string>();
@@ -645,6 +639,7 @@ namespace TaikoAssist
             return lines;
         }
 
+        // 工具：安全解析 float。
         private static float ParseFloat(string s, float defaultValue)
         {
             if (float.TryParse(s, NumberStyles.Float, CultureInfo.InvariantCulture, out float result))
@@ -652,6 +647,7 @@ namespace TaikoAssist
             return defaultValue;
         }
 
+        // 工具：安全解析 int。
         private static int ParseInt(string s, int defaultValue)
         {
             if (int.TryParse(s, NumberStyles.Integer, CultureInfo.InvariantCulture, out int result))
@@ -659,6 +655,7 @@ namespace TaikoAssist
             return defaultValue;
         }
 
+        // 工具：解析逗号分隔整数列表。
         private static List<int> ParseIntList(string s)
         {
             var list = new List<int>();
@@ -672,6 +669,7 @@ namespace TaikoAssist
             return list;
         }
 
+        // 工具：解析拍号（如 4/4）。
         private static int[] ParseTimeSignature(string arg, int[] fallback)
         {
             if (string.IsNullOrWhiteSpace(arg)) return fallback;
@@ -685,17 +683,86 @@ namespace TaikoAssist
             return (int[])fallback.Clone();
         }
 
+        // 工具：格式化浮点数用于输出。
         private static string FormatFloat(float value)
         {
             return value.ToString("0.##", CultureInfo.InvariantCulture);
         }
 
+        // 工具：浮点近似比较。
         private static bool NearlyEqual(float a, float b)
         {
             if (float.IsNaN(a) || float.IsNaN(b)) return false;
             return Mathf.Abs(a - b) < 0.001f;
         }
 
+        // 按气球类音符出现顺序收集 BALLOON 值。
+        private static List<int> CollectBalloonHits(ChartBody chart)
+        {
+            var result = new List<int>();
+            if (chart?.measures == null)
+                return result;
+
+            foreach (var measure in chart.measures)
+            {
+                if (measure?.notes == null)
+                    continue;
+
+                foreach (var note in measure.notes)
+                {
+                    if (!IsBalloonType(note.type))
+                        continue;
+
+                    if (note.balloonHitsRequired > 0)
+                        result.Add(note.balloonHitsRequired);
+                }
+            }
+
+            return result;
+        }
+
+        // 遇到气球类音符时，从 BALLOON 列表消费一个目标次数。
+        private static int TryConsumeBalloonHits(NoteType type, List<int> balloonHits, ref int cursor)
+        {
+            if (!IsBalloonType(type))
+                return 0;
+
+            if (balloonHits != null && cursor < balloonHits.Count)
+                return balloonHits[cursor++];
+
+            return 0;
+        }
+
+        private static bool IsBalloonType(NoteType type)
+        {
+            return type == NoteType.Balloon ||
+                   type == NoteType.BigBalloon ||
+                   type == NoteType.Kusudama;
+        }
+
+        // 将 timing=[a,b,c] 映射为当前小节内拍位索引。
+        private static int ResolveBeatIndex(ChartNote note, int measureBaseBeat, int beatCount)
+        {
+            if (note?.timing == null || note.timing.Count < 3)
+                return -1;
+
+            int a = note.timing[0];
+            int b = note.timing[1];
+            int c = note.timing[2];
+
+            if (c <= 0)
+                return -1;
+
+            double localBeat = (a + (double)b / c) - measureBaseBeat;
+            int index = (int)Math.Floor(localBeat + 1e-9);
+
+            if (index < 0 || index >= beatCount)
+                return -1;
+
+            return index;
+        }
+
+        // 分支切换时恢复解析状态。
         private static void RestoreState(BranchParseState state,
             ref float bpm, ref float scroll, ref int[] timeSig,
             ref bool gogo, ref bool barline)
@@ -708,6 +775,7 @@ namespace TaikoAssist
             barline = state.savedBarline;
         }
 
+        // 根据分支名拿到对应小节容器。
         private static List<ChartMeasure> GetCurrentBranchTarget(BranchParseState state, string branch)
         {
             return branch switch
@@ -719,7 +787,7 @@ namespace TaikoAssist
             };
         }
 
-        /// <summary>分支解析的临时状态</summary>
+        // 解析分支时的临时状态快照。
         private class BranchParseState
         {
             public string condition = "";
@@ -731,6 +799,84 @@ namespace TaikoAssist
             public int[] savedTimeSig;
             public bool savedGogo;
             public bool savedBarline;
+        }
+
+        // 复制元数据，避免难度段之间互相污染。
+        private static ChartMetadata CloneMetadata(ChartMetadata source)
+        {
+            var clone = new ChartMetadata
+            {
+                title = source.title,
+                titleJa = source.titleJa,
+                subtitle = source.subtitle,
+                subtitleJa = source.subtitleJa,
+                bpm = source.bpm,
+                wave = source.wave,
+                offset = source.offset,
+                demoStart = source.demoStart,
+                course = source.course,
+                level = source.level,
+                branch = source.branch,
+                branchCondition = source.branchCondition,
+                scoreInit = source.scoreInit,
+                scoreDiff = source.scoreDiff,
+                songVol = source.songVol,
+                seVol = source.seVol,
+                maker = source.maker,
+                genre = source.genre,
+                parsedBalloonHits = new List<int>(source.parsedBalloonHits)
+            };
+
+            foreach (var kv in source.extra)
+                clone.extra[kv.Key] = kv.Value;
+
+            return clone;
+        }
+
+        // 根据解析结果组装最终谱面对象。
+        private static TaikoChartData BuildChartData(
+            ChartMetadata sectionMeta,
+            ParsedChartBody parsedBody,
+            string branch,
+            string branchCondition,
+            List<ChartMeasure> measures)
+        {
+            var meta = CloneMetadata(sectionMeta);
+            meta.branch = branch;
+            meta.branchCondition = branchCondition ?? "";
+
+            var data = new TaikoChartData
+            {
+                metadata = meta,
+                chart = new ChartBody
+                {
+                    initialBpm = parsedBody.InitialBpm,
+                    initialScroll = parsedBody.InitialScroll,
+                    initialTimeSignature = (int[])parsedBody.InitialTimeSignature.Clone(),
+                    measures = measures ?? new List<ChartMeasure>()
+                }
+            };
+
+            return data;
+        }
+
+        // 主体解析中间结构（尚未落到公开数据模型）。
+        private class ParsedChartBody
+        {
+            public float InitialBpm;
+            public float InitialScroll;
+            public int[] InitialTimeSignature;
+            public List<ChartMeasure> Measures = new();
+            public ParsedBranches Branches;
+        }
+
+        // 分支解析中间结构。
+        private class ParsedBranches
+        {
+            public string Condition = "";
+            public List<ChartMeasure> Normal = new();
+            public List<ChartMeasure> Professional = new();
+            public List<ChartMeasure> Master = new();
         }
     }
 }

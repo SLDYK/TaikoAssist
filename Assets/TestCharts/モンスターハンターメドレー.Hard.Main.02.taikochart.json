@@ -1,0 +1,4984 @@
+{
+  "formatVersion": "1.0",
+  "metadata": {
+    "title": "モンスターハンターメドレー",
+    "titleJa": "",
+    "subtitle": "--",
+    "subtitleJa": "",
+    "bpm": 98.47786,
+    "wave": "モンスターハンターメドレー.ogg",
+    "offset": -2.506,
+    "demoStart": 2.49,
+    "course": "Hard",
+    "level": 5,
+    "branch": "Main",
+    "branchCondition": "",
+    "scoreInit": 510,
+    "scoreDiff": 135,
+    "songVol": 100,
+    "seVol": 100,
+    "maker": "",
+    "genre": "ゲームミュージック",
+    "extra": {
+      "SCOREMODE": "2"
+    }
+  },
+  "chart": {
+    "initialBpm": 98.47786,
+    "initialScroll": 1,
+    "initialTimeSignature": [
+      4,
+      4
+    ],
+    "measures": [
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 98.47786,
+        "scroll": 1,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              0,
+              0,
+              24
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              0,
+              12,
+              24
+            ],
+            "type": 6,
+            "balloonHitsRequired": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 107.48008,
+        "scroll": 0.91,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              2,
+              12,
+              24
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 103.46647,
+        "scroll": 0.95,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              4,
+              0,
+              24
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              4,
+              16,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              4,
+              20,
+              24
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 104.86467,
+        "scroll": 0.93,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              6,
+              0,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              6,
+              12,
+              24
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 104.583,
+        "scroll": 0.94,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              8,
+              0,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              8,
+              4,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              8,
+              8,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              8,
+              16,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              8,
+              20,
+              24
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 104.866875,
+        "scroll": 0.93,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              10,
+              0,
+              12
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 102.64569,
+        "scroll": 0.95,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              12,
+              0,
+              12
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 97.97822,
+        "scroll": 1,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              14,
+              0,
+              12
+            ],
+            "type": 7
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 106.01381,
+        "scroll": 0.92,
+        "gogo": true,
+        "barline": false,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 105.43518,
+        "scroll": 0.93,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              18,
+              14,
+              24
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 97.97822,
+        "scroll": 1,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              20,
+              0,
+              12
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 108.08824,
+        "scroll": 0.91,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              22,
+              0,
+              12
+            ],
+            "type": 5,
+            "balloonHitsRequired": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 101.82798,
+        "scroll": 0.96,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              24,
+              10,
+              12
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 114.10098,
+        "scroll": 0.86,
+        "gogo": true,
+        "barline": false,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 104.5912,
+        "scroll": 0.94,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              28,
+              0,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              28,
+              16,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              28,
+              20,
+              24
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 102.13253,
+        "scroll": 0.96,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              30,
+              0,
+              24
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 106.25017,
+        "scroll": 0.92,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              32,
+              0,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              32,
+              4,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              32,
+              8,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              32,
+              16,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              32,
+              20,
+              24
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 108.033165,
+        "scroll": 0.91,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              34,
+              0,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              34,
+              12,
+              24
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 91.17529,
+        "scroll": 1.08,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              36,
+              0,
+              12
+            ],
+            "type": 7
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 110.859825,
+        "scroll": 0.88,
+        "gogo": false,
+        "barline": false,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 112.13759,
+        "scroll": 0.87,
+        "gogo": false,
+        "barline": false,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          1,
+          4
+        ],
+        "bpm": 102.36777,
+        "scroll": 0.96,
+        "gogo": false,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              42,
+              2,
+              12
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 92.171,
+        "scroll": 1.06,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              44,
+              0,
+              48
+            ],
+            "type": 3
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 95.902565,
+        "scroll": 0.51,
+        "gogo": false,
+        "barline": true,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 94.909225,
+        "scroll": 0.51,
+        "gogo": false,
+        "barline": false,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 133.58417,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              50,
+              0,
+              48
+            ],
+            "type": 9,
+            "balloonHitsRequired": 25
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 131.75809,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.15306,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              54,
+              47,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.21393,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 131.67625,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              58,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              58,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              58,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              58,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              58,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              58,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.02278,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              60,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              60,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              60,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              60,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              60,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              60,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.02454,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              62,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              62,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              62,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              62,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              62,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              62,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 131.86987,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              64,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              64,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              64,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              64,
+              15,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              64,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              64,
+              24,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              64,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              64,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.80124,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              66,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              66,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              66,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              66,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              66,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              66,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.0655,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              68,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              68,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              68,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              68,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              68,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              68,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 131.90756,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              70,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              70,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              70,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              70,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              70,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              70,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 131.85161,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              72,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              72,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              72,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              72,
+              15,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              72,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              72,
+              24,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              72,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              72,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.0655,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              74,
+              0,
+              48
+            ],
+            "type": 5,
+            "balloonHitsRequired": 3
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.02278,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              76,
+              23,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.10011,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              78,
+              0,
+              48
+            ],
+            "type": 5,
+            "balloonHitsRequired": 10
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.45062,
+        "scroll": 1.01,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              80,
+              23,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 154.0476,
+        "scroll": 1,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              82,
+              0,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              82,
+              18,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              82,
+              36,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              82,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 157.40636,
+        "scroll": 0.98,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              84,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              84,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              84,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              84,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              84,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              84,
+              21,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              84,
+              24,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 160.20335,
+        "scroll": 0.96,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              86,
+              0,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              86,
+              18,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              86,
+              36,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              86,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 155.99123,
+        "scroll": 0.99,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              88,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              88,
+              6,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              88,
+              9,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              88,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              88,
+              18,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              88,
+              21,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              88,
+              24,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 159.74654,
+        "scroll": 0.96,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              90,
+              0,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              90,
+              18,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              90,
+              36,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              90,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.40036,
+        "scroll": 0.97,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              92,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              92,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              92,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              92,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              92,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              92,
+              21,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              92,
+              24,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.40036,
+        "scroll": 0.97,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              94,
+              0,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              94,
+              18,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              94,
+              36,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              94,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 155.34785,
+        "scroll": 0.99,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              96,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              96,
+              6,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              96,
+              9,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              96,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              96,
+              18,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              96,
+              21,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              96,
+              24,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.7331,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              98,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              98,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              98,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              98,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              98,
+              36,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              98,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 156.75128,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              100,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              100,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              100,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              100,
+              27,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              100,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              100,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.95935,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              102,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              102,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              102,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              102,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              102,
+              36,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              102,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 156.63997,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              104,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              104,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              104,
+              24,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              104,
+              27,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              104,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              104,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 159.40701,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              106,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              106,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              106,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              106,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              106,
+              36,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              106,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.84488,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              108,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              108,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              108,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              108,
+              27,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              108,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              108,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 155.99123,
+        "scroll": 0.99,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              110,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              110,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              110,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              110,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              110,
+              36,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              110,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 157.737,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              112,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              112,
+              12,
+              48
+            ],
+            "type": 7
+          },
+          {
+            "timing": [
+              112,
+              36,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.45726,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              114,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              114,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              114,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              114,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              114,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.01033,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              116,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              116,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              116,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              116,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              116,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              116,
+              33,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              116,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.2913,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              118,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              118,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              118,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              118,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              118,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 157.65701,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              120,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              120,
+              6,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              120,
+              9,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              120,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              120,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              120,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              120,
+              33,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              120,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.26082,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              122,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              122,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              122,
+              18,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              122,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              122,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 157.73492,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              124,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              124,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              124,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              124,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              124,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              124,
+              33,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              124,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.1261,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              126,
+              0,
+              48
+            ],
+            "type": 7
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 157.79134,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              128,
+              24,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.84488,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              130,
+              0,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              130,
+              18,
+              48
+            ],
+            "type": 4
+          },
+          {
+            "timing": [
+              130,
+              36,
+              48
+            ],
+            "type": 4
+          },
+          {
+            "timing": [
+              130,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 157.0771,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              132,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              132,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              132,
+              18,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              132,
+              24,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              132,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              132,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.40036,
+        "scroll": 0.97,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              134,
+              0,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              134,
+              18,
+              48
+            ],
+            "type": 4
+          },
+          {
+            "timing": [
+              134,
+              36,
+              48
+            ],
+            "type": 4
+          },
+          {
+            "timing": [
+              134,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 157.18904,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              136,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              136,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              136,
+              18,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              136,
+              24,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              136,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              136,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.51419,
+        "scroll": 0.97,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              138,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              138,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              138,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              138,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              138,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              138,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              138,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.28922,
+        "scroll": 0.97,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              140,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              140,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              140,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              140,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              140,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              140,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              140,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 159.40955,
+        "scroll": 0.97,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              142,
+              0,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              142,
+              6,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              142,
+              9,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              142,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              142,
+              18,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              142,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              142,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 156.20526,
+        "scroll": 0.99,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              144,
+              0,
+              48
+            ],
+            "type": 5,
+            "balloonHitsRequired": 12
+          },
+          {
+            "timing": [
+              144,
+              35,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.18738,
+        "scroll": 0.97,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              146,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              146,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              146,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              146,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              146,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              146,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              146,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 157.7088,
+        "scroll": 0.98,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              148,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              148,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              148,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              148,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              148,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              148,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              148,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.20615,
+        "scroll": 0.97,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              150,
+              0,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              150,
+              6,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              150,
+              9,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              150,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              150,
+              18,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              150,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              150,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 157.51422,
+        "scroll": 0.98,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              152,
+              0,
+              48
+            ],
+            "type": 5
+          },
+          {
+            "timing": [
+              152,
+              35,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 158.51419,
+        "scroll": 0.97,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              154,
+              0,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              154,
+              6,
+              48
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              154,
+              18,
+              48
+            ],
+            "type": 4
+          },
+          {
+            "timing": [
+              154,
+              36,
+              48
+            ],
+            "type": 3
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 156.39703,
+        "scroll": 0.99,
+        "gogo": false,
+        "barline": true,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 120.018005,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              158,
+              0,
+              24
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              158,
+              12,
+              24
+            ],
+            "type": 3
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120.018005,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              160,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              160,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              160,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              160,
+              32,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              160,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120.018005,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              162,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              162,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              162,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              162,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              162,
+              32,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              162,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120.57417,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              164,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              164,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              164,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              164,
+              32,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              164,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 119.53525,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              166,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              166,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              166,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              166,
+              24,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120.04082,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              168,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              168,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              168,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              168,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              168,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 119.932594,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              170,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              170,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              170,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              170,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              170,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 119.932594,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              172,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              172,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              172,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              172,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              172,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              174,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              174,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              174,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              174,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              174,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              176,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              176,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              176,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              176,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              176,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              178,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              178,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              178,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              178,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              178,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              180,
+              0,
+              48
+            ],
+            "type": 7
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              182,
+              24,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              184,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              184,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              184,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              184,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              184,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              186,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              186,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              186,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              186,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              186,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              188,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              188,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              188,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              188,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              188,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              190,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              190,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              190,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              190,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              190,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              192,
+              0,
+              48
+            ],
+            "type": 5
+          },
+          {
+            "timing": [
+              192,
+              35,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              194,
+              0,
+              48
+            ],
+            "type": 5
+          },
+          {
+            "timing": [
+              194,
+              35,
+              48
+            ],
+            "type": 8
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              196,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              196,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              196,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              196,
+              32,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              196,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              198,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              198,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              198,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              198,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              198,
+              32,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              198,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              200,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              200,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              200,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              200,
+              32,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              200,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              202,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              202,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              202,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              202,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              202,
+              32,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              202,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120.83838,
+        "scroll": 1,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              204,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              204,
+              8,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              204,
+              20,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              204,
+              24,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          5,
+          8
+        ],
+        "bpm": 123.36591,
+        "scroll": 0.98,
+        "gogo": false,
+        "barline": false,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 142.51477,
+        "scroll": 1,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              208,
+              0,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              208,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              208,
+              24,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              208,
+              36,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 142.04243,
+        "scroll": 1,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              210,
+              0,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              210,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              210,
+              18,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              210,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              210,
+              42,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 142.89558,
+        "scroll": 1,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              212,
+              0,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              212,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              212,
+              18,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              212,
+              30,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              212,
+              42,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 142.40146,
+        "scroll": 1,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              214,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              214,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              214,
+              12,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              214,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              214,
+              30,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              214,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 140.87384,
+        "scroll": 1.01,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              216,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              216,
+              6,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              216,
+              9,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              216,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              216,
+              18,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              216,
+              24,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          5,
+          8
+        ],
+        "bpm": 135.4145,
+        "scroll": 1.05,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              218,
+              0,
+              30
+            ],
+            "type": 3
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 144.75621,
+        "scroll": 0.98,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              220,
+              0,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              220,
+              6,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              220,
+              9,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              220,
+              15,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              220,
+              18,
+              24
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 135.193,
+        "scroll": 1.05,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              222,
+              0,
+              24
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              222,
+              12,
+              24
+            ],
+            "type": 4
+          }
+        ]
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 135.193,
+        "scroll": 1.05,
+        "gogo": true,
+        "barline": true,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 135.193,
+        "scroll": 1.05,
+        "gogo": true,
+        "barline": false,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 135.193,
+        "scroll": 1.05,
+        "gogo": true,
+        "barline": true,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 135.193,
+        "scroll": 1.05,
+        "gogo": true,
+        "barline": false,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 135.193,
+        "scroll": 1.05,
+        "gogo": true,
+        "barline": true,
+        "notes": []
+      },
+      {
+        "beatCount": 2,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 135.193,
+        "scroll": 1.05,
+        "gogo": true,
+        "barline": false,
+        "notes": []
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 
@@ -23,7 +23,7 @@ namespace TaikoAssist
         [SerializeField] private Transform KaLine;
         [SerializeField] private SpriteRenderer Track;
         [SerializeField] private Slider BlendLerp;
-        [SerializeField] private SliderReleaseNotifier Notifier;
+        [SerializeField] private SliderNotifier Notifier;
 
         [Header("Animation")]
         [SerializeField] private float Duration = 0.5f;
