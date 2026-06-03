@@ -70,7 +70,6 @@
         "bpm": 107.48008,
         "scroll": 0.91,
         "gogo": true,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -112,7 +111,6 @@
         "bpm": 104.86467,
         "scroll": 0.93,
         "gogo": true,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -154,7 +152,6 @@
         "bpm": 104.866875,
         "scroll": 0.93,
         "gogo": true,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -175,7 +172,6 @@
         "bpm": 102.64569,
         "scroll": 0.95,
         "gogo": true,
-        "barline": false,
         "notes": []
       },
       {
@@ -208,7 +204,6 @@
         "bpm": 106.01381,
         "scroll": 0.92,
         "gogo": true,
-        "barline": false,
         "notes": []
       },
       {
@@ -220,7 +215,6 @@
         "bpm": 105.43518,
         "scroll": 0.93,
         "gogo": true,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -262,7 +256,6 @@
         "bpm": 108.08824,
         "scroll": 0.91,
         "gogo": true,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -284,7 +277,6 @@
         "bpm": 101.82798,
         "scroll": 0.96,
         "gogo": true,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -305,7 +297,6 @@
         "bpm": 114.10098,
         "scroll": 0.86,
         "gogo": true,
-        "barline": false,
         "notes": []
       },
       {
@@ -338,7 +329,6 @@
         "bpm": 102.13253,
         "scroll": 0.96,
         "gogo": true,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -380,7 +370,6 @@
         "bpm": 108.033165,
         "scroll": 0.91,
         "gogo": true,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -421,8 +410,6 @@
         ],
         "bpm": 110.859825,
         "scroll": 0.88,
-        "gogo": false,
-        "barline": false,
         "notes": []
       },
       {
@@ -433,8 +420,6 @@
         ],
         "bpm": 112.13759,
         "scroll": 0.87,
-        "gogo": false,
-        "barline": false,
         "notes": []
       },
       {
@@ -445,8 +430,6 @@
         ],
         "bpm": 102.36777,
         "scroll": 0.96,
-        "gogo": false,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -466,7 +449,6 @@
         ],
         "bpm": 92.171,
         "scroll": 1.06,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -487,7 +469,6 @@
         ],
         "bpm": 95.902565,
         "scroll": 0.51,
-        "gogo": false,
         "barline": true,
         "notes": []
       },
@@ -499,8 +480,6 @@
         ],
         "bpm": 94.909225,
         "scroll": 0.51,
-        "gogo": false,
-        "barline": false,
         "notes": []
       },
       {
@@ -511,7 +490,6 @@
         ],
         "bpm": 133.58417,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -533,7 +511,6 @@
         ],
         "bpm": 131.75809,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": []
       },
@@ -545,7 +522,6 @@
         ],
         "bpm": 132.15306,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -566,7 +542,6 @@
         ],
         "bpm": 132.21393,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": []
       },
@@ -578,7 +553,6 @@
         ],
         "bpm": 131.67625,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -615,7 +589,6 @@
         ],
         "bpm": 132.02278,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -636,7 +609,6 @@
         ],
         "bpm": 132.02454,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -673,7 +645,6 @@
         ],
         "bpm": 131.86987,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -694,7 +665,6 @@
         ],
         "bpm": 132.80124,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -723,7 +693,6 @@
         ],
         "bpm": 132.0655,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -760,7 +729,6 @@
         ],
         "bpm": 131.90756,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -789,7 +757,6 @@
         ],
         "bpm": 131.85161,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -826,7 +793,6 @@
         ],
         "bpm": 132.0655,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -848,7 +814,6 @@
         ],
         "bpm": 132.02278,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -869,7 +834,6 @@
         ],
         "bpm": 132.10011,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -891,7 +855,6 @@
         ],
         "bpm": 132.45062,
         "scroll": 1.01,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1176,7 +1139,6 @@
         ],
         "bpm": 158.7331,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1205,7 +1167,6 @@
         ],
         "bpm": 156.75128,
         "scroll": 0.98,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1234,7 +1195,6 @@
         ],
         "bpm": 158.95935,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1263,7 +1223,6 @@
         ],
         "bpm": 156.63997,
         "scroll": 0.98,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1292,7 +1251,6 @@
         ],
         "bpm": 159.40701,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1329,7 +1287,6 @@
         ],
         "bpm": 158.84488,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1358,7 +1315,6 @@
         ],
         "bpm": 155.99123,
         "scroll": 0.99,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1395,7 +1351,6 @@
         ],
         "bpm": 157.737,
         "scroll": 0.98,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1424,7 +1379,6 @@
         ],
         "bpm": 158.45726,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1446,7 +1400,6 @@
         ],
         "bpm": 158.01033,
         "scroll": 0.98,
-        "gogo": false,
         "barline": true,
         "notes": []
       },
@@ -1458,7 +1411,6 @@
         ],
         "bpm": 158.2913,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": []
       },
@@ -1470,7 +1422,6 @@
         ],
         "bpm": 157.65701,
         "scroll": 0.98,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1491,7 +1442,6 @@
         ],
         "bpm": 158.26082,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1512,7 +1462,6 @@
         ],
         "bpm": 157.73492,
         "scroll": 0.98,
-        "gogo": false,
         "barline": true,
         "notes": []
       },
@@ -1524,7 +1473,6 @@
         ],
         "bpm": 158.1261,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1545,7 +1493,6 @@
         ],
         "bpm": 157.79134,
         "scroll": 0.98,
-        "gogo": false,
         "barline": true,
         "notes": []
       },
@@ -1557,7 +1504,6 @@
         ],
         "bpm": 158.84488,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1586,7 +1532,6 @@
         ],
         "bpm": 157.0771,
         "scroll": 0.98,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1615,7 +1560,6 @@
         ],
         "bpm": 158.40036,
         "scroll": 0.97,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1644,7 +1588,6 @@
         ],
         "bpm": 157.18904,
         "scroll": 0.98,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -1966,7 +1909,6 @@
         ],
         "bpm": 156.39703,
         "scroll": 0.99,
-        "gogo": false,
         "barline": true,
         "notes": []
       },
@@ -1978,7 +1920,6 @@
         ],
         "bpm": 120.018005,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2007,7 +1948,6 @@
         ],
         "bpm": 120.018005,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2044,7 +1984,6 @@
         ],
         "bpm": 120.018005,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2073,7 +2012,6 @@
         ],
         "bpm": 120.57417,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2110,7 +2048,6 @@
         ],
         "bpm": 119.53525,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2139,7 +2076,6 @@
         ],
         "bpm": 120.04082,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2168,7 +2104,6 @@
         ],
         "bpm": 119.932594,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2205,7 +2140,6 @@
         ],
         "bpm": 119.932594,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2234,7 +2168,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2271,7 +2204,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2300,7 +2232,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2329,7 +2260,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2350,7 +2280,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2371,7 +2300,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2408,7 +2336,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2437,7 +2364,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2474,7 +2400,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2503,7 +2428,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2532,7 +2456,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2561,7 +2484,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2598,7 +2520,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2627,7 +2548,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2664,7 +2584,6 @@
         ],
         "bpm": 120,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2693,7 +2612,6 @@
         ],
         "bpm": 120.83838,
         "scroll": 1,
-        "gogo": false,
         "barline": true,
         "notes": [
           {
@@ -2722,8 +2640,6 @@
         ],
         "bpm": 123.36591,
         "scroll": 0.98,
-        "gogo": false,
-        "barline": false,
         "notes": []
       },
       {
@@ -2962,7 +2878,6 @@
         "bpm": 135.193,
         "scroll": 1.05,
         "gogo": true,
-        "barline": false,
         "notes": [
           {
             "timing": [
@@ -3003,7 +2918,6 @@
         "bpm": 135.193,
         "scroll": 1.05,
         "gogo": true,
-        "barline": false,
         "notes": []
       },
       {
@@ -3027,7 +2941,6 @@
         "bpm": 135.193,
         "scroll": 1.05,
         "gogo": true,
-        "barline": false,
         "notes": []
       },
       {
@@ -3051,7 +2964,6 @@
         "bpm": 135.193,
         "scroll": 1.05,
         "gogo": true,
-        "barline": false,
         "notes": []
       }
     ]

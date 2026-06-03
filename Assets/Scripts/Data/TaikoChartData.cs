@@ -106,12 +106,12 @@ namespace TaikoAssist
     {
         // 小节拍位总数。
         public int beatCount = 16;
-        // 可选覆盖：拍号 / BPM / 滚速 / GOGO / 小节线显示。
+        // 小节状态：拍号 / BPM / 滚速 / GOGO / 小节线显示。
         public int[] timeSignature = null;
-        public float? bpm = null;
-        public float? scroll = null;
-        public bool? gogo = null;
-        public bool? barline = null;
+        public float bpm = 120f;
+        public float scroll = 1f;
+        public bool gogo = false;
+        public bool barline = true;
         // 小节内音符列表。仅保存有音符的位置。
         public List<ChartNote> notes = new();
     }

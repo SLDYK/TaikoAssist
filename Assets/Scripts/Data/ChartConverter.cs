@@ -533,36 +533,28 @@ namespace TaikoAssist
 
             foreach (var m in measures)
             {
-                if (m.bpm.HasValue && !NearlyEqual(m.bpm.Value, lastBpm))
+                if (!NearlyEqual(m.bpm, lastBpm))
                 {
-                    sb.AppendLine($"#BPMCHANGE {FormatFloat(m.bpm.Value)}");
-                    lastBpm = m.bpm.Value;
-                }
-                else if (!m.bpm.HasValue && !float.IsNaN(lastBpm))
-                {
-                    lastBpm = float.NaN;
+                    sb.AppendLine($"#BPMCHANGE {FormatFloat(m.bpm)}");
+                    lastBpm = m.bpm;
                 }
 
-                if (m.scroll.HasValue && !NearlyEqual(m.scroll.Value, lastScroll))
+                if (!NearlyEqual(m.scroll, lastScroll))
                 {
-                    sb.AppendLine($"#SCROLL {FormatFloat(m.scroll.Value)}");
-                    lastScroll = m.scroll.Value;
-                }
-                else if (!m.scroll.HasValue && !float.IsNaN(lastScroll))
-                {
-                    lastScroll = float.NaN;
+                    sb.AppendLine($"#SCROLL {FormatFloat(m.scroll)}");
+                    lastScroll = m.scroll;
                 }
 
-                if (m.gogo.HasValue && m.gogo.Value != lastGogo)
+                if (m.gogo != lastGogo)
                 {
-                    sb.AppendLine(m.gogo.Value ? "#GOGOSTART" : "#GOGOEND");
-                    lastGogo = m.gogo.Value;
+                    sb.AppendLine(m.gogo ? "#GOGOSTART" : "#GOGOEND");
+                    lastGogo = m.gogo;
                 }
 
-                if (m.barline.HasValue && m.barline.Value != lastBarline)
+                if (m.barline != lastBarline)
                 {
-                    sb.AppendLine(m.barline.Value ? "#BARLINEON" : "#BARLINEOFF");
-                    lastBarline = m.barline.Value;
+                    sb.AppendLine(m.barline ? "#BARLINEON" : "#BARLINEOFF");
+                    lastBarline = m.barline;
                 }
 
                 if (m.timeSignature != null)
