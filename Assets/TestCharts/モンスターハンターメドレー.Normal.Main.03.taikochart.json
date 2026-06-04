@@ -5,9 +5,9 @@
     "titleJa": "",
     "subtitle": "--",
     "subtitleJa": "",
-    "bpm": 98.47786,
+    "bpm": 98.47785949707031,
     "wave": "モンスターハンターメドレー.ogg",
-    "offset": -2.506,
+    "offset": -2.5060000250311174,
     "demoStart": 2.49,
     "course": "Normal",
     "level": 5,
@@ -15,8 +15,8 @@
     "branchCondition": "",
     "scoreInit": 740,
     "scoreDiff": 200,
-    "songVol": 100,
-    "seVol": 100,
+    "songVol": 100.0,
+    "seVol": 100.0,
     "maker": "",
     "genre": "ゲームミュージック",
     "extra": {
@@ -24,21 +24,21 @@
     }
   },
   "chart": {
-    "initialBpm": 98.47786,
-    "initialScroll": 1,
+    "initialBpm": 98.47785949707031,
+    "initialScroll": 1.0,
     "initialTimeSignature": [
       4,
       4
     ],
     "measures": [
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 98.47786,
-        "scroll": 1,
+        "bpm": 98.47785949707031,
+        "scroll": 1.0,
         "gogo": true,
         "barline": true,
         "notes": [
@@ -62,18 +62,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 107.48008,
-        "scroll": 0.91,
+        "bpm": 107.4800796508789,
+        "scroll": 0.9100000262260437,
         "gogo": true,
+        "barline": false,
         "notes": [
           {
             "timing": [
-              2,
+              1,
               12,
               24
             ],
@@ -82,13 +83,63 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 103.46647,
-        "scroll": 0.95,
+        "bpm": 103.46646881103516,
+        "scroll": 0.949999988079071,
+        "gogo": true,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              2,
+              0,
+              24
+            ],
+            "type": 3
+          },
+          {
+            "timing": [
+              2,
+              12,
+              24
+            ],
+            "type": 3
+          }
+        ]
+      },
+      {
+        "beatCount": 1,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 104.86466979980469,
+        "scroll": 0.9300000071525574,
+        "gogo": true,
+        "barline": false,
+        "notes": [
+          {
+            "timing": [
+              3,
+              0,
+              24
+            ],
+            "type": 3
+          }
+        ]
+      },
+      {
+        "beatCount": 1,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 104.58300018310547,
+        "scroll": 0.9399999976158142,
         "gogo": true,
         "barline": true,
         "notes": [
@@ -111,67 +162,19 @@
         ]
       },
       {
-        "beatCount": 2,
-        "timeSignature": [
-          2,
-          4
-        ],
-        "bpm": 104.86467,
-        "scroll": 0.93,
-        "gogo": true,
-        "notes": [
-          {
-            "timing": [
-              6,
-              0,
-              24
-            ],
-            "type": 3
-          }
-        ]
-      },
-      {
-        "beatCount": 2,
-        "timeSignature": [
-          2,
-          4
-        ],
-        "bpm": 104.583,
-        "scroll": 0.94,
-        "gogo": true,
-        "barline": true,
-        "notes": [
-          {
-            "timing": [
-              8,
-              0,
-              24
-            ],
-            "type": 3
-          },
-          {
-            "timing": [
-              8,
-              12,
-              24
-            ],
-            "type": 3
-          }
-        ]
-      },
-      {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 104.866875,
-        "scroll": 0.93,
+        "bpm": 104.86687469482422,
+        "scroll": 0.9300000071525574,
         "gogo": true,
+        "barline": false,
         "notes": [
           {
             "timing": [
-              10,
+              5,
               0,
               12
             ],
@@ -180,30 +183,31 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 102.64569,
-        "scroll": 0.95,
+        "bpm": 102.64569091796875,
+        "scroll": 0.949999988079071,
         "gogo": true,
+        "barline": false,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 97.97822,
-        "scroll": 1,
+        "bpm": 97.97821807861328,
+        "scroll": 1.0,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              14,
+              7,
               0,
               12
             ],
@@ -212,29 +216,31 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 106.01381,
-        "scroll": 0.92,
+        "bpm": 106.01380920410156,
+        "scroll": 0.9200000166893005,
         "gogo": true,
+        "barline": false,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 105.43518,
-        "scroll": 0.93,
+        "bpm": 105.4351806640625,
+        "scroll": 0.9300000071525574,
         "gogo": true,
+        "barline": false,
         "notes": [
           {
             "timing": [
-              18,
+              9,
               14,
               24
             ],
@@ -243,19 +249,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 97.97822,
-        "scroll": 1,
+        "bpm": 97.97821807861328,
+        "scroll": 1.0,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              20,
+              10,
               0,
               12
             ],
@@ -264,18 +270,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 108.08824,
-        "scroll": 0.91,
+        "bpm": 108.08824157714844,
+        "scroll": 0.9100000262260437,
         "gogo": true,
+        "barline": false,
         "notes": [
           {
             "timing": [
-              22,
+              11,
               0,
               12
             ],
@@ -285,18 +292,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 101.82798,
-        "scroll": 0.96,
+        "bpm": 101.8279800415039,
+        "scroll": 0.9599999785423279,
         "gogo": true,
+        "barline": false,
         "notes": [
           {
             "timing": [
-              24,
+              12,
               10,
               12
             ],
@@ -305,30 +313,31 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 114.10098,
-        "scroll": 0.86,
+        "bpm": 114.10098266601562,
+        "scroll": 0.8600000143051147,
         "gogo": true,
+        "barline": false,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 104.5912,
-        "scroll": 0.94,
+        "bpm": 104.59120178222656,
+        "scroll": 0.9399999976158142,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              28,
+              14,
               0,
               24
             ],
@@ -336,7 +345,7 @@
           },
           {
             "timing": [
-              28,
+              14,
               12,
               24
             ],
@@ -345,18 +354,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 102.13253,
-        "scroll": 0.96,
+        "bpm": 102.13253021240234,
+        "scroll": 0.9599999785423279,
         "gogo": true,
+        "barline": false,
         "notes": [
           {
             "timing": [
-              30,
+              15,
               0,
               24
             ],
@@ -365,19 +375,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 106.25017,
-        "scroll": 0.92,
+        "bpm": 106.25016784667969,
+        "scroll": 0.9200000166893005,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              32,
+              16,
               0,
               24
             ],
@@ -385,7 +395,7 @@
           },
           {
             "timing": [
-              32,
+              16,
               12,
               24
             ],
@@ -394,18 +404,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 108.033165,
-        "scroll": 0.91,
+        "bpm": 108.03316497802734,
+        "scroll": 0.9100000262260437,
         "gogo": true,
+        "barline": false,
         "notes": [
           {
             "timing": [
-              34,
+              17,
               0,
               24
             ],
@@ -414,19 +425,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 91.17529,
-        "scroll": 1.08,
+        "bpm": 91.17529296875,
+        "scroll": 1.0800000429153442,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              36,
+              18,
               0,
               12
             ],
@@ -435,37 +446,43 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 110.859825,
-        "scroll": 0.88,
+        "bpm": 110.85982513427734,
+        "scroll": 0.8799999952316284,
+        "gogo": false,
+        "barline": false,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 112.13759,
-        "scroll": 0.87,
+        "bpm": 112.13758850097656,
+        "scroll": 0.8700000047683716,
+        "gogo": false,
+        "barline": false,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           1,
           4
         ],
-        "bpm": 102.36777,
-        "scroll": 0.96,
+        "bpm": 102.36776733398438,
+        "scroll": 0.9599999785423279,
+        "gogo": false,
+        "barline": false,
         "notes": [
           {
             "timing": [
-              42,
+              21,
               2,
               12
             ],
@@ -474,18 +491,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 92.171,
-        "scroll": 1.06,
+        "bpm": 92.1709976196289,
+        "scroll": 1.059999942779541,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              44,
+              22,
               0,
               48
             ],
@@ -494,39 +512,43 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 95.902565,
-        "scroll": 0.51,
+        "bpm": 95.9025650024414,
+        "scroll": 0.5099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 94.909225,
-        "scroll": 0.51,
+        "bpm": 94.90922546386719,
+        "scroll": 0.5099999904632568,
+        "gogo": false,
+        "barline": false,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 133.58417,
-        "scroll": 1,
+        "bpm": 133.58416748046875,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              50,
+              25,
               0,
               48
             ],
@@ -536,29 +558,31 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 131.75809,
-        "scroll": 1.01,
+        "bpm": 131.75808715820312,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 132.15306,
-        "scroll": 1.01,
+        "bpm": 132.15306091308594,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              54,
+              27,
               47,
               48
             ],
@@ -567,29 +591,31 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 132.21393,
-        "scroll": 1.01,
+        "bpm": 132.21392822265625,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 131.67625,
-        "scroll": 1.01,
+        "bpm": 131.67625427246094,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              58,
+              29,
               0,
               48
             ],
@@ -597,7 +623,7 @@
           },
           {
             "timing": [
-              58,
+              29,
               24,
               48
             ],
@@ -605,7 +631,7 @@
           },
           {
             "timing": [
-              58,
+              29,
               36,
               48
             ],
@@ -613,7 +639,7 @@
           },
           {
             "timing": [
-              58,
+              29,
               42,
               48
             ],
@@ -622,18 +648,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 132.02278,
-        "scroll": 1.01,
+        "bpm": 132.0227813720703,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              60,
+              30,
               0,
               48
             ],
@@ -641,7 +668,7 @@
           },
           {
             "timing": [
-              60,
+              30,
               24,
               48
             ],
@@ -649,87 +676,7 @@
           },
           {
             "timing": [
-              60,
-              36,
-              48
-            ],
-            "type": 2
-          }
-        ]
-      },
-      {
-        "beatCount": 2,
-        "timeSignature": [
-          4,
-          4
-        ],
-        "bpm": 132.02454,
-        "scroll": 1.01,
-        "barline": true,
-        "notes": [
-          {
-            "timing": [
-              62,
-              0,
-              48
-            ],
-            "type": 1
-          },
-          {
-            "timing": [
-              62,
-              24,
-              48
-            ],
-            "type": 1
-          },
-          {
-            "timing": [
-              62,
-              36,
-              48
-            ],
-            "type": 1
-          },
-          {
-            "timing": [
-              62,
-              42,
-              48
-            ],
-            "type": 1
-          }
-        ]
-      },
-      {
-        "beatCount": 2,
-        "timeSignature": [
-          4,
-          4
-        ],
-        "bpm": 131.86987,
-        "scroll": 1.01,
-        "barline": true,
-        "notes": [
-          {
-            "timing": [
-              64,
-              0,
-              48
-            ],
-            "type": 1
-          },
-          {
-            "timing": [
-              64,
-              24,
-              48
-            ],
-            "type": 2
-          },
-          {
-            "timing": [
-              64,
+              30,
               36,
               48
             ],
@@ -738,18 +685,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 132.80124,
-        "scroll": 1.01,
+        "bpm": 132.0245361328125,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              66,
+              31,
               0,
               48
             ],
@@ -757,7 +705,7 @@
           },
           {
             "timing": [
-              66,
+              31,
               24,
               48
             ],
@@ -765,7 +713,7 @@
           },
           {
             "timing": [
-              66,
+              31,
               36,
               48
             ],
@@ -773,7 +721,7 @@
           },
           {
             "timing": [
-              66,
+              31,
               42,
               48
             ],
@@ -782,18 +730,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 132.0655,
-        "scroll": 1.01,
+        "bpm": 131.869873046875,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              68,
+              32,
               0,
               48
             ],
@@ -801,7 +750,44 @@
           },
           {
             "timing": [
-              68,
+              32,
+              24,
+              48
+            ],
+            "type": 2
+          },
+          {
+            "timing": [
+              32,
+              36,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 1,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.80123901367188,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              33,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              33,
               24,
               48
             ],
@@ -809,7 +795,7 @@
           },
           {
             "timing": [
-              68,
+              33,
               36,
               48
             ],
@@ -817,7 +803,7 @@
           },
           {
             "timing": [
-              68,
+              33,
               42,
               48
             ],
@@ -826,18 +812,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 131.90756,
-        "scroll": 1.01,
+        "bpm": 132.0655059814453,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              70,
+              34,
               0,
               48
             ],
@@ -845,7 +832,7 @@
           },
           {
             "timing": [
-              70,
+              34,
               24,
               48
             ],
@@ -853,7 +840,7 @@
           },
           {
             "timing": [
-              70,
+              34,
               36,
               48
             ],
@@ -861,7 +848,7 @@
           },
           {
             "timing": [
-              70,
+              34,
               42,
               48
             ],
@@ -870,18 +857,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 131.85161,
-        "scroll": 1.01,
+        "bpm": 131.90756225585938,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              72,
+              35,
               0,
               48
             ],
@@ -889,7 +877,7 @@
           },
           {
             "timing": [
-              72,
+              35,
               24,
               48
             ],
@@ -897,7 +885,7 @@
           },
           {
             "timing": [
-              72,
+              35,
               36,
               48
             ],
@@ -905,7 +893,7 @@
           },
           {
             "timing": [
-              72,
+              35,
               42,
               48
             ],
@@ -914,18 +902,64 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 132.0655,
-        "scroll": 1.01,
+        "bpm": 131.8516082763672,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              74,
+              36,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              36,
+              24,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              36,
+              36,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              36,
+              42,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 1,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 132.0655059814453,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              37,
               0,
               48
             ],
@@ -935,18 +969,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 132.02278,
-        "scroll": 1.01,
+        "bpm": 132.0227813720703,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              76,
+              38,
               23,
               48
             ],
@@ -955,18 +990,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 132.10011,
-        "scroll": 1.01,
+        "bpm": 132.10011291503906,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              78,
+              39,
               0,
               48
             ],
@@ -976,18 +1012,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 132.45062,
-        "scroll": 1.01,
+        "bpm": 132.45062255859375,
+        "scroll": 1.0099999904632568,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              80,
+              40,
               23,
               48
             ],
@@ -996,19 +1033,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 154.0476,
-        "scroll": 1,
+        "bpm": 154.047607421875,
+        "scroll": 1.0,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              82,
+              41,
               0,
               48
             ],
@@ -1016,7 +1053,7 @@
           },
           {
             "timing": [
-              82,
+              41,
               36,
               48
             ],
@@ -1024,7 +1061,7 @@
           },
           {
             "timing": [
-              82,
+              41,
               42,
               48
             ],
@@ -1033,19 +1070,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 157.40636,
-        "scroll": 0.98,
+        "bpm": 157.40635681152344,
+        "scroll": 0.9800000190734863,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              84,
+              42,
               0,
               48
             ],
@@ -1053,7 +1090,7 @@
           },
           {
             "timing": [
-              84,
+              42,
               12,
               48
             ],
@@ -1061,7 +1098,7 @@
           },
           {
             "timing": [
-              84,
+              42,
               18,
               48
             ],
@@ -1069,7 +1106,7 @@
           },
           {
             "timing": [
-              84,
+              42,
               24,
               48
             ],
@@ -1078,19 +1115,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 160.20335,
-        "scroll": 0.96,
+        "bpm": 160.20335388183594,
+        "scroll": 0.9599999785423279,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              86,
+              43,
               0,
               48
             ],
@@ -1098,7 +1135,7 @@
           },
           {
             "timing": [
-              86,
+              43,
               36,
               48
             ],
@@ -1106,7 +1143,7 @@
           },
           {
             "timing": [
-              86,
+              43,
               42,
               48
             ],
@@ -1115,19 +1152,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 155.99123,
-        "scroll": 0.99,
+        "bpm": 155.99122619628906,
+        "scroll": 0.9900000095367432,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              88,
+              44,
               0,
               48
             ],
@@ -1135,7 +1172,7 @@
           },
           {
             "timing": [
-              88,
+              44,
               12,
               48
             ],
@@ -1143,7 +1180,7 @@
           },
           {
             "timing": [
-              88,
+              44,
               18,
               48
             ],
@@ -1151,7 +1188,7 @@
           },
           {
             "timing": [
-              88,
+              44,
               24,
               48
             ],
@@ -1160,19 +1197,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 159.74654,
-        "scroll": 0.96,
+        "bpm": 159.7465362548828,
+        "scroll": 0.9599999785423279,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              90,
+              45,
               0,
               48
             ],
@@ -1180,7 +1217,7 @@
           },
           {
             "timing": [
-              90,
+              45,
               36,
               48
             ],
@@ -1188,7 +1225,7 @@
           },
           {
             "timing": [
-              90,
+              45,
               42,
               48
             ],
@@ -1197,19 +1234,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.40036,
-        "scroll": 0.97,
+        "bpm": 158.40036010742188,
+        "scroll": 0.9700000286102295,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              92,
+              46,
               0,
               48
             ],
@@ -1217,7 +1254,7 @@
           },
           {
             "timing": [
-              92,
+              46,
               12,
               48
             ],
@@ -1225,7 +1262,7 @@
           },
           {
             "timing": [
-              92,
+              46,
               18,
               48
             ],
@@ -1233,7 +1270,7 @@
           },
           {
             "timing": [
-              92,
+              46,
               24,
               48
             ],
@@ -1242,19 +1279,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.40036,
-        "scroll": 0.97,
+        "bpm": 158.40036010742188,
+        "scroll": 0.9700000286102295,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              94,
+              47,
               0,
               48
             ],
@@ -1262,7 +1299,7 @@
           },
           {
             "timing": [
-              94,
+              47,
               36,
               48
             ],
@@ -1270,7 +1307,7 @@
           },
           {
             "timing": [
-              94,
+              47,
               42,
               48
             ],
@@ -1279,19 +1316,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 155.34785,
-        "scroll": 0.99,
+        "bpm": 155.3478546142578,
+        "scroll": 0.9900000095367432,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              96,
+              48,
               0,
               48
             ],
@@ -1299,7 +1336,7 @@
           },
           {
             "timing": [
-              96,
+              48,
               12,
               48
             ],
@@ -1307,7 +1344,7 @@
           },
           {
             "timing": [
-              96,
+              48,
               18,
               48
             ],
@@ -1315,7 +1352,7 @@
           },
           {
             "timing": [
-              96,
+              48,
               24,
               48
             ],
@@ -1324,18 +1361,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.7331,
-        "scroll": 0.97,
+        "bpm": 158.73309326171875,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              98,
+              49,
               0,
               48
             ],
@@ -1343,7 +1381,7 @@
           },
           {
             "timing": [
-              98,
+              49,
               12,
               48
             ],
@@ -1351,7 +1389,7 @@
           },
           {
             "timing": [
-              98,
+              49,
               24,
               48
             ],
@@ -1360,18 +1398,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 156.75128,
-        "scroll": 0.98,
+        "bpm": 156.75128173828125,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              100,
+              50,
               0,
               48
             ],
@@ -1379,7 +1418,7 @@
           },
           {
             "timing": [
-              100,
+              50,
               12,
               48
             ],
@@ -1387,7 +1426,7 @@
           },
           {
             "timing": [
-              100,
+              50,
               18,
               48
             ],
@@ -1395,7 +1434,7 @@
           },
           {
             "timing": [
-              100,
+              50,
               24,
               48
             ],
@@ -1404,18 +1443,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.95935,
-        "scroll": 0.97,
+        "bpm": 158.9593505859375,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              102,
+              51,
               0,
               48
             ],
@@ -1423,7 +1463,7 @@
           },
           {
             "timing": [
-              102,
+              51,
               12,
               48
             ],
@@ -1431,7 +1471,7 @@
           },
           {
             "timing": [
-              102,
+              51,
               24,
               48
             ],
@@ -1440,18 +1480,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 156.63997,
-        "scroll": 0.98,
+        "bpm": 156.6399688720703,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              104,
+              52,
               0,
               48
             ],
@@ -1459,7 +1500,7 @@
           },
           {
             "timing": [
-              104,
+              52,
               12,
               48
             ],
@@ -1467,7 +1508,7 @@
           },
           {
             "timing": [
-              104,
+              52,
               18,
               48
             ],
@@ -1475,7 +1516,7 @@
           },
           {
             "timing": [
-              104,
+              52,
               24,
               48
             ],
@@ -1484,18 +1525,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 159.40701,
-        "scroll": 0.97,
+        "bpm": 159.40701293945312,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              106,
+              53,
               0,
               48
             ],
@@ -1503,7 +1545,7 @@
           },
           {
             "timing": [
-              106,
+              53,
               12,
               48
             ],
@@ -1511,7 +1553,7 @@
           },
           {
             "timing": [
-              106,
+              53,
               24,
               48
             ],
@@ -1520,18 +1562,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.84488,
-        "scroll": 0.97,
+        "bpm": 158.84487915039062,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              108,
+              54,
               0,
               48
             ],
@@ -1539,7 +1582,7 @@
           },
           {
             "timing": [
-              108,
+              54,
               12,
               48
             ],
@@ -1547,7 +1590,7 @@
           },
           {
             "timing": [
-              108,
+              54,
               18,
               48
             ],
@@ -1555,7 +1598,7 @@
           },
           {
             "timing": [
-              108,
+              54,
               24,
               48
             ],
@@ -1564,18 +1607,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 155.99123,
-        "scroll": 0.99,
+        "bpm": 155.99122619628906,
+        "scroll": 0.9900000095367432,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              110,
+              55,
               0,
               48
             ],
@@ -1583,7 +1627,7 @@
           },
           {
             "timing": [
-              110,
+              55,
               12,
               48
             ],
@@ -1591,7 +1635,7 @@
           },
           {
             "timing": [
-              110,
+              55,
               24,
               48
             ],
@@ -1600,18 +1644,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 157.737,
-        "scroll": 0.98,
+        "bpm": 157.73699951171875,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              112,
+              56,
               0,
               48
             ],
@@ -1619,7 +1664,7 @@
           },
           {
             "timing": [
-              112,
+              56,
               12,
               48
             ],
@@ -1627,7 +1672,7 @@
           },
           {
             "timing": [
-              112,
+              56,
               18,
               48
             ],
@@ -1635,7 +1680,7 @@
           },
           {
             "timing": [
-              112,
+              56,
               24,
               48
             ],
@@ -1644,18 +1689,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.45726,
-        "scroll": 0.97,
+        "bpm": 158.45726013183594,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              114,
+              57,
               0,
               48
             ],
@@ -1665,40 +1711,43 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.01033,
-        "scroll": 0.98,
+        "bpm": 158.0103302001953,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.2913,
-        "scroll": 0.97,
+        "bpm": 158.2913055419922,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 157.65701,
-        "scroll": 0.98,
+        "bpm": 157.65701293945312,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              120,
+              60,
               0,
               48
             ],
@@ -1707,18 +1756,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.26082,
-        "scroll": 0.97,
+        "bpm": 158.2608184814453,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              122,
+              61,
               0,
               48
             ],
@@ -1727,29 +1777,31 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 157.73492,
-        "scroll": 0.98,
+        "bpm": 157.73492431640625,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.1261,
-        "scroll": 0.97,
+        "bpm": 158.1260986328125,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              126,
+              63,
               47,
               48
             ],
@@ -1758,29 +1810,31 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 157.79134,
-        "scroll": 0.98,
+        "bpm": 157.7913360595703,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.84488,
-        "scroll": 0.97,
+        "bpm": 158.84487915039062,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              130,
+              65,
               0,
               48
             ],
@@ -1788,7 +1842,7 @@
           },
           {
             "timing": [
-              130,
+              65,
               24,
               48
             ],
@@ -1796,7 +1850,7 @@
           },
           {
             "timing": [
-              130,
+              65,
               36,
               48
             ],
@@ -1805,18 +1859,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 157.0771,
-        "scroll": 0.98,
+        "bpm": 157.0771026611328,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              132,
+              66,
               0,
               48
             ],
@@ -1824,7 +1879,7 @@
           },
           {
             "timing": [
-              132,
+              66,
               24,
               48
             ],
@@ -1833,18 +1888,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.40036,
-        "scroll": 0.97,
+        "bpm": 158.40036010742188,
+        "scroll": 0.9700000286102295,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              134,
+              67,
               0,
               48
             ],
@@ -1852,7 +1908,7 @@
           },
           {
             "timing": [
-              134,
+              67,
               24,
               48
             ],
@@ -1860,7 +1916,7 @@
           },
           {
             "timing": [
-              134,
+              67,
               36,
               48
             ],
@@ -1869,18 +1925,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 157.18904,
-        "scroll": 0.98,
+        "bpm": 157.1890411376953,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              136,
+              68,
               0,
               48
             ],
@@ -1888,7 +1945,7 @@
           },
           {
             "timing": [
-              136,
+              68,
               24,
               48
             ],
@@ -1897,19 +1954,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.51419,
-        "scroll": 0.97,
+        "bpm": 158.51419067382812,
+        "scroll": 0.9700000286102295,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              138,
+              69,
               0,
               48
             ],
@@ -1917,7 +1974,7 @@
           },
           {
             "timing": [
-              138,
+              69,
               24,
               48
             ],
@@ -1925,7 +1982,7 @@
           },
           {
             "timing": [
-              138,
+              69,
               36,
               48
             ],
@@ -1934,19 +1991,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.28922,
-        "scroll": 0.97,
+        "bpm": 158.28921508789062,
+        "scroll": 0.9700000286102295,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              140,
+              70,
               0,
               48
             ],
@@ -1954,7 +2011,7 @@
           },
           {
             "timing": [
-              140,
+              70,
               24,
               48
             ],
@@ -1962,7 +2019,7 @@
           },
           {
             "timing": [
-              140,
+              70,
               30,
               48
             ],
@@ -1970,7 +2027,7 @@
           },
           {
             "timing": [
-              140,
+              70,
               36,
               48
             ],
@@ -1979,19 +2036,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 159.40955,
-        "scroll": 0.97,
+        "bpm": 159.4095458984375,
+        "scroll": 0.9700000286102295,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              142,
+              71,
               0,
               48
             ],
@@ -1999,7 +2056,7 @@
           },
           {
             "timing": [
-              142,
+              71,
               24,
               48
             ],
@@ -2007,7 +2064,7 @@
           },
           {
             "timing": [
-              142,
+              71,
               36,
               48
             ],
@@ -2016,19 +2073,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 156.20526,
-        "scroll": 0.99,
+        "bpm": 156.20526123046875,
+        "scroll": 0.9900000095367432,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              144,
+              72,
               0,
               48
             ],
@@ -2036,7 +2093,7 @@
           },
           {
             "timing": [
-              144,
+              72,
               35,
               48
             ],
@@ -2045,19 +2102,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.18738,
-        "scroll": 0.97,
+        "bpm": 158.1873779296875,
+        "scroll": 0.9700000286102295,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              146,
+              73,
               0,
               48
             ],
@@ -2065,7 +2122,7 @@
           },
           {
             "timing": [
-              146,
+              73,
               24,
               48
             ],
@@ -2073,7 +2130,7 @@
           },
           {
             "timing": [
-              146,
+              73,
               36,
               48
             ],
@@ -2082,19 +2139,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 157.7088,
-        "scroll": 0.98,
+        "bpm": 157.70880126953125,
+        "scroll": 0.9800000190734863,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              148,
+              74,
               0,
               48
             ],
@@ -2102,7 +2159,7 @@
           },
           {
             "timing": [
-              148,
+              74,
               24,
               48
             ],
@@ -2110,7 +2167,7 @@
           },
           {
             "timing": [
-              148,
+              74,
               30,
               48
             ],
@@ -2118,7 +2175,7 @@
           },
           {
             "timing": [
-              148,
+              74,
               36,
               48
             ],
@@ -2127,19 +2184,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.20615,
-        "scroll": 0.97,
+        "bpm": 158.20614624023438,
+        "scroll": 0.9700000286102295,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              150,
+              75,
               0,
               48
             ],
@@ -2147,7 +2204,7 @@
           },
           {
             "timing": [
-              150,
+              75,
               24,
               48
             ],
@@ -2155,7 +2212,7 @@
           },
           {
             "timing": [
-              150,
+              75,
               36,
               48
             ],
@@ -2164,19 +2221,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 157.51422,
-        "scroll": 0.98,
+        "bpm": 157.51422119140625,
+        "scroll": 0.9800000190734863,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              152,
+              76,
               0,
               48
             ],
@@ -2184,7 +2241,7 @@
           },
           {
             "timing": [
-              152,
+              76,
               35,
               48
             ],
@@ -2193,19 +2250,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 158.51419,
-        "scroll": 0.97,
+        "bpm": 158.51419067382812,
+        "scroll": 0.9700000286102295,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              154,
+              77,
               0,
               48
             ],
@@ -2213,7 +2270,7 @@
           },
           {
             "timing": [
-              154,
+              77,
               35,
               48
             ],
@@ -2222,29 +2279,31 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 156.39703,
-        "scroll": 0.99,
+        "bpm": 156.39703369140625,
+        "scroll": 0.9900000095367432,
+        "gogo": false,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 120.018005,
-        "scroll": 1,
+        "bpm": 120.01800537109375,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              158,
+              79,
               0,
               24
             ],
@@ -2252,7 +2311,7 @@
           },
           {
             "timing": [
-              158,
+              79,
               12,
               24
             ],
@@ -2261,18 +2320,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120.018005,
-        "scroll": 1,
+        "bpm": 120.01800537109375,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              160,
+              80,
               0,
               48
             ],
@@ -2280,7 +2340,7 @@
           },
           {
             "timing": [
-              160,
+              80,
               12,
               48
             ],
@@ -2288,7 +2348,7 @@
           },
           {
             "timing": [
-              160,
+              80,
               24,
               48
             ],
@@ -2297,18 +2357,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120.018005,
-        "scroll": 1,
+        "bpm": 120.01800537109375,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              162,
+              81,
               0,
               48
             ],
@@ -2316,7 +2377,7 @@
           },
           {
             "timing": [
-              162,
+              81,
               24,
               48
             ],
@@ -2325,18 +2386,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120.57417,
-        "scroll": 1,
+        "bpm": 120.57417297363281,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              164,
+              82,
               0,
               48
             ],
@@ -2344,7 +2406,7 @@
           },
           {
             "timing": [
-              164,
+              82,
               12,
               48
             ],
@@ -2352,7 +2414,7 @@
           },
           {
             "timing": [
-              164,
+              82,
               24,
               48
             ],
@@ -2361,18 +2423,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 119.53525,
-        "scroll": 1,
+        "bpm": 119.53524780273438,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              166,
+              83,
               0,
               48
             ],
@@ -2380,7 +2443,7 @@
           },
           {
             "timing": [
-              166,
+              83,
               24,
               48
             ],
@@ -2389,18 +2452,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120.04082,
-        "scroll": 1,
+        "bpm": 120.04081726074219,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              168,
+              84,
               0,
               48
             ],
@@ -2408,7 +2472,7 @@
           },
           {
             "timing": [
-              168,
+              84,
               12,
               48
             ],
@@ -2416,7 +2480,7 @@
           },
           {
             "timing": [
-              168,
+              84,
               24,
               48
             ],
@@ -2425,18 +2489,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 119.932594,
-        "scroll": 1,
+        "bpm": 119.9325942993164,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              170,
+              85,
               0,
               48
             ],
@@ -2444,7 +2509,7 @@
           },
           {
             "timing": [
-              170,
+              85,
               12,
               48
             ],
@@ -2452,7 +2517,7 @@
           },
           {
             "timing": [
-              170,
+              85,
               24,
               48
             ],
@@ -2461,18 +2526,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 119.932594,
-        "scroll": 1,
+        "bpm": 119.9325942993164,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              172,
+              86,
               0,
               48
             ],
@@ -2480,7 +2546,7 @@
           },
           {
             "timing": [
-              172,
+              86,
               24,
               48
             ],
@@ -2489,18 +2555,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              174,
+              87,
               0,
               48
             ],
@@ -2508,7 +2575,7 @@
           },
           {
             "timing": [
-              174,
+              87,
               12,
               48
             ],
@@ -2516,7 +2583,7 @@
           },
           {
             "timing": [
-              174,
+              87,
               24,
               48
             ],
@@ -2525,18 +2592,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              176,
+              88,
               0,
               48
             ],
@@ -2544,7 +2612,7 @@
           },
           {
             "timing": [
-              176,
+              88,
               12,
               48
             ],
@@ -2552,7 +2620,7 @@
           },
           {
             "timing": [
-              176,
+              88,
               24,
               48
             ],
@@ -2561,18 +2629,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              178,
+              89,
               0,
               48
             ],
@@ -2580,7 +2649,7 @@
           },
           {
             "timing": [
-              178,
+              89,
               12,
               48
             ],
@@ -2588,7 +2657,7 @@
           },
           {
             "timing": [
-              178,
+              89,
               24,
               48
             ],
@@ -2597,18 +2666,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              180,
+              90,
               0,
               48
             ],
@@ -2617,18 +2687,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              182,
+              91,
               24,
               48
             ],
@@ -2637,18 +2708,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              184,
+              92,
               0,
               48
             ],
@@ -2656,7 +2728,7 @@
           },
           {
             "timing": [
-              184,
+              92,
               12,
               48
             ],
@@ -2664,7 +2736,7 @@
           },
           {
             "timing": [
-              184,
+              92,
               24,
               48
             ],
@@ -2673,18 +2745,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              186,
+              93,
               0,
               48
             ],
@@ -2692,7 +2765,7 @@
           },
           {
             "timing": [
-              186,
+              93,
               12,
               48
             ],
@@ -2700,79 +2773,7 @@
           },
           {
             "timing": [
-              186,
-              24,
-              48
-            ],
-            "type": 2
-          }
-        ]
-      },
-      {
-        "beatCount": 2,
-        "timeSignature": [
-          4,
-          4
-        ],
-        "bpm": 120,
-        "scroll": 1,
-        "barline": true,
-        "notes": [
-          {
-            "timing": [
-              188,
-              0,
-              48
-            ],
-            "type": 1
-          },
-          {
-            "timing": [
-              188,
-              12,
-              48
-            ],
-            "type": 1
-          },
-          {
-            "timing": [
-              188,
-              24,
-              48
-            ],
-            "type": 1
-          }
-        ]
-      },
-      {
-        "beatCount": 2,
-        "timeSignature": [
-          4,
-          4
-        ],
-        "bpm": 120,
-        "scroll": 1,
-        "barline": true,
-        "notes": [
-          {
-            "timing": [
-              190,
-              0,
-              48
-            ],
-            "type": 1
-          },
-          {
-            "timing": [
-              190,
-              12,
-              48
-            ],
-            "type": 1
-          },
-          {
-            "timing": [
-              190,
+              93,
               24,
               48
             ],
@@ -2781,18 +2782,93 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              192,
+              94,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              94,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              94,
+              24,
+              48
+            ],
+            "type": 1
+          }
+        ]
+      },
+      {
+        "beatCount": 1,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              95,
+              0,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              95,
+              12,
+              48
+            ],
+            "type": 1
+          },
+          {
+            "timing": [
+              95,
+              24,
+              48
+            ],
+            "type": 2
+          }
+        ]
+      },
+      {
+        "beatCount": 1,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
+        "barline": true,
+        "notes": [
+          {
+            "timing": [
+              96,
               0,
               48
             ],
@@ -2800,7 +2876,7 @@
           },
           {
             "timing": [
-              192,
+              96,
               35,
               48
             ],
@@ -2809,18 +2885,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              194,
+              97,
               0,
               48
             ],
@@ -2828,7 +2905,7 @@
           },
           {
             "timing": [
-              194,
+              97,
               35,
               48
             ],
@@ -2837,18 +2914,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              196,
+              98,
               0,
               48
             ],
@@ -2856,7 +2934,7 @@
           },
           {
             "timing": [
-              196,
+              98,
               12,
               48
             ],
@@ -2864,7 +2942,7 @@
           },
           {
             "timing": [
-              196,
+              98,
               24,
               48
             ],
@@ -2873,18 +2951,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              198,
+              99,
               0,
               48
             ],
@@ -2892,7 +2971,7 @@
           },
           {
             "timing": [
-              198,
+              99,
               12,
               48
             ],
@@ -2900,7 +2979,7 @@
           },
           {
             "timing": [
-              198,
+              99,
               24,
               48
             ],
@@ -2909,18 +2988,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              200,
+              100,
               0,
               48
             ],
@@ -2928,7 +3008,7 @@
           },
           {
             "timing": [
-              200,
+              100,
               12,
               48
             ],
@@ -2936,7 +3016,7 @@
           },
           {
             "timing": [
-              200,
+              100,
               24,
               48
             ],
@@ -2945,18 +3025,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120,
-        "scroll": 1,
+        "bpm": 120.0,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              202,
+              101,
               0,
               48
             ],
@@ -2964,7 +3045,7 @@
           },
           {
             "timing": [
-              202,
+              101,
               12,
               48
             ],
@@ -2972,7 +3053,7 @@
           },
           {
             "timing": [
-              202,
+              101,
               24,
               48
             ],
@@ -2981,18 +3062,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 120.83838,
-        "scroll": 1,
+        "bpm": 120.83837890625,
+        "scroll": 1.0,
+        "gogo": false,
         "barline": true,
         "notes": [
           {
             "timing": [
-              204,
+              102,
               0,
               48
             ],
@@ -3000,7 +3082,7 @@
           },
           {
             "timing": [
-              204,
+              102,
               12,
               48
             ],
@@ -3008,7 +3090,7 @@
           },
           {
             "timing": [
-              204,
+              102,
               24,
               48
             ],
@@ -3017,29 +3099,31 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           5,
           8
         ],
-        "bpm": 123.36591,
-        "scroll": 0.98,
+        "bpm": 123.36591339111328,
+        "scroll": 0.9800000190734863,
+        "gogo": false,
+        "barline": false,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 142.51477,
-        "scroll": 1,
+        "bpm": 142.5147705078125,
+        "scroll": 1.0,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              208,
+              104,
               0,
               48
             ],
@@ -3047,7 +3131,7 @@
           },
           {
             "timing": [
-              208,
+              104,
               12,
               48
             ],
@@ -3055,7 +3139,7 @@
           },
           {
             "timing": [
-              208,
+              104,
               24,
               48
             ],
@@ -3063,7 +3147,7 @@
           },
           {
             "timing": [
-              208,
+              104,
               36,
               48
             ],
@@ -3072,19 +3156,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 142.04243,
-        "scroll": 1,
+        "bpm": 142.0424346923828,
+        "scroll": 1.0,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              210,
+              105,
               0,
               48
             ],
@@ -3092,7 +3176,7 @@
           },
           {
             "timing": [
-              210,
+              105,
               12,
               48
             ],
@@ -3100,7 +3184,7 @@
           },
           {
             "timing": [
-              210,
+              105,
               36,
               48
             ],
@@ -3109,19 +3193,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 142.89558,
-        "scroll": 1,
+        "bpm": 142.8955841064453,
+        "scroll": 1.0,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              212,
+              106,
               0,
               48
             ],
@@ -3129,7 +3213,7 @@
           },
           {
             "timing": [
-              212,
+              106,
               12,
               48
             ],
@@ -3137,7 +3221,7 @@
           },
           {
             "timing": [
-              212,
+              106,
               36,
               48
             ],
@@ -3146,19 +3230,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 142.40146,
-        "scroll": 1,
+        "bpm": 142.40145874023438,
+        "scroll": 1.0,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              214,
+              107,
               0,
               48
             ],
@@ -3166,7 +3250,7 @@
           },
           {
             "timing": [
-              214,
+              107,
               6,
               48
             ],
@@ -3174,7 +3258,7 @@
           },
           {
             "timing": [
-              214,
+              107,
               12,
               48
             ],
@@ -3182,7 +3266,7 @@
           },
           {
             "timing": [
-              214,
+              107,
               24,
               48
             ],
@@ -3190,7 +3274,7 @@
           },
           {
             "timing": [
-              214,
+              107,
               30,
               48
             ],
@@ -3198,7 +3282,7 @@
           },
           {
             "timing": [
-              214,
+              107,
               36,
               48
             ],
@@ -3207,19 +3291,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 140.87384,
-        "scroll": 1.01,
+        "bpm": 140.87384033203125,
+        "scroll": 1.0099999904632568,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              216,
+              108,
               0,
               48
             ],
@@ -3227,7 +3311,7 @@
           },
           {
             "timing": [
-              216,
+              108,
               12,
               48
             ],
@@ -3235,7 +3319,7 @@
           },
           {
             "timing": [
-              216,
+              108,
               18,
               48
             ],
@@ -3243,7 +3327,7 @@
           },
           {
             "timing": [
-              216,
+              108,
               24,
               48
             ],
@@ -3252,19 +3336,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           5,
           8
         ],
-        "bpm": 135.4145,
-        "scroll": 1.05,
+        "bpm": 135.4145050048828,
+        "scroll": 1.0499999523162842,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              218,
+              109,
               0,
               30
             ],
@@ -3273,19 +3357,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 144.75621,
-        "scroll": 0.98,
+        "bpm": 144.75621032714844,
+        "scroll": 0.9800000190734863,
         "gogo": true,
         "barline": true,
         "notes": [
           {
             "timing": [
-              220,
+              110,
               0,
               24
             ],
@@ -3293,7 +3377,7 @@
           },
           {
             "timing": [
-              220,
+              110,
               12,
               24
             ],
@@ -3302,18 +3386,19 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 135.193,
-        "scroll": 1.05,
+        "bpm": 135.1929931640625,
+        "scroll": 1.0499999523162842,
         "gogo": true,
+        "barline": false,
         "notes": [
           {
             "timing": [
-              222,
+              111,
               0,
               24
             ],
@@ -3321,7 +3406,7 @@
           },
           {
             "timing": [
-              222,
+              111,
               12,
               24
             ],
@@ -3330,72 +3415,75 @@
         ]
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 135.193,
-        "scroll": 1.05,
+        "bpm": 135.1929931640625,
+        "scroll": 1.0499999523162842,
         "gogo": true,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 135.193,
-        "scroll": 1.05,
+        "bpm": 135.1929931640625,
+        "scroll": 1.0499999523162842,
         "gogo": true,
+        "barline": false,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
         "timeSignature": [
           2,
           4
         ],
-        "bpm": 135.193,
-        "scroll": 1.05,
-        "gogo": true,
-        "barline": true,
-        "notes": []
-      },
-      {
-        "beatCount": 2,
-        "timeSignature": [
-          2,
-          4
-        ],
-        "bpm": 135.193,
-        "scroll": 1.05,
-        "gogo": true,
-        "notes": []
-      },
-      {
-        "beatCount": 2,
-        "timeSignature": [
-          2,
-          4
-        ],
-        "bpm": 135.193,
-        "scroll": 1.05,
+        "bpm": 135.1929931640625,
+        "scroll": 1.0499999523162842,
         "gogo": true,
         "barline": true,
         "notes": []
       },
       {
-        "beatCount": 2,
+        "beatCount": 1,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 135.1929931640625,
+        "scroll": 1.0499999523162842,
+        "gogo": true,
+        "barline": false,
+        "notes": []
+      },
+      {
+        "beatCount": 1,
+        "timeSignature": [
+          2,
+          4
+        ],
+        "bpm": 135.1929931640625,
+        "scroll": 1.0499999523162842,
+        "gogo": true,
+        "barline": true,
+        "notes": []
+      },
+      {
+        "beatCount": 1,
         "timeSignature": [
           4,
           4
         ],
-        "bpm": 135.193,
-        "scroll": 1.05,
+        "bpm": 135.1929931640625,
+        "scroll": 1.0499999523162842,
         "gogo": true,
+        "barline": false,
         "notes": []
       }
     ]

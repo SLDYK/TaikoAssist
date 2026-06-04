@@ -39,15 +39,26 @@ namespace TaikoAssist
             {NoteType.Kusudama,   '9'},
         };
 
-        // 分支里谱常见的 Ad-lib 字符映射。
-        private static readonly Dictionary<char, (NoteType type, bool isAdlib)> CharToAdlib = new()
+        // 分支里谱常见的字母扩展音符映射。
+        private static readonly Dictionary<char, NoteType> CharToAdlib = new()
         {
-            {'A', (NoteType.Don,    true)},
-            {'B', (NoteType.Kat,    true)},
-            {'C', (NoteType.BigDon, true)},
-            {'D', (NoteType.BigKat, true)},
-            {'F', (NoteType.Balloon, true)},
-            {'G', (NoteType.BigBalloon, true)},
+            {'A', NoteType.HandDon},
+            {'B', NoteType.HandKat},
+            {'C', NoteType.Mine},
+            {'D', NoteType.Fuse},
+            {'F', NoteType.Adlib},
+            {'G', NoteType.Kadon},
+        };
+
+        // 字母扩展音符 → TJA 字符（回写用）。
+        private static readonly Dictionary<NoteType, char> AdlibToChar = new()
+        {
+            {NoteType.HandDon, 'A'},
+            {NoteType.HandKat, 'B'},
+            {NoteType.Mine,    'C'},
+            {NoteType.Fuse,    'D'},
+            {NoteType.Adlib,   'F'},
+            {NoteType.Kadon,   'G'},
         };
 
 
@@ -181,23 +192,23 @@ namespace TaikoAssist
 
             switch (key)
             {
-                case "TITLE":       meta.title = value; break;
-                case "TITLEJA":     meta.titleJa = value; break;
-                case "SUBTITLE":    meta.subtitle = value; break;
-                case "SUBTITLEJA":  meta.subtitleJa = value; break;
-                case "BPM":         meta.bpm = ParseFloat(value, 120f); break;
-                case "WAVE":        meta.wave = value; break;
-                case "OFFSET":      meta.offset = ParseFloat(value, 0f); break;
-                case "DEMOSTART":   meta.demoStart = ParseFloat(value, 0f); break;
-                case "COURSE":      meta.course = value; break;
-                case "LEVEL":       meta.level = ParseInt(value, 1); break;
-                case "BALLOON":     meta.parsedBalloonHits = ParseIntList(value); break;
-                case "SCOREINIT":   meta.scoreInit = ParseInt(value, 0); break;
-                case "SCOREDIFF":   meta.scoreDiff = ParseInt(value, 0); break;
-                case "SONGVOL":     meta.songVol = ParseFloat(value, 1f); break;
-                case "SEVOL":       meta.seVol = ParseFloat(value, 1f); break;
-                case "MAKER":       meta.maker = value; break;
-                case "GENRE":       meta.genre = value; break;
+                case "TITLE": meta.title = value; break;
+                case "TITLEJA": meta.titleJa = value; break;
+                case "SUBTITLE": meta.subtitle = value; break;
+                case "SUBTITLEJA": meta.subtitleJa = value; break;
+                case "BPM": meta.bpm = ParseFloat(value, 120f); break;
+                case "WAVE": meta.wave = value; break;
+                case "OFFSET": meta.offset = ParseFloat(value, 0f); break;
+                case "DEMOSTART": meta.demoStart = ParseFloat(value, 0f); break;
+                case "COURSE": meta.course = value; break;
+                case "LEVEL": meta.level = ParseInt(value, 1); break;
+                case "BALLOON": meta.parsedBalloonHits = ParseIntList(value); break;
+                case "SCOREINIT": meta.scoreInit = ParseInt(value, 0); break;
+                case "SCOREDIFF": meta.scoreDiff = ParseInt(value, 0); break;
+                case "SONGVOL": meta.songVol = ParseFloat(value, 1f); break;
+                case "SEVOL": meta.seVol = ParseFloat(value, 1f); break;
+                case "MAKER": meta.maker = value; break;
+                case "GENRE": meta.genre = value; break;
                 default:
                     meta.extra[key] = value;
                     break;
@@ -452,19 +463,17 @@ namespace TaikoAssist
                             timing = new List<int> { measureBaseBeat + beat, sub, segment.Length },
                             type = noteType,
                             balloonHitsRequired = balloonHitsRequired,
-                            isAdlib = false,
                         });
                     }
-                    else if (CharToAdlib.TryGetValue(ch, out var adlib))
+                    else if (CharToAdlib.TryGetValue(ch, out NoteType adlibType))
                     {
-                        if (adlib.type == NoteType.Rest) continue;
-                        int balloonHitsRequired = TryConsumeBalloonHits(adlib.type, balloonHits, ref balloonHitCursor);
+                        if (adlibType == NoteType.Rest) continue;
+                        int balloonHitsRequired = TryConsumeBalloonHits(adlibType, balloonHits, ref balloonHitCursor);
                         measure.notes.Add(new ChartNote
                         {
                             timing = new List<int> { measureBaseBeat + beat, sub, segment.Length },
-                            type = adlib.type,
+                            type = adlibType,
                             balloonHitsRequired = balloonHitsRequired,
-                            isAdlib = adlib.isAdlib,
                         });
                     }
                 }
@@ -582,18 +591,9 @@ namespace TaikoAssist
                 if (beatIndex < 0 || beatIndex >= measure.beatCount) continue;
 
                 char ch;
-                if (note.isAdlib)
+                if (AdlibToChar.TryGetValue(note.type, out ch))
                 {
-                    ch = note.type switch
-                    {
-                        NoteType.Don        => 'A',
-                        NoteType.Kat        => 'B',
-                        NoteType.BigDon     => 'C',
-                        NoteType.BigKat     => 'D',
-                        NoteType.Balloon    => 'F',
-                        NoteType.BigBalloon => 'G',
-                        _ => NoteTypeToChar.GetValueOrDefault(note.type, '0'),
-                    };
+                    // 已是字母扩展音符，直接使用对应字符。
                 }
                 else
                 {

@@ -126,11 +126,10 @@ namespace TaikoAssist
         public NoteType type;
         // 气球/风船类音符的目标连打次数（仅 5/6/9 有效）。
         public int balloonHitsRequired = 0;
-        // 是否为 Ad-lib（A/B/C/D/F/G）来源音符。
-        public bool isAdlib = false;
     }
 
-    // 音符类型，数值与 TJA 字符 0-9 对应。
+    // 音符类型，数值与 TJA 字符对应。
+    // 0-9 为标准音符，A-I 为扩展字母音符。
     public enum NoteType
     {
         Rest = 0,
@@ -143,6 +142,13 @@ namespace TaikoAssist
         BalloonEnd = 7,
         RollEnd = 8,
         Kusudama = 9,
+        // --- 字母扩展音符 ---
+        HandDon = 10,   // A: 双人手拍子·红（大ドン + 手拍子属性）
+        HandKat = 11,   // B: 双人手拍子·蓝（大カッ + 手拍子属性）
+        Mine = 12,      // C: 地雷音符（击中爆炸特效）
+        Fuse = 13,      // D: 导火线连打（类似风船连打）
+        Adlib = 14,     // F: アドリブ即兴音符（不计分/装饰用）
+        Kadon = 15,     // G: 花どん特殊音符
     }
 
 }
