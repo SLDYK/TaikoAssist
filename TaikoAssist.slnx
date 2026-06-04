@@ -3,4 +3,5 @@
   <Project Path="E7.NativeAudio.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Temp/ChartConvertTemp/ChartConvertTemp.csproj" />
 </Solution>
