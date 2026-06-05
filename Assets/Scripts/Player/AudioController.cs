@@ -10,6 +10,7 @@ namespace TaikoAssist
         {
             AudioSource.clip = clip;
             AudioSource.Stop();
+            Timer.SetLength(clip.length);
         }
 
         public void Resume(float currentTime)

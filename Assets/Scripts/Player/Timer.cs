@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 namespace TaikoAssist
 {
     public class Timer : Singleton<Timer>
@@ -7,10 +8,11 @@ namespace TaikoAssist
         [SerializeField] private float ElapsedTime;
         [SerializeField] private float StartTime;
         [SerializeField] private float DelayTime = 0;
-        [SerializeField] private float Length;
+        [SerializeField] private float Length = 0;
         [SerializeField] private bool Paused = false;
         [SerializeField] private float Multiplier = 1;
         [SerializeField] private float TargetTime;
+        [SerializeField] private Slider ProgressBar;
 
         void Start()
         {
@@ -26,6 +28,8 @@ namespace TaikoAssist
             {
                 ElapsedTime = (Time.time - StartTime) * Multiplier;
                 TargetTime = ElapsedTime;
+                if (Length > 0)
+                    ProgressBar.value = ElapsedTime / Length;
             }
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
@@ -70,6 +74,10 @@ namespace TaikoAssist
             PauseTimer();
             Instance.TargetTime = Mathf.Max(SetTime, 0);
             AudioController.Instance.SetTime(SetTime);
+        }
+        public static void SetLength(float Length)
+        {
+            Instance.Length = Length;
         }
 
         public static float GetElapsedTime()
