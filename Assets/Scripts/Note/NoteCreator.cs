@@ -22,7 +22,7 @@ namespace TaikoAssist
         private Vector3 BigScale = Vector3.one * 0.7f;
 
         private List<PendingNote> _pendingNotes = new();
-        private bool _dirty = true;
+        private bool _dirty = false;
 
         public IReadOnlyList<NoteInfo> Notes => ActiveNotes;
 
