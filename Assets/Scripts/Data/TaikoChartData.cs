@@ -112,20 +112,23 @@ namespace TaikoAssist
         public float scroll = 1f;
         public bool gogo = false;
         public bool barline = true;
-        // 小节内音符列表。仅保存有音符的位置。
+        // 小节内音符列表。
         public List<ChartNote> notes = new();
     }
 
     // 单个音符。
+    // 对于气球/连打等持续时间型音符，endTiming 非空表示结束拍位。
     [Serializable]
     public class ChartNote
     {
         // 判定时间三元组 [a,b,c]，表示第 a 又 b/c 拍。
-        public List<int> timing = new() { 0, 0, 1 };
+        public List<int> startTime = new() { 0, 0, 1 };
+        // 持续时间型音符的结束 timing（气球/连打有效）；null 表示瞬时音符。
+        public List<int> endTime = null;
         // 音符类型。
         public NoteType type;
-        // 气球/风船类音符的目标连打次数（仅 5/6/9 有效）。
-        public int balloonHitsRequired = 0;
+        // 气球连打次数（仅 Balloon/BigBalloon 有效）。
+        public int requiredHits = 0;
     }
 
     // 音符类型，数值与 TJA 字符对应。
@@ -139,8 +142,8 @@ namespace TaikoAssist
         BigKat = 4,
         Balloon = 5,
         BigBalloon = 6,
-        BalloonEnd = 7,
-        RollEnd = 8,
+        Roll = 7,       // 连打/黄条（对应 TJA 8 结束标记，起始由 endTiming 确定）
+        BigRoll = 8,    // 大连打
         Kusudama = 9,
         // --- 字母扩展音符 ---
         HandDon = 10,   // A: 双人手拍子·红（大ドン + 手拍子属性）

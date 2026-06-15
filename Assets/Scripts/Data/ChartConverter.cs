@@ -10,7 +10,7 @@ namespace TaikoAssist
     // 解析时会按“难度 + 分支”拆成多个独立谱面对象。
     public class ChartConverter
     {
-        // 标准 TJA 字符到音符类型的映射。
+        // 标准 TJA 字符到音符类型的映射（不含 7/8，它们是气球/连打结束的特殊标记）。
         private static readonly Dictionary<char, NoteType> CharToNoteType = new()
         {
             {'0', NoteType.Rest},
@@ -20,8 +20,6 @@ namespace TaikoAssist
             {'4', NoteType.BigKat},
             {'5', NoteType.Balloon},
             {'6', NoteType.BigBalloon},
-            {'7', NoteType.BalloonEnd},
-            {'8', NoteType.RollEnd},
             {'9', NoteType.Kusudama},
         };
 
@@ -34,8 +32,8 @@ namespace TaikoAssist
             {NoteType.BigKat,     '4'},
             {NoteType.Balloon,    '5'},
             {NoteType.BigBalloon, '6'},
-            {NoteType.BalloonEnd, '7'},
-            {NoteType.RollEnd,    '8'},
+            {NoteType.Roll,       '8'},
+            {NoteType.BigRoll,    '8'},
             {NoteType.Kusudama,   '9'},
         };
 
@@ -233,6 +231,7 @@ namespace TaikoAssist
 
             var branchStack = new Stack<BranchParseState>();
             int balloonHitCursor = 0;
+            ChartNote pendingNote = null;
             // null 表示当前在非分支主轨。
             var currentBranch = (string)null;
             var currentTarget = measures;
@@ -298,6 +297,12 @@ namespace TaikoAssist
                             if (currentTarget != null && targetBeatOffsets.TryGetValue(currentTarget, out int currentOffset))
                                 branchStartBeat = currentOffset;
 
+                            // 最外层分支开始时，快照当前已累积的小节作为 pre-branch measures。
+                            if (branchStack.Count == 0)
+                            {
+                                body.PreBranchMeasures = new List<ChartMeasure>(measures);
+                            }
+
                             branchStack.Push(new BranchParseState
                             {
                                 condition = arg,
@@ -362,23 +367,11 @@ namespace TaikoAssist
                                         Professional = st.professionalTarget,
                                         Master = st.masterTarget,
                                     };
-                                    currentTarget = null;
+                                    // 分支结束后，后续小节继续写入主轨 measures（作为 post-branch）。
+                                    currentTarget = measures;
                                     currentBranch = null;
                                 }
-                                else
-                                {
-                                    var parent = branchStack.Peek();
-                                    var mergedList = GetCurrentBranchTarget(parent, currentBranch);
-                                    mergedList.Add(new ChartMeasure
-                                    {
-                                        beatCount = 0,
-                                        timeSignature = (int[])currentTimeSig.Clone(),
-                                        bpm = currentBpm,
-                                        scroll = currentScroll,
-                                        gogo = currentGogo,
-                                        barline = currentBarline,
-                                    });
-                                }
+                                // 嵌套分支结束：恢复状态并回到父分支轨道，不插入零拍占位小节。
                                 RestoreState(branchStack.Count > 0 ? branchStack.Peek() : null, ref currentBpm, ref currentScroll, ref currentTimeSig, ref currentGogo, ref currentBarline);
                                 currentTarget = branchStack.Count > 0 ? GetCurrentBranchTarget(branchStack.Peek(), currentBranch) : measures;
                             }
@@ -408,7 +401,8 @@ namespace TaikoAssist
                         currentBarline,
                         measureBaseBeat,
                         balloonHits,
-                        ref balloonHitCursor);
+                        ref balloonHitCursor,
+                        ref pendingNote);
 
                     if (measure != null)
                     {
@@ -422,22 +416,56 @@ namespace TaikoAssist
             {
                 body.Measures = measures;
             }
+            else
+            {
+                // pre-branch 已在 #BRANCHSTART 时快照；post-branch 是 measures 中快照之后新增的部分。
+                int preCount = body.PreBranchMeasures?.Count ?? 0;
+                if (measures.Count > preCount)
+                    body.PostBranchMeasures = measures.GetRange(preCount, measures.Count - preCount);
+            }
 
             return body;
         }
 
         // 解析单行小节（逗号分拍，拍内按字符解析音符）。
+        // pendingNote: 跨小节跟踪未闭合的气球/连打 ChartNote；解析到 7/8 时写入其 endTiming。
         private static ChartMeasure ParseMeasureLine(
             string line, float bpm, float scroll, int[] timeSig,
             bool gogo, bool barline, int measureBaseBeat,
-            List<int> balloonHits, ref int balloonHitCursor)
+            List<int> balloonHits, ref int balloonHitCursor,
+            ref ChartNote pendingNote)
         {
             string[] beats = line.Split(',');
             if (beats.Length == 0) return null;
 
+            // 寻找第一个非空的音符段（在 TJA 中，通常每行只有一个以逗号结尾的段，代表一整个小节）
+            string segment = "";
+            for (int i = 0; i < beats.Length; i++)
+            {
+                string text = beats[i].Trim();
+                if (!string.IsNullOrEmpty(text))
+                {
+                    segment = text;
+                    break;
+                }
+            }
+
+            if (string.IsNullOrEmpty(segment))
+            {
+                return new ChartMeasure
+                {
+                    beatCount = 0,
+                    timeSignature = timeSig != null ? (int[])timeSig.Clone() : null,
+                    bpm = bpm,
+                    scroll = scroll,
+                    gogo = gogo,
+                    barline = barline,
+                };
+            }
+
             var measure = new ChartMeasure
             {
-                beatCount = beats.Length,
+                beatCount = segment.Length,
                 timeSignature = timeSig != null ? (int[])timeSig.Clone() : null,
                 bpm = bpm,
                 scroll = scroll,
@@ -445,41 +473,84 @@ namespace TaikoAssist
                 barline = barline,
             };
 
-            for (int beat = 0; beat < beats.Length; beat++)
+            for (int sub = 0; sub < segment.Length; sub++)
             {
-                string segment = beats[beat].Trim();
-                if (string.IsNullOrEmpty(segment)) continue;
+                char ch = segment[sub];
+                List<int> currentTiming = new() { measureBaseBeat + sub, 0, 1 };
 
-                for (int sub = 0; sub < segment.Length; sub++)
+                // 气球结束符 7：将 pending 气球写入当前小节，设置 endTiming
+                if (ch == '7')
                 {
-                    char ch = segment[sub];
+                    if (pendingNote != null && (pendingNote.type == NoteType.Balloon || pendingNote.type == NoteType.BigBalloon))
+                    {
+                        pendingNote.endTime = currentTiming;
+                        pendingNote.requiredHits = TryConsumeBalloonHits(balloonHits, ref balloonHitCursor);
+                        measure.notes.Add(pendingNote);
+                        pendingNote = null;
+                    }
+                    continue;
+                }
 
-                    if (CharToNoteType.TryGetValue(ch, out NoteType noteType))
+                // 连打结束符 8：在当前小节创建 Roll 音符，endTiming 取自 8 的位置
+                if (ch == '8')
+                {
+                    var roll = new ChartNote
                     {
-                        if (noteType == NoteType.Rest) continue;
-                        int balloonHitsRequired = TryConsumeBalloonHits(noteType, balloonHits, ref balloonHitCursor);
-                        measure.notes.Add(new ChartNote
+                        startTime = FindLastNoteTiming(measure) ?? currentTiming,
+                        type = NoteType.Roll,
+                        endTime = currentTiming,
+                    };
+                    measure.notes.Add(roll);
+                    continue;
+                }
+
+                if (CharToNoteType.TryGetValue(ch, out NoteType noteType))
+                {
+                    if (noteType == NoteType.Rest) continue;
+
+                    // 气球起始 5/6：先设为 pending，不立即添加到 notes
+                    if (noteType == NoteType.Balloon || noteType == NoteType.BigBalloon)
+                    {
+                        // 若前一个 pending 未闭合，先以无 endTiming 的形式写入
+                        if (pendingNote != null)
+                            measure.notes.Add(pendingNote);
+
+                        pendingNote = new ChartNote
                         {
-                            timing = new List<int> { measureBaseBeat + beat, sub, segment.Length },
+                            startTime = currentTiming,
                             type = noteType,
-                            balloonHitsRequired = balloonHitsRequired,
-                        });
+                        };
+                        continue;
                     }
-                    else if (CharToAdlib.TryGetValue(ch, out NoteType adlibType))
+
+                    measure.notes.Add(new ChartNote
                     {
-                        if (adlibType == NoteType.Rest) continue;
-                        int balloonHitsRequired = TryConsumeBalloonHits(adlibType, balloonHits, ref balloonHitCursor);
-                        measure.notes.Add(new ChartNote
-                        {
-                            timing = new List<int> { measureBaseBeat + beat, sub, segment.Length },
-                            type = adlibType,
-                            balloonHitsRequired = balloonHitsRequired,
-                        });
-                    }
+                        startTime = currentTiming,
+                        type = noteType,
+                    });
+                }
+                else if (CharToAdlib.TryGetValue(ch, out NoteType adlibType))
+                {
+                    if (adlibType == NoteType.Rest) continue;
+
+                    measure.notes.Add(new ChartNote
+                    {
+                        startTime = currentTiming,
+                        type = adlibType,
+                    });
                 }
             }
 
             return measure;
+        }
+
+        // 在当前小节的 notes 列表中查找最后一个音符的 timing（供连打起止配对）。
+        private static List<int> FindLastNoteTiming(ChartMeasure measure)
+        {
+            if (measure.notes != null && measure.notes.Count > 0)
+                return new List<int>(measure.notes[^1].startTime);
+
+            return null;
         }
 
 
@@ -581,43 +652,44 @@ namespace TaikoAssist
         {
             if (measure.beatCount <= 0) return ",";
 
-            var beatChars = new List<char>[measure.beatCount];
-            for (int i = 0; i < measure.beatCount; i++)
-                beatChars[i] = new List<char>();
+            char[] chars = new char[measure.beatCount];
+            for (int i = 0; i < chars.Length; i++)
+                chars[i] = '0';
 
             foreach (var note in measure.notes)
             {
-                int beatIndex = ResolveBeatIndex(note, measureBaseBeat, measure.beatCount);
+                int beatIndex = ResolveBeatIndexFromTiming(note.startTime, measureBaseBeat, measure.beatCount);
                 if (beatIndex < 0 || beatIndex >= measure.beatCount) continue;
 
                 char ch;
                 if (AdlibToChar.TryGetValue(note.type, out ch))
                 {
-                    // 已是字母扩展音符，直接使用对应字符。
+                    // 字母扩展音符
                 }
                 else
                 {
                     ch = NoteTypeToChar.GetValueOrDefault(note.type, '0');
                 }
+                chars[beatIndex] = ch;
 
-                beatChars[beatIndex].Add(ch);
+                // 气球/连打：在结束位置写入 7 或 8
+                if (note.endTime != null)
+                {
+                    int endIdx = ResolveBeatIndexFromTiming(note.endTime, measureBaseBeat, measure.beatCount);
+                    if (endIdx >= 0 && endIdx < measure.beatCount)
+                    {
+                        bool isBalloon = note.type == NoteType.Balloon || note.type == NoteType.BigBalloon;
+                        chars[endIdx] = isBalloon ? '7' : '8';
+                    }
+                }
             }
 
             var sb = new StringBuilder();
-            for (int i = 0; i < measure.beatCount; i++)
+            foreach (char c in chars)
             {
-                if (beatChars[i].Count == 0)
-                {
-                    sb.Append('0');
-                }
-                else
-                {
-                    foreach (char c in beatChars[i])
-                        sb.Append(c);
-                }
-                sb.Append(',');
+                sb.Append(c);
             }
-
+            sb.Append(',');
             return sb.ToString();
         }
 
@@ -688,7 +760,7 @@ namespace TaikoAssist
             return Mathf.Abs(a - b) < 0.001f;
         }
 
-        // 按气球类音符出现顺序收集 BALLOON 值。
+        // 按气球出现顺序收集 BALLOON 值（从 notes 列表中读取）。
         private static List<int> CollectBalloonHits(ChartBody chart)
         {
             var result = new List<int>();
@@ -702,45 +774,34 @@ namespace TaikoAssist
 
                 foreach (var note in measure.notes)
                 {
-                    if (!IsBalloonType(note.type))
+                    if (note.type != NoteType.Balloon && note.type != NoteType.BigBalloon)
                         continue;
-
-                    if (note.balloonHitsRequired > 0)
-                        result.Add(note.balloonHitsRequired);
+                    if (note.requiredHits > 0)
+                        result.Add(note.requiredHits);
                 }
             }
 
             return result;
         }
 
-        // 遇到气球类音符时，从 BALLOON 列表消费一个目标次数。
-        private static int TryConsumeBalloonHits(NoteType type, List<int> balloonHits, ref int cursor)
+        // 从 BALLOON 列表消费一个目标次数（仅在新格式气球中使用）。
+        private static int TryConsumeBalloonHits(List<int> balloonHits, ref int cursor)
         {
-            if (!IsBalloonType(type))
-                return 0;
-
             if (balloonHits != null && cursor < balloonHits.Count)
                 return balloonHits[cursor++];
 
             return 0;
         }
 
-        private static bool IsBalloonType(NoteType type)
-        {
-            return type == NoteType.Balloon ||
-                   type == NoteType.BigBalloon ||
-                   type == NoteType.Kusudama;
-        }
-
         // 将 timing=[a,b,c] 映射为当前小节内拍位索引。
-        private static int ResolveBeatIndex(ChartNote note, int measureBaseBeat, int beatCount)
+        private static int ResolveBeatIndexFromTiming(List<int> timing, int measureBaseBeat, int beatCount)
         {
-            if (note?.timing == null || note.timing.Count < 3)
+            if (timing == null || timing.Count < 3)
                 return -1;
 
-            int a = note.timing[0];
-            int b = note.timing[1];
-            int c = note.timing[2];
+            int a = timing[0];
+            int b = timing[1];
+            int c = timing[2];
 
             if (c <= 0)
                 return -1;
@@ -831,11 +892,20 @@ namespace TaikoAssist
             ParsedChartBody parsedBody,
             string branch,
             string branchCondition,
-            List<ChartMeasure> measures)
+            List<ChartMeasure> branchMeasures)
         {
             var meta = CloneMetadata(sectionMeta);
             meta.branch = branch;
             meta.branchCondition = branchCondition ?? "";
+
+            // 合并：pre-branch + 分支 + post-branch，保证 Time2Sec 可基于完整小节列表正确计算。
+            var mergedMeasures = new List<ChartMeasure>();
+            if (parsedBody.PreBranchMeasures != null)
+                mergedMeasures.AddRange(parsedBody.PreBranchMeasures);
+            if (branchMeasures != null)
+                mergedMeasures.AddRange(branchMeasures);
+            if (parsedBody.PostBranchMeasures != null)
+                mergedMeasures.AddRange(parsedBody.PostBranchMeasures);
 
             var data = new TaikoChartData
             {
@@ -845,7 +915,7 @@ namespace TaikoAssist
                     initialBpm = parsedBody.InitialBpm,
                     initialScroll = parsedBody.InitialScroll,
                     initialTimeSignature = (int[])parsedBody.InitialTimeSignature.Clone(),
-                    measures = measures ?? new List<ChartMeasure>()
+                    measures = mergedMeasures
                 }
             };
 
@@ -858,6 +928,11 @@ namespace TaikoAssist
             public float InitialBpm;
             public float InitialScroll;
             public int[] InitialTimeSignature;
+            // 分支前的小节快照（仅在含分支时非空）。
+            public List<ChartMeasure> PreBranchMeasures;
+            // 分支后的小节（仅在含分支时非空）。
+            public List<ChartMeasure> PostBranchMeasures;
+            // 无分支时的完整小节列表。
             public List<ChartMeasure> Measures = new();
             public ParsedBranches Branches;
         }

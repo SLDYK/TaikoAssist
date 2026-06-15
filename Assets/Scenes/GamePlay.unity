@@ -782,6 +782,8 @@ GameObject:
   m_Component:
   - component: {fileID: 571604071}
   - component: {fileID: 571604072}
+  - component: {fileID: 571604073}
+  - component: {fileID: 571604074}
   m_Layer: 0
   m_Name: Track
   m_TagString: Untagged
@@ -863,6 +865,40 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &571604073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571604070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5847db4d5f78a0c43999e7744b5736b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaikoAssist.NoteCreator
+  LoadRange: 15
+  ScrollSpeed: 15
+  ActiveNotes: []
+  DonSprite: {fileID: 21300000, guid: 10ffdff1d682d184d8feb8eab6150540, type: 3}
+  KatSprite: {fileID: 21300000, guid: b968fcad25648f847a03ebda2acc6603, type: 3}
+  BigDonSprite: {fileID: 21300000, guid: 2845cf0f3d87a7842bc1d4eed51ff8e7, type: 3}
+  BigKatSprite: {fileID: 21300000, guid: 50a9968a68ae8cc4f84e8324fc8f2cf2, type: 3}
+  DonLine: {fileID: 16482269}
+  KatLine: {fileID: 656990212}
+--- !u!114 &571604074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571604070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fb29cd44d196f4da8e017ebca45c11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaikoAssist.NotePool
+  NotePrefab: {fileID: 978060749606744027, guid: 8ee7f97e560f90946b4912c0030b1dd0, type: 3}
 --- !u!1 &656990211
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +910,7 @@ GameObject:
   - component: {fileID: 656990212}
   - component: {fileID: 656990213}
   m_Layer: 0
-  m_Name: KaLine
+  m_Name: KatLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,6 +2048,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaikoAssist.ChartLoader
   AudioPath: "TestCharts/\u30E2\u30F3\u30B9\u30BF\u30FC\u30CF\u30F3\u30BF\u30FC\u30E1\u30C9\u30EC\u30FC.ogg"
+  TjaPath: "TestCharts/\u30E2\u30F3\u30B9\u30BF\u30FC\u30CF\u30F3\u30BF\u30FC\u30E1\u30C9\u30EC\u30FC.tja"
+  LoadedCharts: []
+  ChartIndex: 0
 --- !u!1 &1717103435
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,8 +2179,8 @@ MonoBehaviour:
   KaLinePos1: {x: -2.7, y: 1.95, z: 0}
   TrackPos1: {x: 3.6, y: 1.7, z: 0}
   TrackHight1: 2.65
-  DonLinePos2: {x: -2.7, y: 1.95, z: 0}
-  KaLinePos2: {x: -2.7, y: 0, z: 0}
+  DonLinePos2: {x: -2.7, y: 0, z: 0}
+  KaLinePos2: {x: -2.7, y: 1.95, z: 0}
   TrackPos2: {x: 3.6, y: 0.725, z: 0}
   TrackHight2: 4.6
   DonLine: {fileID: 16482269}

@@ -14,9 +14,9 @@ namespace TaikoAssist
 
             EditorGUILayout.Space(8);
 
-            if (GUILayout.Button("加载音频", GUILayout.Height(30)))
+            if (GUILayout.Button("加载测试谱面", GUILayout.Height(30)))
             {
-                loader.LoadAudio();
+                loader.LoadAll();
             }
         }
     }
