@@ -115,12 +115,17 @@ namespace TaikoAssist
                 ActiveRendas.Add(renda);
             }
 
-            // 步骤四：更新所有活跃 Renda 的轨道位置。
+            // 步骤四：更新所有活跃 Renda 的轨道位置和 Body 长度。
             // 到达 StartTime 后锁定在 X=0，不再继续向左移动。
             foreach (RendaInfo renda in ActiveRendas)
             {
                 float loadValue = (renda.StartTime - elapsed) * renda.Speed * ScrollSpeed;
                 renda.transform.localPosition = new Vector3(Mathf.Max(loadValue, 0f), 0f, 0f);
+
+                // Body 长度 = 剩余持续时间对应的世界空间长度
+                float remainingTime = renda.EndTime - Mathf.Max(renda.StartTime, elapsed);
+                float bodyLength = remainingTime * renda.Speed * ScrollSpeed;
+                renda.SetBodyLength(Mathf.Max(bodyLength, 0f));
             }
 
             // 步骤五：渲染层级由 NoteCreator.LateUpdate 统一混合排序分配。

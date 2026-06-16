@@ -2055,8 +2055,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7deb3fb7d4340b7aeaa32e053b00d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaikoAssist.ChartLoader
-  AudioPath: "TestCharts/\u30E2\u30F3\u30B9\u30BF\u30FC\u30CF\u30F3\u30BF\u30FC\u30E1\u30C9\u30EC\u30FC.ogg"
-  TjaPath: "TestCharts/\u30E2\u30F3\u30B9\u30BF\u30FC\u30CF\u30F3\u30BF\u30FC\u30E1\u30C9\u30EC\u30FC.tja"
   LoadedCharts: []
   ChartIndex: 0
 --- !u!1 &1717103435
