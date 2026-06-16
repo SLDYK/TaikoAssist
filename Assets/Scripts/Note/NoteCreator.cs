@@ -36,6 +36,7 @@ namespace TaikoAssist
         protected override void Awake()
         {
             base.Awake();
+            ChartLoader.Instance.OnChartLoaded += MarkDirty;
         }
 
         private void Update()
@@ -102,15 +103,14 @@ namespace TaikoAssist
                 ActiveNotes.Add(note);
             }
 
-            // 步骤四：更新所有活跃 Note 的轨道位置和渲染层级。
+            // 步骤四：更新所有活跃 Note 的轨道位置。
             // X=0 为判定线，Note 从右侧（X 正值）向左接近。
-            // 越接近判定线的 Note 渲染层级越高，最小为 5。
             foreach (NoteInfo note in ActiveNotes)
             {
                 float loadValue = (note.TargetTime - elapsed) * note.Speed * ScrollSpeed;
-                note.Transform.localPosition = new Vector3(loadValue, 0f, 0f);
-                note.Sprite.sortingOrder = 5 + Mathf.Max(0, (int)(LoadRange - loadValue));
+                note.transform.localPosition = new Vector3(loadValue, 0f, 0f);
             }
+
         }
 
         // 根据 NoteType 返回所属轨道：Don→DonLine，Kat→KatLine。
@@ -123,26 +123,33 @@ namespace TaikoAssist
             };
         }
 
-        // 根据 Note 类型应用对应的精灵和缩放。
+        // 根据 Note 类型应用对应的精灵、缩放和中文 Caption。
         private void ApplyNoteResources(NoteInfo note)
         {
             switch (note.Type)
             {
                 case NoteType.Don:
                     note.Sprite.sprite = DonSprite;
-                    note.Transform.localScale = NormalScale;
+                    note.transform.localScale = NormalScale;
+                    note.Caption.text = "咚";
                     break;
                 case NoteType.Kat:
                     note.Sprite.sprite = KatSprite;
-                    note.Transform.localScale = NormalScale;
+                    note.transform.localScale = NormalScale;
+                    note.Caption.text = "咔";
                     break;
                 case NoteType.BigDon:
                     note.Sprite.sprite = BigDonSprite;
-                    note.Transform.localScale = BigScale;
+                    note.transform.localScale = BigScale;
+                    note.Caption.text = "大咚";
                     break;
                 case NoteType.BigKat:
                     note.Sprite.sprite = BigKatSprite;
-                    note.Transform.localScale = BigScale;
+                    note.transform.localScale = BigScale;
+                    note.Caption.text = "大咔";
+                    break;
+                default:
+                    note.Caption.text = "";
                     break;
             }
         }

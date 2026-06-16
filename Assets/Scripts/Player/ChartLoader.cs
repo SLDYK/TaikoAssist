@@ -14,6 +14,9 @@ namespace TaikoAssist
         public List<TaikoChartData> LoadedCharts;
         public int ChartIndex;
 
+        // LoadAll 完成后触发，供 NoteCreator / RendaCreator 订阅。
+        public event Action OnChartLoaded;
+
         // 根据 ChartIndex 返回对应的 TaikoChartData（静态属性）。
         public static TaikoChartData CurrentChart
         {
@@ -28,7 +31,7 @@ namespace TaikoAssist
             LoadAudioAsync(AudioPath).Forget();
         }
 
-        private async UniTaskVoid LoadAudioAsync(string Path)
+        private async UniTask LoadAudioAsync(string Path)
         {
             string FullPath = System.IO.Path.Combine(Application.streamingAssetsPath, Path);
             string URI = "file://" + FullPath;
@@ -64,7 +67,7 @@ namespace TaikoAssist
             LoadChartAsync(TjaPath).Forget();
         }
 
-        private async UniTaskVoid LoadChartAsync(string Path)
+        private async UniTask LoadChartAsync(string Path)
         {
             string FullPath = System.IO.Path.Combine(Application.streamingAssetsPath, Path);
             string URI = "file://" + FullPath;
@@ -83,7 +86,6 @@ namespace TaikoAssist
             {
                 LoadedCharts = ChartConverter.ParseTjaToCharts(TjaContent);
                 Debug.Log($"[ChartLoader] 谱面加载成功: {LoadedCharts.Count} 条谱面");
-                NoteCreator.Instance?.MarkDirty();
             }
             catch (Exception Ex)
             {
@@ -94,8 +96,14 @@ namespace TaikoAssist
         //检查器按钮调用
         public void LoadAll()
         {
-            LoadAudio();
-            LoadChart();
+            LoadAllAsync().Forget();
+        }
+
+        private async UniTaskVoid LoadAllAsync()
+        {
+            await LoadAudioAsync(AudioPath);
+            await LoadChartAsync(TjaPath);
+            OnChartLoaded?.Invoke();
         }
     }
 }

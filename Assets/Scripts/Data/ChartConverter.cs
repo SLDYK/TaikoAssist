@@ -10,7 +10,7 @@ namespace TaikoAssist
     // 解析时会按“难度 + 分支”拆成多个独立谱面对象。
     public class ChartConverter
     {
-        // 标准 TJA 字符到音符类型的映射（不含 7/8，它们是气球/连打结束的特殊标记）。
+        // 标准 TJA 字符到音符类型的映射（不含 5/6/7/8/9，它们是连打/风船起止的特殊标记，在解析循环中独立处理）。
         private static readonly Dictionary<char, NoteType> CharToNoteType = new()
         {
             {'0', NoteType.Rest},
@@ -18,9 +18,6 @@ namespace TaikoAssist
             {'2', NoteType.Kat},
             {'3', NoteType.BigDon},
             {'4', NoteType.BigKat},
-            {'5', NoteType.Balloon},
-            {'6', NoteType.BigBalloon},
-            {'9', NoteType.Kusudama},
         };
 
         private static readonly Dictionary<NoteType, char> NoteTypeToChar = new()
@@ -30,10 +27,9 @@ namespace TaikoAssist
             {NoteType.Kat,        '2'},
             {NoteType.BigDon,     '3'},
             {NoteType.BigKat,     '4'},
-            {NoteType.Balloon,    '5'},
-            {NoteType.BigBalloon, '6'},
-            {NoteType.Roll,       '8'},
-            {NoteType.BigRoll,    '8'},
+            {NoteType.Roll,       '5'},
+            {NoteType.BigRoll,    '6'},
+            {NoteType.Balloon,    '7'},
             {NoteType.Kusudama,   '9'},
         };
 
@@ -200,7 +196,11 @@ namespace TaikoAssist
                 case "DEMOSTART": meta.demoStart = ParseFloat(value, 0f); break;
                 case "COURSE": meta.course = value; break;
                 case "LEVEL": meta.level = ParseInt(value, 1); break;
-                case "BALLOON": meta.parsedBalloonHits = ParseIntList(value); break;
+                case "BALLOON":
+                case "BALLOONNOR":
+                case "BALLOONEXP":
+                case "BALLOONMAS":
+                    meta.parsedBalloonHits = ParseIntList(value); break;
                 case "SCOREINIT": meta.scoreInit = ParseInt(value, 0); break;
                 case "SCOREDIFF": meta.scoreDiff = ParseInt(value, 0); break;
                 case "SONGVOL": meta.songVol = ParseFloat(value, 1f); break;
@@ -252,6 +252,19 @@ namespace TaikoAssist
 
                 if (string.IsNullOrEmpty(line) || line.StartsWith("//"))
                     continue;
+
+                // #START 之后仍可能出现 BALLOON: 等头部行
+                if (line.IndexOf(':') > 0 && !line.StartsWith('#'))
+                {
+                    string upper = line.Split(':')[0].Trim().ToUpperInvariant();
+                    if (upper == "BALLOON" || upper == "BALLOONNOR" || upper == "BALLOONEXP" || upper == "BALLOONMAS")
+                    {
+                        string val = line[(line.IndexOf(':') + 1)..].Trim();
+                        balloonHits = ParseIntList(val);
+                        balloonHitCursor = 0;
+                        continue;
+                    }
+                }
 
                 if (line.StartsWith('#'))
                 {
@@ -428,7 +441,7 @@ namespace TaikoAssist
         }
 
         // 解析单行小节（逗号分拍，拍内按字符解析音符）。
-        // pendingNote: 跨小节跟踪未闭合的气球/连打 ChartNote；解析到 7/8 时写入其 endTiming。
+        // pendingNote: 跨小节跟踪未闭合的风船/连打 ChartNote；解析到 5/6/7/8/9 时写入其 endTiming。
         private static ChartMeasure ParseMeasureLine(
             string line, float bpm, float scroll, int[] timeSig,
             bool gogo, bool barline, int measureBaseBeat,
@@ -478,50 +491,43 @@ namespace TaikoAssist
                 char ch = segment[sub];
                 List<int> currentTiming = new() { measureBaseBeat + sub, 0, 1 };
 
-                // 气球结束符 7：将 pending 气球写入当前小节，设置 endTiming
-                if (ch == '7')
+                // 连打/风船起始 5=连打 6=大连打 7=风船 9=九素玉：设置 pendingNote 并加入当前小节
+                if (ch == '5' || ch == '6' || ch == '7' || ch == '9')
                 {
-                    if (pendingNote != null && (pendingNote.type == NoteType.Balloon || pendingNote.type == NoteType.BigBalloon))
+                    NoteType longType = ch switch
                     {
-                        pendingNote.endTime = currentTiming;
-                        pendingNote.requiredHits = TryConsumeBalloonHits(balloonHits, ref balloonHitCursor);
-                        measure.notes.Add(pendingNote);
-                        pendingNote = null;
-                    }
+                        '5' => NoteType.Roll,
+                        '6' => NoteType.BigRoll,
+                        '7' => NoteType.Balloon,
+                        _ => NoteType.Kusudama,
+                    };
+                    bool needsHits = ch == '7' || ch == '9';
+                    var longNote = new ChartNote
+                    {
+                        startTime = currentTiming,
+                        type = longType,
+                        endTime = null,
+                        requiredHits = needsHits ? TryConsumeBalloonHits(balloonHits, ref balloonHitCursor) : 0,
+                    };
+                    measure.notes.Add(longNote);
+                    pendingNote = longNote;
                     continue;
                 }
 
-                // 连打结束符 8：在当前小节创建 Roll 音符，endTiming 取自 8 的位置
+                // 连打/风船结束符 8：闭合当前 pendingNote
                 if (ch == '8')
                 {
-                    var roll = new ChartNote
+                    if (pendingNote != null)
                     {
-                        startTime = FindLastNoteTiming(measure) ?? currentTiming,
-                        type = NoteType.Roll,
-                        endTime = currentTiming,
-                    };
-                    measure.notes.Add(roll);
+                        pendingNote.endTime = currentTiming;
+                        pendingNote = null;
+                    }
                     continue;
                 }
 
                 if (CharToNoteType.TryGetValue(ch, out NoteType noteType))
                 {
                     if (noteType == NoteType.Rest) continue;
-
-                    // 气球起始 5/6：先设为 pending，不立即添加到 notes
-                    if (noteType == NoteType.Balloon || noteType == NoteType.BigBalloon)
-                    {
-                        // 若前一个 pending 未闭合，先以无 endTiming 的形式写入
-                        if (pendingNote != null)
-                            measure.notes.Add(pendingNote);
-
-                        pendingNote = new ChartNote
-                        {
-                            startTime = currentTiming,
-                            type = noteType,
-                        };
-                        continue;
-                    }
 
                     measure.notes.Add(new ChartNote
                     {
@@ -542,15 +548,6 @@ namespace TaikoAssist
             }
 
             return measure;
-        }
-
-        // 在当前小节的 notes 列表中查找最后一个音符的 timing（供连打起止配对）。
-        private static List<int> FindLastNoteTiming(ChartMeasure measure)
-        {
-            if (measure.notes != null && measure.notes.Count > 0)
-                return new List<int>(measure.notes[^1].startTime);
-
-            return null;
         }
 
 
@@ -610,6 +607,8 @@ namespace TaikoAssist
             bool lastGogo = false;
             bool lastBarline = true;
             int measureBaseBeat = 0;
+            // 跨小节的结束符 8 待写入队列：key=绝对拍位
+            var pendingEndBeats = new Dictionary<int, char>();
 
             foreach (var m in measures)
             {
@@ -642,19 +641,34 @@ namespace TaikoAssist
                     sb.AppendLine($"#MEASURE {m.timeSignature[0]}/{m.timeSignature[1]}");
                 }
 
-                sb.AppendLine(EmitMeasureLine(m, measureBaseBeat));
+                sb.AppendLine(EmitMeasureLine(m, measureBaseBeat, pendingEndBeats));
                 measureBaseBeat += m.beatCount;
             }
         }
 
         // 把单个小节转成 TJA 音符行。
-        private static string EmitMeasureLine(ChartMeasure measure, int measureBaseBeat)
+        // pendingEndBeats: 来自前序小节尚未落位的跨小节结束标记（key=绝对拍位）
+        private static string EmitMeasureLine(ChartMeasure measure, int measureBaseBeat, Dictionary<int, char> pendingEndBeats)
         {
             if (measure.beatCount <= 0) return ",";
 
             char[] chars = new char[measure.beatCount];
             for (int i = 0; i < chars.Length; i++)
                 chars[i] = '0';
+
+            // 先处理跨小节遗留的结束标记
+            var resolvedKeys = new List<int>();
+            foreach (var kv in pendingEndBeats)
+            {
+                int localIdx = kv.Key - measureBaseBeat;
+                if (localIdx >= 0 && localIdx < measure.beatCount)
+                {
+                    chars[localIdx] = kv.Value;
+                    resolvedKeys.Add(kv.Key);
+                }
+            }
+            foreach (int key in resolvedKeys)
+                pendingEndBeats.Remove(key);
 
             foreach (var note in measure.notes)
             {
@@ -672,14 +686,20 @@ namespace TaikoAssist
                 }
                 chars[beatIndex] = ch;
 
-                // 气球/连打：在结束位置写入 7 或 8
+                // 连打/风船：在结束位置写入结束符 8
                 if (note.endTime != null)
                 {
                     int endIdx = ResolveBeatIndexFromTiming(note.endTime, measureBaseBeat, measure.beatCount);
                     if (endIdx >= 0 && endIdx < measure.beatCount)
                     {
-                        bool isBalloon = note.type == NoteType.Balloon || note.type == NoteType.BigBalloon;
-                        chars[endIdx] = isBalloon ? '7' : '8';
+                        chars[endIdx] = '8';
+                    }
+                    else if (note.endTime.Count >= 3)
+                    {
+                        // 结束拍位超出本小节：记录到 pending，由后续小节处理
+                        int absEndBeat = note.endTime[0];
+                        if (absEndBeat >= measureBaseBeat + measure.beatCount)
+                            pendingEndBeats[absEndBeat] = '8';
                     }
                 }
             }
@@ -760,7 +780,7 @@ namespace TaikoAssist
             return Mathf.Abs(a - b) < 0.001f;
         }
 
-        // 按气球出现顺序收集 BALLOON 值（从 notes 列表中读取）。
+        // 按风船出现顺序收集 BALLOON 值（从 notes 列表中读取）。
         private static List<int> CollectBalloonHits(ChartBody chart)
         {
             var result = new List<int>();
@@ -774,7 +794,7 @@ namespace TaikoAssist
 
                 foreach (var note in measure.notes)
                 {
-                    if (note.type != NoteType.Balloon && note.type != NoteType.BigBalloon)
+                    if (note.type != NoteType.Balloon && note.type != NoteType.Kusudama)
                         continue;
                     if (note.requiredHits > 0)
                         result.Add(note.requiredHits);
@@ -784,7 +804,7 @@ namespace TaikoAssist
             return result;
         }
 
-        // 从 BALLOON 列表消费一个目标次数（仅在新格式气球中使用）。
+        // 从 BALLOON 列表消费一个目标次数（仅在风船中使用）。
         private static int TryConsumeBalloonHits(List<int> balloonHits, ref int cursor)
         {
             if (balloonHits != null && cursor < balloonHits.Count)

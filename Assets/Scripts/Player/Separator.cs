@@ -8,26 +8,35 @@ namespace TaikoAssist
     {
         [Header("State 1")]
         [SerializeField] private Vector3 DonLinePos1;
-        [SerializeField] private Vector3 KaLinePos1;
+        [SerializeField] private Vector3 KatLinePos1;
         [SerializeField] private Vector3 TrackPos1;
         [SerializeField] private float TrackHight1;
+        [SerializeField] private float JudgeHight1;
+        [SerializeField] private float CaptionHight1;
 
         [Header("State 2")]
         [SerializeField] private Vector3 DonLinePos2;
-        [SerializeField] private Vector3 KaLinePos2;
+        [SerializeField] private Vector3 KatLinePos2;
         [SerializeField] private Vector3 TrackPos2;
         [SerializeField] private float TrackHight2;
-
+        [SerializeField] private float JudgeHight2;
+        [SerializeField] private float CaptionHight2;
         [Header("Objects")]
         [SerializeField] private Transform DonLine;
-        [SerializeField] private Transform KaLine;
+        [SerializeField] private Transform KatLine;
+        [SerializeField] private Transform RendaLine;
         [SerializeField] private SpriteRenderer Track;
+        [SerializeField] private SpriteRenderer Judge;
         [SerializeField] private Slider BlendLerp;
         [SerializeField] private SliderNotifier Notifier;
 
         [Header("Animation")]
         [SerializeField] private float Duration = 0.5f;
         [SerializeField] private Ease BlendEase = Ease.OutQuad;
+
+        // 由 DOTween 驱动的当前 Caption 高度（世界 Y 坐标）
+        private float _captionHight;
+        public float CurrentCaptionHight => _captionHight;
 
         private Sequence BlendTween;
         private Tween BlendLerpTween;
@@ -52,16 +61,23 @@ namespace TaikoAssist
         {
             Target = Mathf.Clamp01(Target);
             Vector3 DonTarget = Vector3.Lerp(DonLinePos1, DonLinePos2, Target);
-            Vector3 KaTarget = Vector3.Lerp(KaLinePos1, KaLinePos2, Target);
+            Vector3 KaTarget = Vector3.Lerp(KatLinePos1, KatLinePos2, Target);
             Vector3 TrackTarget = Vector3.Lerp(TrackPos1, TrackPos2, Target);
+            Vector3 RendaTarget = (DonTarget + KaTarget) * 0.5f;
+
             float HeightTarget = Mathf.Lerp(TrackHight1, TrackHight2, Target);
+            float JudgeTarget = Mathf.Lerp(JudgeHight1, JudgeHight2, Target);
+            float CaptionTarget = Mathf.Lerp(CaptionHight1, CaptionHight2, Target);
 
             BlendTween?.Kill();
             BlendTween = DOTween.Sequence()
                 .Join(DonLine.DOLocalMove(DonTarget, Duration).SetEase(BlendEase))
-                .Join(KaLine.DOLocalMove(KaTarget, Duration).SetEase(BlendEase))
+                .Join(KatLine.DOLocalMove(KaTarget, Duration).SetEase(BlendEase))
+                .Join(RendaLine.DOLocalMove(RendaTarget, Duration).SetEase(BlendEase))
                 .Join(Track.transform.DOLocalMove(TrackTarget, Duration).SetEase(BlendEase))
-                .Join(DOTween.To(() => Track.size.y, y => Track.size = new Vector2(Track.size.x, y), HeightTarget, Duration).SetEase(BlendEase));
+                .Join(DOTween.To(() => Track.size.y, y => Track.size = new Vector2(Track.size.x, y), HeightTarget, Duration).SetEase(BlendEase))
+                .Join(DOTween.To(() => Judge.size.y, y => Judge.size = new Vector2(Judge.size.x, y), JudgeTarget, Duration).SetEase(BlendEase))
+                .Join(DOTween.To(() => _captionHight, v => _captionHight = v, CaptionTarget, Duration).SetEase(BlendEase));
         }
 
         public void BlendToWithSlider(float target)
@@ -117,9 +133,12 @@ namespace TaikoAssist
         private void ApplyBlendInstant(float target)
         {
             DonLine.localPosition = Vector3.Lerp(DonLinePos1, DonLinePos2, target);
-            KaLine.localPosition = Vector3.Lerp(KaLinePos1, KaLinePos2, target);
+            KatLine.localPosition = Vector3.Lerp(KatLinePos1, KatLinePos2, target);
+            RendaLine.localPosition = (DonLine.localPosition + KatLine.localPosition) * 0.5f;
             Track.transform.localPosition = Vector3.Lerp(TrackPos1, TrackPos2, target);
             Track.size = new Vector2(Track.size.x, Mathf.Lerp(TrackHight1, TrackHight2, target));
+            Judge.size = new Vector2(Judge.size.x, Mathf.Lerp(JudgeHight1, JudgeHight2, target));
+            _captionHight = Mathf.Lerp(CaptionHight1, CaptionHight2, target);
         }
 
         protected override void OnDestroy()

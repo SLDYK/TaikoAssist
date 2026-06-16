@@ -43,7 +43,7 @@ namespace TaikoAssist
         public string branch = "Main";
         // 分支条件表达式（来自 #BRANCHSTART），无分支时为空。
         public string branchCondition = "";
-        // 解析期临时保存 BALLOON 列表，不参与序列化；最终会写入具体气球音符。
+        // 解析期临时保存 BALLOON 列表，不参与序列化；最终会写入具体风船音符。
         [NonSerialized]
         public List<int> parsedBalloonHits = new();
         // 计分参数。
@@ -117,17 +117,17 @@ namespace TaikoAssist
     }
 
     // 单个音符。
-    // 对于气球/连打等持续时间型音符，endTiming 非空表示结束拍位。
+    // 对于风船/连打等持续时间型音符，endTiming 非空表示结束拍位。
     [Serializable]
     public class ChartNote
     {
         // 判定时间三元组 [a,b,c]，表示第 a 又 b/c 拍。
         public List<int> startTime = new() { 0, 0, 1 };
-        // 持续时间型音符的结束 timing（气球/连打有效）；null 表示瞬时音符。
+        // 持续时间型音符的结束 timing（风船/连打有效）；null 表示瞬时音符。
         public List<int> endTime = null;
         // 音符类型。
         public NoteType type;
-        // 气球连打次数（仅 Balloon/BigBalloon 有效）。
+        // 连打/风船连打次数（仅 Balloon / Kusudama 有效）。
         public int requiredHits = 0;
     }
 
@@ -140,11 +140,10 @@ namespace TaikoAssist
         Kat = 2,
         BigDon = 3,
         BigKat = 4,
-        Balloon = 5,
-        BigBalloon = 6,
-        Roll = 7,       // 连打/黄条（对应 TJA 8 结束标记，起始由 endTiming 确定）
-        BigRoll = 8,    // 大连打
-        Kusudama = 9,
+        Roll = 5,       // 连打/黄条 (TJA 5 起始, 8 结束)
+        BigRoll = 6,    // 大连打 (TJA 6 起始, 8 结束)
+        Balloon = 7,    // 风船 (TJA 7 起始, 8 结束)
+        Kusudama = 9,   // 九素玉 (TJA 9 起始, 8 结束)
         // --- 字母扩展音符 ---
         HandDon = 10,   // A: 双人手拍子·红（大ドン + 手拍子属性）
         HandKat = 11,   // B: 双人手拍子·蓝（大カッ + 手拍子属性）

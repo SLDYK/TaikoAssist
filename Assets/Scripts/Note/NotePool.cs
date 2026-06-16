@@ -10,8 +10,10 @@ namespace TaikoAssist
     {
         [Header("预制体")]
         [SerializeField] private NoteInfo NotePrefab;
+        [SerializeField] private RendaInfo RendaPrefab;
 
         private readonly Queue<NoteInfo> _pool = new();
+        private readonly Queue<RendaInfo> _rendaPool = new();
 
         // 从池中获取一个 NoteInfo 实例（已激活），放在指定 parent 下。
         // 若池中有空闲实例则复用，否则 Instantiate 新的。
@@ -22,8 +24,8 @@ namespace TaikoAssist
             {
                 note = _pool.Dequeue();
                 // 重新挂到目标父节点下，并重置缩放
-                note.Transform.SetParent(parent, false);
-                note.Transform.localScale = Vector3.one;
+                note.transform.SetParent(parent, false);
+                note.transform.localScale = Vector3.one;
                 note.gameObject.SetActive(true);
             }
             else
@@ -43,7 +45,7 @@ namespace TaikoAssist
 
             note.gameObject.SetActive(false);
             // 挂到池对象下，避免场景层级混乱
-            note.Transform.SetParent(transform, false);
+            note.transform.SetParent(transform, false);
 
             _pool.Enqueue(note);
         }
@@ -56,6 +58,7 @@ namespace TaikoAssist
             note.TargetTime = 0f;
             note.PendingIndex = 0;
             note.Sprite.sprite = null;
+            note.Caption.text = "";
         }
 
         // 清空池中所有已回收的实例（真正 Destroy）。
@@ -67,6 +70,59 @@ namespace TaikoAssist
                 if (note != null)
                     Destroy(note.gameObject);
             }
+
+            while (_rendaPool.Count > 0)
+            {
+                RendaInfo renda = _rendaPool.Dequeue();
+                if (renda != null)
+                    Destroy(renda.gameObject);
+            }
+        }
+
+        // 从池中获取一个 RendaInfo 实例（已激活），放在指定 parent 下。
+        public RendaInfo GetRenda(Transform parent)
+        {
+            RendaInfo renda;
+            if (_rendaPool.Count > 0)
+            {
+                renda = _rendaPool.Dequeue();
+                renda.transform.SetParent(parent, false);
+                renda.transform.localScale = Vector3.one;
+                renda.gameObject.SetActive(true);
+            }
+            else
+            {
+                renda = Instantiate(RendaPrefab, parent);
+            }
+
+            return renda;
+        }
+
+        // 将 RendaInfo 回收至池中（GameObject 设为 inactive）。
+        public void ReleaseRenda(RendaInfo renda)
+        {
+            if (renda == null) return;
+
+            ResetRenda(renda);
+
+            renda.gameObject.SetActive(false);
+            renda.transform.SetParent(transform, false);
+
+            _rendaPool.Enqueue(renda);
+        }
+
+        // 重置 RendaInfo 的所有字段。
+        private static void ResetRenda(RendaInfo renda)
+        {
+            renda.Type = NoteType.Balloon;
+            renda.Speed = 1f;
+            renda.StartTime = 0f;
+            renda.EndTime = 0f;
+            renda.RequiredHits = 0;
+            renda.PendingIndex = 0;
+            renda.Head.sprite = null;
+            renda.Body.sprite = null;
+            renda.Caption.text = "";
         }
     }
 }
