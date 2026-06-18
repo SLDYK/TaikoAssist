@@ -231,6 +231,7 @@ namespace TaikoAssist
 
             var branchStack = new Stack<BranchParseState>();
             int balloonHitCursor = 0;
+            int noteID = 0;
             ChartNote pendingNote = null;
             // null 表示当前在非分支主轨。
             var currentBranch = (string)null;
@@ -415,7 +416,8 @@ namespace TaikoAssist
                         measureBaseBeat,
                         balloonHits,
                         ref balloonHitCursor,
-                        ref pendingNote);
+                        ref pendingNote,
+                        ref noteID);
 
                     if (measure != null)
                     {
@@ -446,7 +448,7 @@ namespace TaikoAssist
             string line, float bpm, float scroll, int[] timeSig,
             bool gogo, bool barline, int measureBaseBeat,
             List<int> balloonHits, ref int balloonHitCursor,
-            ref ChartNote pendingNote)
+            ref ChartNote pendingNote, ref int noteID)
         {
             string[] beats = line.Split(',');
             if (beats.Length == 0) return null;
@@ -504,10 +506,11 @@ namespace TaikoAssist
                     bool needsHits = ch == '7' || ch == '9';
                     var longNote = new ChartNote
                     {
-                        startTime = currentTiming,
-                        type = longType,
-                        endTime = null,
-                        requiredHits = needsHits ? TryConsumeBalloonHits(balloonHits, ref balloonHitCursor) : 0,
+                        ID = noteID++,
+                        StartTime = currentTiming,
+                        Type = longType,
+                        EndTime = null,
+                        RequiredHits = needsHits ? TryConsumeBalloonHits(balloonHits, ref balloonHitCursor) : 0,
                     };
                     measure.notes.Add(longNote);
                     pendingNote = longNote;
@@ -519,7 +522,7 @@ namespace TaikoAssist
                 {
                     if (pendingNote != null)
                     {
-                        pendingNote.endTime = currentTiming;
+                        pendingNote.EndTime = currentTiming;
                         pendingNote = null;
                     }
                     continue;
@@ -531,8 +534,9 @@ namespace TaikoAssist
 
                     measure.notes.Add(new ChartNote
                     {
-                        startTime = currentTiming,
-                        type = noteType,
+                        ID = noteID++,
+                        StartTime = currentTiming,
+                        Type = noteType,
                     });
                 }
                 else if (CharToAdlib.TryGetValue(ch, out NoteType adlibType))
@@ -541,8 +545,9 @@ namespace TaikoAssist
 
                     measure.notes.Add(new ChartNote
                     {
-                        startTime = currentTiming,
-                        type = adlibType,
+                        ID = noteID++,
+                        StartTime = currentTiming,
+                        Type = adlibType,
                     });
                 }
             }
@@ -672,32 +677,32 @@ namespace TaikoAssist
 
             foreach (var note in measure.notes)
             {
-                int beatIndex = ResolveBeatIndexFromTiming(note.startTime, measureBaseBeat, measure.beatCount);
+                int beatIndex = ResolveBeatIndexFromTiming(note.StartTime, measureBaseBeat, measure.beatCount);
                 if (beatIndex < 0 || beatIndex >= measure.beatCount) continue;
 
                 char ch;
-                if (AdlibToChar.TryGetValue(note.type, out ch))
+                if (AdlibToChar.TryGetValue(note.Type, out ch))
                 {
                     // 字母扩展音符
                 }
                 else
                 {
-                    ch = NoteTypeToChar.GetValueOrDefault(note.type, '0');
+                    ch = NoteTypeToChar.GetValueOrDefault(note.Type, '0');
                 }
                 chars[beatIndex] = ch;
 
                 // 连打/风船：在结束位置写入结束符 8
-                if (note.endTime != null)
+                if (note.EndTime != null)
                 {
-                    int endIdx = ResolveBeatIndexFromTiming(note.endTime, measureBaseBeat, measure.beatCount);
+                    int endIdx = ResolveBeatIndexFromTiming(note.EndTime, measureBaseBeat, measure.beatCount);
                     if (endIdx >= 0 && endIdx < measure.beatCount)
                     {
                         chars[endIdx] = '8';
                     }
-                    else if (note.endTime.Count >= 3)
+                    else if (note.EndTime.Count >= 3)
                     {
                         // 结束拍位超出本小节：记录到 pending，由后续小节处理
-                        int absEndBeat = note.endTime[0];
+                        int absEndBeat = note.EndTime[0];
                         if (absEndBeat >= measureBaseBeat + measure.beatCount)
                             pendingEndBeats[absEndBeat] = '8';
                     }
@@ -794,10 +799,10 @@ namespace TaikoAssist
 
                 foreach (var note in measure.notes)
                 {
-                    if (note.type != NoteType.Balloon && note.type != NoteType.Kusudama)
+                    if (note.Type != NoteType.Balloon && note.Type != NoteType.Kusudama)
                         continue;
-                    if (note.requiredHits > 0)
-                        result.Add(note.requiredHits);
+                    if (note.RequiredHits > 0)
+                        result.Add(note.RequiredHits);
                 }
             }
 

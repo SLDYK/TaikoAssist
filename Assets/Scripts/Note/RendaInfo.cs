@@ -14,7 +14,10 @@ namespace TaikoAssist
         public float Speed;
         public float StartTime;
         public float EndTime;
-        public int RequiredHits;
+        public int ID;
+        public int RequiredHits;  // 风船/九素玉：还需击打多少次才算完成（递减）
+        public int HitCount;       // 连打：回收前累计击打次数（递增）
+        public bool IsHeadHit;     // 头部是否已被判定（区分头部判定和身体击打）
         public int PendingIndex;
 
         [Header("Body Length Settings")]

@@ -121,14 +121,16 @@ namespace TaikoAssist
     [Serializable]
     public class ChartNote
     {
+        // 转谱时按顺序分配的唯一编号。
+        public int ID;
         // 判定时间三元组 [a,b,c]，表示第 a 又 b/c 拍。
-        public List<int> startTime = new() { 0, 0, 1 };
+        public List<int> StartTime = new() { 0, 0, 1 };
         // 持续时间型音符的结束 timing（风船/连打有效）；null 表示瞬时音符。
-        public List<int> endTime = null;
+        public List<int> EndTime = null;
         // 音符类型。
-        public NoteType type;
+        public NoteType Type;
         // 连打/风船连打次数（仅 Balloon / Kusudama 有效）。
-        public int requiredHits = 0;
+        public int RequiredHits = 0;
     }
 
     // 音符类型，数值与 TJA 字符对应。

@@ -10,6 +10,7 @@ namespace TaikoAssist
         public NoteType Type;
         public float Speed;
         public float TargetTime;
+        public int ID;
         public int PendingIndex;
     }
 }

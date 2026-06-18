@@ -45,8 +45,22 @@ namespace TaikoAssist
         protected override void Awake()
         {
             base.Awake();
-            ApplyBlendInstant(0f);
+            float initialBlend = GlobalSettings.TrackBlend;
+            ApplyBlendInstant(initialBlend);
             SetupBlendSlider();
+            BlendLerp.SetValueWithoutNotify(initialBlend);
+
+            GlobalSettings.OnSettingsChanged += OnSettingsChanged;
+        }
+
+        private void OnSettingsChanged()
+        {
+            float blend = GlobalSettings.TrackBlend;
+            if (!Mathf.Approximately(BlendLerp.value, blend))
+            {
+                AnimateSliderTo(blend);
+                BlendTo(blend);
+            }
         }
 
         private void SetupBlendSlider()
@@ -93,6 +107,7 @@ namespace TaikoAssist
 
             AnimateSliderTo(Snapped);
             BlendTo(Snapped);
+            GlobalSettings.TrackBlend = Snapped;
         }
 
         private void AnimateSliderTo(float target)
@@ -143,6 +158,7 @@ namespace TaikoAssist
 
         protected override void OnDestroy()
         {
+            GlobalSettings.OnSettingsChanged -= OnSettingsChanged;
             BlendLerpTween?.Kill();
             BlendTween?.Kill();
             base.OnDestroy();

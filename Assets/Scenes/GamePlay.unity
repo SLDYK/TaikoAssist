@@ -910,8 +910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5847db4d5f78a0c43999e7744b5736b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaikoAssist.NoteCreator
-  LoadRange: 15
-  ScrollSpeed: 10
   ActiveNotes: []
   DonSprite: {fileID: 21300000, guid: 10ffdff1d682d184d8feb8eab6150540, type: 3}
   KatSprite: {fileID: 21300000, guid: b968fcad25648f847a03ebda2acc6603, type: 3}
@@ -957,8 +955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c7e622454332340a55837ee0d3fcfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaikoAssist.RendaCreator
-  LoadRange: 15
-  ScrollSpeed: 10
   ActiveRendas: []
   BalloonSprite: {fileID: 21300000, guid: f3b551193cf97d54598ecb7add5daf0e, type: 3}
   RollSprite: {fileID: 21300000, guid: 16d0f466945ecd845850c9a3c336c4e8, type: 3}

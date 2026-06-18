@@ -10,22 +10,75 @@ namespace TaikoAssist
         [SerializeField] private AudioClip[] InputSounds;
         [SerializeField] private AudioSource AudioSource;
 
-        private Key[] Keys = new Key[] { Key.F, Key.D, Key.J, Key.K };
+        private InputAction[] InputActions;
+        private bool Available;
 
-        private void Update()
+        protected override void Awake()
         {
-            for (int i = 0; i < Keys.Length && i < InputSprites.Length; i++)
+            base.Awake();
+            InitActions();
+        }
+
+        private void OnEnable()
+        {
+            GlobalSettings.OnSettingsChanged += ResetActions;
+        }
+
+        private void OnDisable()
+        {
+            GlobalSettings.OnSettingsChanged -= ResetActions;
+            DestroyActions();
+        }
+
+        private void ResetActions()
+        {
+            DestroyActions();
+            InitActions();
+        }
+
+        private void InitActions()
+        {
+            var Keys = GlobalSettings.AllKeyArrays;
+            InputActions = new InputAction[Keys.Length];
+            for (int i = 0; i < Keys.Length; i++)
             {
-                if (Keyboard.current[Keys[i]].wasPressedThisFrame)
+                var KeyArray = Keys[i];
+                if (KeyArray == null || KeyArray.Length == 0) continue;
+                var Action = new InputAction($"DrumArea_{i}", InputActionType.Button);
+                for (int j = 0; j < KeyArray.Length; j++)
                 {
-                    var TriggerSprite = InputSprites[i];
-                    TriggerSprite.DOKill();
-                    TriggerSprite.color = Color.white;
-                    TriggerSprite.DOFade(0f, 0.2f).SetEase(Ease.InQuad);
-                    int SoundIndex = i % 2;
-                    AudioSource.PlayOneShot(InputSounds[SoundIndex]);
+                    Action.AddBinding($"<Keyboard>/{KeyArray[j]}");
                 }
+                int areaIndex = i;
+                Action.started += _ => OnKeyPressed(areaIndex);
+                Action.Enable();
+
+                InputActions[i] = Action;
             }
+            Available = true;
+        }
+
+        private void DestroyActions()
+        {
+            if (!Available || InputActions == null) return;
+            for (int i = 0; i < InputActions.Length; i++)
+            {
+                InputActions[i]?.Disable();
+                InputActions[i]?.Dispose();
+            }
+            InputActions = null;
+            Available = false;
+        }
+
+        private void OnKeyPressed(int Index)
+        {
+            var Sprite = InputSprites[Index];
+            Sprite.DOKill();
+            Sprite.color = Color.white;
+            Sprite.DOFade(0f, 0.2f).SetEase(Ease.InQuad);
+            int Sound = Index % 2;
+            AudioSource.PlayOneShot(InputSounds[Sound]);
         }
     }
 }
+

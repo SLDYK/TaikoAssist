@@ -3,15 +3,8 @@ using UnityEngine;
 
 namespace TaikoAssist
 {
-    // 连打/风船类音符的创建与管理器。
-    // 与 NoteCreator 类似，但专门处理 Balloon / Kusudama / Roll / BigRoll 四种类型，
-    // 所有 RendaInfo 音符创建在 Separator 的 RendaLine 轨道上。
     public class RendaCreator : Singleton<RendaCreator>
     {
-        [Header("加载配置")]
-        [SerializeField] private float LoadRange = 5f;
-        [SerializeField] private float ScrollSpeed = 1f;
-
         [Header("运行时")]
         [SerializeField] private List<RendaInfo> ActiveRendas;
 
@@ -26,18 +19,20 @@ namespace TaikoAssist
         private Vector3 NormalScale = Vector3.one * 0.9f;
         private Vector3 BigScale = Vector3.one * 0.7f;
 
-        private List<PendingRenda> _pendingRendas = new();
-        private bool _dirty = false;
+        private List<PendingRenda> ChartRendas = new();
+        private bool IsDirty = false;
 
-        public IReadOnlyList<RendaInfo> Rendas => ActiveRendas;
+        public IReadOnlyList<PendingRenda> PendingRendas => ChartRendas;
 
-        private struct PendingRenda
+        [System.Serializable]
+        public class PendingRenda : ChartNote
         {
-            public NoteType type;
-            public float timeSec;
-            public float endTimeSec;    // 结束时间（秒），连打有效
-            public int requiredHits;    // 风船所需击打次数
-            public float scroll;
+            public float StartTimeSec;
+            public float EndTimeSec;
+            public float Scroll;
+            public RendaInfo RendaInstance;
+            public bool IsHit;
+            public bool IsFinished;
         }
 
         protected override void Awake()
@@ -48,87 +43,56 @@ namespace TaikoAssist
 
         private void Update()
         {
-            if (_dirty)
+            if (IsDirty)
                 RebuildPending();
 
-            if (_pendingRendas.Count == 0)
+            if (ChartRendas.Count == 0)
                 return;
 
-            float elapsed = Timer.GetElapsedTime();
+            float Elapsed = Timer.GetElapsedTime();
 
-            // 步骤一：扫描全部待加载 Renda，找出当前应在可视范围内的索引。
-            HashSet<int> desired = new();
-            for (int i = 0; i < _pendingRendas.Count; i++)
+            foreach (PendingRenda Renda in ChartRendas)
             {
-                PendingRenda p = _pendingRendas[i];
-                float loadValue = (p.timeSec - elapsed) * p.scroll * ScrollSpeed;
-
-                if (loadValue < 0f)
-                    continue;
-                if (loadValue > LoadRange)
-                    continue;
-
-                desired.Add(i);
-            }
-
-            // 步骤二：遍历当前活跃 Renda，保留仍需要的，移除不再需要的。
-            for (int i = ActiveRendas.Count - 1; i >= 0; i--)
-            {
-                RendaInfo renda = ActiveRendas[i];
-                if (renda == null)
+                if ((InDistance(Renda) || InTimeRange(Renda)) && !Renda.IsFinished && Renda.RendaInstance == null)
                 {
-                    ActiveRendas.RemoveAt(i);
-                    continue;
+                    Transform Track = GetRendaTrack();
+                    RendaInfo Instance = PrefabPool.Instance.GetRenda(Track);
+                    Instance.Type = Renda.Type;
+                    Instance.Speed = Renda.Scroll;
+                    Instance.StartTime = Renda.StartTimeSec;
+                    Instance.EndTime = Renda.EndTimeSec;
+                    Instance.ID = Renda.ID;
+                    Instance.RequiredHits = Renda.RequiredHits;
+                    Renda.RendaInstance = Instance;
+                    Renda.IsFinished = false;
+                    SetTexture(Instance);
                 }
-
-                if (desired.Contains(renda.PendingIndex))
+                else if (Renda.RendaInstance != null && (!InDistance(Renda) && !InTimeRange(Renda) || Renda.IsFinished))
                 {
-                    // StartTime 尚未到达判定线，仍在加载范围内，继续保留。
-                    desired.Remove(renda.PendingIndex);
+                    PrefabPool.Instance.ReleaseRenda(Renda.RendaInstance);
+                    Renda.RendaInstance = null;
                 }
-                else
+                else if (Renda.RendaInstance != null)
                 {
-                    // StartTime 已过判定线，根据类型判断是否应继续存活。
-                    bool keepAlive = ShouldKeepAlive(renda, elapsed);
+                    float Distance = (Renda.StartTimeSec - Elapsed) * Renda.Scroll * GlobalSettings.ScrollSpeed;
+                    Renda.RendaInstance.transform.localPosition = new Vector3(Mathf.Max(Distance, 0f), 0f, 0f);
 
-                    if (!keepAlive)
-                    {
-                        ActiveRendas.RemoveAt(i);
-                        NotePool.Instance.ReleaseRenda(renda);
-                    }
+                    float remainingTime = Renda.EndTimeSec - Mathf.Max(Renda.StartTimeSec, Elapsed);
+                    float bodyLength = remainingTime * Renda.Scroll * GlobalSettings.ScrollSpeed;
+                    Renda.RendaInstance.SetBodyLength(Mathf.Max(bodyLength, 0f));
                 }
             }
+        }
 
-            // 步骤三：创建新的 RendaInfo。
-            foreach (int idx in desired)
+        // 获取当前最早且实例存在的一个未完成 Renda
+        public static PendingRenda GetEarliest()
+        {
+            foreach (PendingRenda renda in Instance.ChartRendas)
             {
-                PendingRenda p = _pendingRendas[idx];
-                Transform track = GetRendaTrack();
-                RendaInfo renda = NotePool.Instance.GetRenda(track);
-                renda.Type = p.type;
-                renda.Speed = p.scroll;
-                renda.StartTime = p.timeSec;
-                renda.EndTime = p.endTimeSec;
-                renda.RequiredHits = p.requiredHits;
-                renda.PendingIndex = idx;
-                ApplyRendaResources(renda);
-                ActiveRendas.Add(renda);
+                if (renda.RendaInstance != null && !renda.IsFinished)
+                    return renda;
             }
-
-            // 步骤四：更新所有活跃 Renda 的轨道位置和 Body 长度。
-            // 到达 StartTime 后锁定在 X=0，不再继续向左移动。
-            foreach (RendaInfo renda in ActiveRendas)
-            {
-                float loadValue = (renda.StartTime - elapsed) * renda.Speed * ScrollSpeed;
-                renda.transform.localPosition = new Vector3(Mathf.Max(loadValue, 0f), 0f, 0f);
-
-                // Body 长度 = 剩余持续时间对应的世界空间长度
-                float remainingTime = renda.EndTime - Mathf.Max(renda.StartTime, elapsed);
-                float bodyLength = remainingTime * renda.Speed * ScrollSpeed;
-                renda.SetBodyLength(Mathf.Max(bodyLength, 0f));
-            }
-
-            // 步骤五：渲染层级由 NoteCreator.LateUpdate 统一混合排序分配。
+            return null;
         }
 
         // 获取 Renda 轨道。
@@ -138,7 +102,7 @@ namespace TaikoAssist
         }
 
         // 根据 Renda 类型应用对应的精灵、缩放和中文 Caption。
-        private void ApplyRendaResources(RendaInfo renda)
+        private void SetTexture(RendaInfo renda)
         {
             switch (renda.Type)
             {
@@ -172,74 +136,43 @@ namespace TaikoAssist
             }
         }
 
-        // 判断 StartTime 已过判定线的 Renda 是否应继续存活。
-        // 连打：EndTime 未过则存活；风船：EndTime 未过且打击次数未满足则存活。
-        private bool ShouldKeepAlive(RendaInfo renda, float elapsed)
-        {
-            float endValue = (renda.EndTime - elapsed) * renda.Speed * ScrollSpeed;
-
-            switch (renda.Type)
-            {
-                case NoteType.Roll:
-                case NoteType.BigRoll:
-                    return endValue > 0f;
-                case NoteType.Balloon:
-                case NoteType.Kusudama:
-                    return endValue > 0f && renda.RequiredHits > 0;
-                default:
-                    return false;
-            }
-        }
-
-        // 从当前谱面重建 _pendingRendas 并清空场景中的旧 Renda。
         private void RebuildPending()
         {
-            _pendingRendas.Clear();
-            _dirty = false;
+            ChartRendas.Clear();
+            IsDirty = false;
 
-            // 回收场景中所有旧 Renda
-            for (int i = ActiveRendas.Count - 1; i >= 0; i--)
+            TaikoChartData Chart = ChartLoader.CurrentChart;
+            List<ChartMeasure> Measures = Chart.chart.measures;
+            float CurrentScroll = Chart.chart.initialScroll;
+
+            for (int i = 0; i < Measures.Count; i++)
             {
-                if (ActiveRendas[i] != null)
-                    NotePool.Instance.ReleaseRenda(ActiveRendas[i]);
-            }
-            ActiveRendas.Clear();
+                ChartMeasure M = Measures[i];
+                if (M.scroll > 0) CurrentScroll = M.scroll;
 
-            TaikoChartData chart = ChartLoader.CurrentChart;
-            if (chart == null) return;
-
-            List<ChartMeasure> measures = chart.chart.measures;
-            float currentScroll = chart.chart.initialScroll;
-
-            for (int i = 0; i < measures.Count; i++)
-            {
-                ChartMeasure m = measures[i];
-                if (m.scroll > 0) currentScroll = m.scroll;
-
-                foreach (ChartNote cn in m.notes)
+                foreach (ChartNote Note in M.notes)
                 {
-                    if (!IsRendaNote(cn.type))
+                    if (!BalloonRoll(Note.Type))
                         continue;
 
-                    // 计算结束时间：连打类用 endTime，风船类直接用 startTime（瞬时判定）
-                    float endSec = 0f;
-                    if (cn.endTime != null && cn.endTime.Count > 0)
-                        endSec = ChartTime.Time2Sec(cn.endTime);
-
-                    _pendingRendas.Add(new PendingRenda
+                    ChartRendas.Add(new PendingRenda
                     {
-                        type = cn.type,
-                        timeSec = ChartTime.Time2Sec(cn.startTime),
-                        endTimeSec = endSec,
-                        requiredHits = cn.requiredHits,
-                        scroll = currentScroll,
+                        Type = Note.Type,
+                        StartTime = Note.StartTime,
+                        EndTime = Note.EndTime,
+                        RequiredHits = Note.RequiredHits,
+                        StartTimeSec = ChartTime.Time2Sec(Note.StartTime),
+                        EndTimeSec = ChartTime.Time2Sec(Note.EndTime),
+                        Scroll = CurrentScroll,
+                        IsHit = false,
+                        IsFinished = false,
                     });
                 }
             }
         }
 
-        // 判断是否为 Renda 类型（风船 / 连打 / 九素玉）。
-        private static bool IsRendaNote(NoteType type)
+        // 仅 Balloon / Kusudama / Roll / BigRoll 四种 Renda 音符需要加载。
+        private static bool BalloonRoll(NoteType type)
         {
             return type == NoteType.Balloon
                 || type == NoteType.Roll
@@ -247,23 +180,30 @@ namespace TaikoAssist
                 || type == NoteType.Kusudama;
         }
 
-        // 外部调用：标记谱面数据已变更。
-        public void MarkDirty()
+        // 当前时间是否在 Renda 的 JudgeOk 判定窗口内。
+        private static bool InTimeRange(PendingRenda Renda)
         {
-            _dirty = true;
+            float Elapsed = Timer.GetElapsedTime();
+            float JudgeWindow = Renda.Type switch
+            {
+                NoteType.BigRoll => GlobalSettings.JudgeOkBig,
+                _ => GlobalSettings.JudgeOkNormal,
+            };
+            return Mathf.Abs(Elapsed - Renda.StartTimeSec) < JudgeWindow;
         }
 
-#if UNITY_EDITOR
-        private void OnDrawGizmosSelected()
+        // Renda 是否在可视距离范围内。
+        private static bool InDistance(PendingRenda Renda)
         {
-            if (ActiveRendas == null) return;
-            Gizmos.color = Color.yellow;
-            foreach (RendaInfo renda in ActiveRendas)
-            {
-                if (renda != null)
-                    Gizmos.DrawWireSphere(renda.transform.position, 0.2f);
-            }
+            float Elapsed = Timer.GetElapsedTime();
+            float StartDistance = (Renda.StartTimeSec - Elapsed) * Renda.Scroll * GlobalSettings.ScrollSpeed;
+            float EndDistance = (Renda.EndTimeSec - Elapsed) * Renda.Scroll * GlobalSettings.ScrollSpeed;
+            return !(StartDistance > GlobalSettings.LoadRange || EndDistance < 0f);
         }
-#endif
+
+        public void MarkDirty()
+        {
+            IsDirty = true;
+        }
     }
 }
