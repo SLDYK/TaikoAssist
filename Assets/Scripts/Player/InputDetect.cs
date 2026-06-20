@@ -13,15 +13,10 @@ namespace TaikoAssist
         private InputAction[] InputActions;
         private bool Available;
 
-        protected override void Awake()
-        {
-            base.Awake();
-            InitActions();
-        }
-
         private void OnEnable()
         {
             GlobalSettings.OnSettingsChanged += ResetActions;
+            InitActions();
         }
 
         private void OnDisable()

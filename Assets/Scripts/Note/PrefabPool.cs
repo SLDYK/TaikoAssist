@@ -80,7 +80,6 @@ namespace TaikoAssist
             renda.EndTime = 0f;
             renda.RequiredHits = 0;
             renda.HitCount = 0;
-            renda.IsHeadHit = false;
             renda.PendingIndex = 0;
             renda.Head.sprite = null;
             renda.Body.sprite = null;

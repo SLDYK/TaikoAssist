@@ -166,7 +166,7 @@ namespace TaikoAssist
 
         // 将四个按键数组合并为一个二维数组，便于遍历。
         public static Key[][] AllKeyArrays =>
-            new Key[][] { LeftDonKeys, RightDonKeys, LeftKatKeys, RightKatKeys };
+            new Key[][] { LeftDonKeys, LeftKatKeys, RightDonKeys, RightKatKeys };
 
         // 将 Key 数组序列化为逗号分隔的整数字符串。
         private static string SerializeKeys(Key[] keys)
