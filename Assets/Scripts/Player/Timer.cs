@@ -17,8 +17,8 @@ namespace TaikoAssist
         void Start()
         {
             Time.fixedDeltaTime = 1f / 100f;
-            StartTime = Time.time + DelayTime / 1000;
-            ElapsedTime = Time.time - StartTime;
+            StartTime = Time.realtimeSinceStartup + DelayTime / 1000;
+            ElapsedTime = Time.realtimeSinceStartup - StartTime;
             PauseTimer();
         }
 
@@ -26,7 +26,7 @@ namespace TaikoAssist
         {
             if (!Paused)
             {
-                ElapsedTime = (Time.time - StartTime) * Multiplier;
+                ElapsedTime = (Time.realtimeSinceStartup - StartTime) * Multiplier;
                 TargetTime = ElapsedTime;
                 if (Length > 0)
                     ProgressBar.value = ElapsedTime / Length;
@@ -65,7 +65,7 @@ namespace TaikoAssist
         public static void ResumeTimer()
         {
             Instance.Paused = false;
-            Instance.StartTime = Time.time - Instance.ElapsedTime / Instance.Multiplier;
+            Instance.StartTime = Time.realtimeSinceStartup - Instance.ElapsedTime / Instance.Multiplier;
             AudioController.Instance.Resume(Instance.ElapsedTime);
         }
 
@@ -82,9 +82,11 @@ namespace TaikoAssist
 
         public static float GetElapsedTime()
         {
-            if (Instance.Paused)
-                return Instance.ElapsedTime;
-            return (Time.time - Instance.StartTime) * Instance.Multiplier;
+            return (Time.realtimeSinceStartup - Instance.StartTime) * Instance.Multiplier;
+        }
+        public static float GetRelativeTime(double Time)
+        {
+            return (float)((Time - Instance.StartTime) * Instance.Multiplier);
         }
     }
 }

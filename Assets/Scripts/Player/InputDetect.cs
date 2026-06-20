@@ -45,7 +45,7 @@ namespace TaikoAssist
                     Action.AddBinding($"<Keyboard>/{KeyArray[j]}");
                 }
                 int areaIndex = i;
-                Action.started += _ => OnKeyPressed(areaIndex);
+                Action.started += ctx => OnKeyPressed(areaIndex, ctx.time);
                 Action.Enable();
 
                 InputActions[i] = Action;
@@ -65,14 +65,29 @@ namespace TaikoAssist
             Available = false;
         }
 
-        private void OnKeyPressed(int Index)
+        private float Elapsed;
+        private bool Hit;
+
+        private void OnKeyPressed(int Index, double time)
         {
+            Elapsed = Timer.GetRelativeTime(time);
+            Hit = true;
             var Sprite = InputSprites[Index];
             Sprite.DOKill();
             Sprite.color = Color.white;
             Sprite.DOFade(0f, 0.2f).SetEase(Ease.InQuad);
             int Sound = Index % 2;
             AudioSource.PlayOneShot(InputSounds[Sound]);
+        }
+        void Update()
+        {
+            if (Hit)
+            {
+                float Delta = Timer.GetElapsedTime() - Elapsed;
+                Debug.Log(Delta * 1000f + " ms");
+                Hit = false;
+            }
+
         }
     }
 }

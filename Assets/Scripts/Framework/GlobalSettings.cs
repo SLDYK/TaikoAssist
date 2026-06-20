@@ -26,7 +26,7 @@ namespace TaikoAssist
         public const float DefaultJudgeOk = 0.075f;
         public const float DefaultJudgeOkBig = 0.108f;
         public const float DefaultTrackBlend = 0f;
-        public const float DefaultLoadRange = 5f;
+        public const float DefaultLoadRange = 15f;
 
         // 默认按键配置：四个鼓面/鼓边的按键。
         public static readonly Key[] DefaultLeftDonKeys = { Key.F };
