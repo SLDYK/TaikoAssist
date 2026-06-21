@@ -25,6 +25,7 @@ namespace TaikoAssist
             else
             {
                 Note = Instantiate(NotePrefab, Track);
+                Note.transform.position = 9999 * Vector3.one;
             }
             return Note;
         }
@@ -37,14 +38,15 @@ namespace TaikoAssist
             NotePool.Enqueue(Note);
         }
 
-        private static void ResetNote(NoteInfo note)
+        private static void ResetNote(NoteInfo Note)
         {
-            note.Type = NoteType.Don;
-            note.Speed = 1f;
-            note.TargetTime = 0f;
-            note.PendingIndex = 0;
-            note.Sprite.sprite = null;
-            note.Caption.text = "";
+            Note.Type = NoteType.Don;
+            Note.Speed = 1f;
+            Note.TargetTime = 0f;
+            Note.PendingIndex = 0;
+            Note.Sprite.sprite = null;
+            Note.Caption.text = "";
+            Note.transform.position = 9999 * Vector3.one;
         }
 
         public RendaInfo GetRenda(Transform Track)
@@ -60,6 +62,7 @@ namespace TaikoAssist
             else
             {
                 Renda = Instantiate(RendaPrefab, Track);
+                Renda.transform.position = 9999 * Vector3.one;
             }
             return Renda;
         }
@@ -72,18 +75,19 @@ namespace TaikoAssist
             RendaPool.Enqueue(Renda);
         }
 
-        private static void ResetRenda(RendaInfo renda)
+        private static void ResetRenda(RendaInfo Renda)
         {
-            renda.Type = NoteType.Balloon;
-            renda.Speed = 1f;
-            renda.StartTime = 0f;
-            renda.EndTime = 0f;
-            renda.RequiredHits = 0;
-            renda.HitCount = 0;
-            renda.PendingIndex = 0;
-            renda.Head.sprite = null;
-            renda.Body.sprite = null;
-            renda.Caption.text = "";
+            Renda.Type = NoteType.Balloon;
+            Renda.Speed = 1f;
+            Renda.StartTime = 0f;
+            Renda.EndTime = 0f;
+            Renda.RequiredHits = 0;
+            Renda.HitCount = 0;
+            Renda.PendingIndex = 0;
+            Renda.Head.sprite = null;
+            Renda.Body.sprite = null;
+            Renda.Caption.text = "";
+            Renda.transform.position = 9999 * Vector3.one;
         }
     }
 }

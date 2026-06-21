@@ -82,10 +82,14 @@ namespace TaikoAssist
 
         public static float GetElapsedTime()
         {
+            if (Instance.Paused)
+                return Instance.TargetTime;
             return (Time.realtimeSinceStartup - Instance.StartTime) * Instance.Multiplier;
         }
         public static float GetRelativeTime(double Time)
         {
+            if (Instance.Paused)
+                return Instance.TargetTime;
             return (float)((Time - Instance.StartTime) * Instance.Multiplier);
         }
     }

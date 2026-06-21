@@ -22,6 +22,10 @@ namespace TaikoAssist
         private List<PendingRenda> ChartRendas = new();
         private bool IsDirty = false;
 
+        // 缓存的 GlobalSettings 值，避免每帧 PlayerPrefs 读取
+        private float _cachedScrollSpeed;
+        private float _cachedLoadRange;
+
         public IReadOnlyList<PendingRenda> PendingRendas => ChartRendas;
 
         [System.Serializable]
@@ -39,6 +43,20 @@ namespace TaikoAssist
         {
             base.Awake();
             ChartLoader.Instance.OnChartLoaded += MarkDirty;
+            RefreshCachedSettings();
+            GlobalSettings.OnSettingsChanged += RefreshCachedSettings;
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            GlobalSettings.OnSettingsChanged -= RefreshCachedSettings;
+        }
+
+        private void RefreshCachedSettings()
+        {
+            _cachedScrollSpeed = GlobalSettings.ScrollSpeed;
+            _cachedLoadRange = GlobalSettings.LoadRange;
         }
 
         private void Update()
@@ -53,7 +71,7 @@ namespace TaikoAssist
 
             foreach (PendingRenda Renda in ChartRendas)
             {
-                if ((InDistance(Renda) || InTimeRange(Renda)) && !Renda.IsFinished && Renda.RendaInstance == null)
+                if ((InDistance(Renda, Elapsed) || InTimeRange(Renda, Elapsed)) && !Renda.IsFinished && Renda.RendaInstance == null)
                 {
                     Transform Track = GetRendaTrack();
                     RendaInfo Instance = PrefabPool.Instance.GetRenda(Track);
@@ -67,18 +85,18 @@ namespace TaikoAssist
                     Renda.IsFinished = false;
                     SetTexture(Instance);
                 }
-                else if (Renda.RendaInstance != null && (!InDistance(Renda) && !InTimeRange(Renda) || Renda.IsFinished))
+                else if (Renda.RendaInstance != null && (!InDistance(Renda, Elapsed) && !InTimeRange(Renda, Elapsed) || Renda.IsFinished))
                 {
                     PrefabPool.Instance.ReleaseRenda(Renda.RendaInstance);
                     Renda.RendaInstance = null;
                 }
                 else if (Renda.RendaInstance != null)
                 {
-                    float Distance = (Renda.StartTimeSec - Elapsed) * Renda.Scroll * GlobalSettings.ScrollSpeed;
+                    float Distance = (Renda.StartTimeSec - Elapsed) * Renda.Scroll * _cachedScrollSpeed;
                     Renda.RendaInstance.transform.localPosition = new Vector3(Mathf.Max(Distance, 0f), 0f, 0f);
 
                     float RemainingTime = Renda.EndTimeSec - Mathf.Max(Renda.StartTimeSec, Elapsed);
-                    float BodyLength = RemainingTime * Renda.Scroll * GlobalSettings.ScrollSpeed;
+                    float BodyLength = RemainingTime * Renda.Scroll * _cachedScrollSpeed;
                     Renda.RendaInstance.SetBodyLength(Mathf.Max(BodyLength, 0f));
                 }
             }
@@ -176,18 +194,16 @@ namespace TaikoAssist
                 || type == NoteType.Kusudama;
         }
 
-        private static bool InTimeRange(PendingRenda Renda)
+        private bool InTimeRange(PendingRenda Renda, float elapsed)
         {
-            float Elapsed = Timer.GetElapsedTime();
-            return Elapsed > Renda.StartTimeSec && Elapsed < Renda.EndTimeSec;
+            return elapsed > Renda.StartTimeSec && elapsed < Renda.EndTimeSec;
         }
 
-        private static bool InDistance(PendingRenda Renda)
+        private bool InDistance(PendingRenda Renda, float elapsed)
         {
-            float Elapsed = Timer.GetElapsedTime();
-            float StartDistance = (Renda.StartTimeSec - Elapsed) * Renda.Scroll * GlobalSettings.ScrollSpeed;
-            float EndDistance = (Renda.EndTimeSec - Elapsed) * Renda.Scroll * GlobalSettings.ScrollSpeed;
-            return !(StartDistance > GlobalSettings.LoadRange || EndDistance < 0f);
+            float StartDistance = (Renda.StartTimeSec - elapsed) * Renda.Scroll * _cachedScrollSpeed;
+            float EndDistance = (Renda.EndTimeSec - elapsed) * Renda.Scroll * _cachedScrollSpeed;
+            return !(StartDistance > _cachedLoadRange || EndDistance < 0f);
         }
 
         public void MarkDirty()

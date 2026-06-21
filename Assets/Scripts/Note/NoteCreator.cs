@@ -18,6 +18,12 @@ namespace TaikoAssist
         private List<PendingNote> ChartNotes = new();
         private bool IsDirty = false;
 
+        // 缓存的 GlobalSettings 值，避免每帧 PlayerPrefs 读取
+        private float _cachedScrollSpeed;
+        private float _cachedLoadRange;
+        private float _cachedJudgeOkNormal;
+        private float _cachedJudgeOkBig;
+
         public IReadOnlyList<PendingNote> PendingNotes => ChartNotes;
 
         [System.Serializable]
@@ -32,7 +38,24 @@ namespace TaikoAssist
         {
             base.Awake();
             ChartLoader.Instance.OnChartLoaded += MarkDirty;
+            RefreshCachedSettings();
+            GlobalSettings.OnSettingsChanged += RefreshCachedSettings;
         }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            GlobalSettings.OnSettingsChanged -= RefreshCachedSettings;
+        }
+
+        private void RefreshCachedSettings()
+        {
+            _cachedScrollSpeed = GlobalSettings.ScrollSpeed;
+            _cachedLoadRange = GlobalSettings.LoadRange;
+            _cachedJudgeOkNormal = GlobalSettings.JudgeOkNormal;
+            _cachedJudgeOkBig = GlobalSettings.JudgeOkBig;
+        }
+
         private void Update()
         {
             if (IsDirty)
@@ -45,7 +68,7 @@ namespace TaikoAssist
 
             foreach (PendingNote Note in ChartNotes)
             {
-                if ((InDistance(Note) || InTimeRange(Note)) && !Note.IsHit && Note.NoteInstance == null)
+                if ((InDistance(Note, Elapsed) || InTimeRange(Note, Elapsed)) && !Note.IsHit && Note.NoteInstance == null)
                 {
                     Transform Track = AttachTrack(Note.Type);
                     NoteInfo Instance = PrefabPool.Instance.GetNote(Track);
@@ -56,27 +79,25 @@ namespace TaikoAssist
                     Note.IsHit = false;
                     SetTexture(Instance);
                 }
-                else if (Note.NoteInstance != null && (!InDistance(Note) && !InTimeRange(Note) || Note.IsHit))
+                else if (Note.NoteInstance != null && (!InDistance(Note, Elapsed) && !InTimeRange(Note, Elapsed) || Note.IsHit))
                 {
                     PrefabPool.Instance.ReleaseNote(Note.NoteInstance);
                     Note.NoteInstance = null;
                 }
                 else if (Note.NoteInstance != null)
                 {
-                    float Distance = (Note.TimeSec - Elapsed) * Note.Scroll * GlobalSettings.ScrollSpeed;
-                    Vector3 Pos = Note.NoteInstance.transform.localPosition;
-                    Pos.x = Distance;
-                    Note.NoteInstance.transform.localPosition = Pos;
+                    float Distance = (Note.TimeSec - Elapsed) * Note.Scroll * _cachedScrollSpeed;
+                    Note.NoteInstance.transform.localPosition = new Vector3(Distance, 0f, 0f);
                 }
             }
         }
 
         public static PendingNote GetEarliest()
         {
-            foreach (PendingNote note in Instance.ChartNotes)
+            foreach (PendingNote Note in Instance.ChartNotes)
             {
-                if (note.NoteInstance != null && !note.IsHit)
-                    return note;
+                if (Note.NoteInstance != null && !Note.IsHit)
+                    return Note;
             }
             return null;
         }
@@ -162,21 +183,20 @@ namespace TaikoAssist
                 || type == NoteType.BigKat;
         }
 
-        private static bool InTimeRange(PendingNote Note)
+        private bool InTimeRange(PendingNote Note, float Elapsed)
         {
-            float Elapsed = Timer.GetElapsedTime();
             float JudgeWindow = Note.Type switch
             {
-                NoteType.BigDon or NoteType.BigKat => GlobalSettings.JudgeOkBig,
-                _ => GlobalSettings.JudgeOkNormal,
+                NoteType.BigDon or NoteType.BigKat => _cachedJudgeOkBig,
+                _ => _cachedJudgeOkNormal,
             };
             return Mathf.Abs(Elapsed - Note.TimeSec) < JudgeWindow;
         }
-        private static bool InDistance(PendingNote Note)
+
+        private bool InDistance(PendingNote Note, float Elapsed)
         {
-            float Elapsed = Timer.GetElapsedTime();
-            float Distance = (Note.TimeSec - Elapsed) * Note.Scroll * GlobalSettings.ScrollSpeed;
-            return Distance > 0f && Distance < GlobalSettings.LoadRange;
+            float Distance = (Note.TimeSec - Elapsed) * Note.Scroll * _cachedScrollSpeed;
+            return Distance > 0f && Distance < _cachedLoadRange;
         }
 
         public void MarkDirty()
