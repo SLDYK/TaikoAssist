@@ -11,7 +11,6 @@ namespace TaikoAssist
         private const string KeyAutoPlay = "GS_AutoPlay";
         private const string KeyJudgeGood = "GS_JudgeGood";
         private const string KeyJudgeOk = "GS_JudgeOk";
-        private const string KeyJudgeOkBig = "GS_JudgeOkBig";
         private const string KeyTrackBlend = "GS_TrackBlend";
         private const string KeyLoadRange = "GS_LoadRange";
         private const string KeyLeftDonKeys = "GS_LeftDonKeys";
@@ -24,7 +23,6 @@ namespace TaikoAssist
         public const bool DefaultAutoPlay = false;
         public const float DefaultJudgeGood = 0.025f;
         public const float DefaultJudgeOk = 0.075f;
-        public const float DefaultJudgeOkBig = 0.108f;
         public const float DefaultTrackBlend = 0f;
         public const float DefaultLoadRange = 15f;
 
@@ -76,7 +74,7 @@ namespace TaikoAssist
             get => PlayerPrefs.GetFloat(KeyJudgeGood, DefaultJudgeGood);
             set
             {
-                float Clamped = Mathf.Max(0.005f, Mathf.Min(value, JudgeOkNormal));
+                float Clamped = Mathf.Max(0.005f, Mathf.Min(value, JudgeOk));
                 PlayerPrefs.SetFloat(KeyJudgeGood, Clamped);
                 PlayerPrefs.Save();
                 OnSettingsChanged?.Invoke();
@@ -84,26 +82,13 @@ namespace TaikoAssist
         }
 
         // 可判定窗口（秒）- 通常音符。命中在此范围内为"可"，超过为不可。
-        public static float JudgeOkNormal
+        public static float JudgeOk
         {
             get => PlayerPrefs.GetFloat(KeyJudgeOk, DefaultJudgeOk);
             set
             {
                 float Clamped = Mathf.Max(JudgeGood, value);
                 PlayerPrefs.SetFloat(KeyJudgeOk, Clamped);
-                PlayerPrefs.Save();
-                OnSettingsChanged?.Invoke();
-            }
-        }
-
-        // 可判定窗口（秒）- 大音符（BigDon/BigKat）。大音符的"可"窗口更宽。
-        public static float JudgeOkBig
-        {
-            get => PlayerPrefs.GetFloat(KeyJudgeOkBig, DefaultJudgeOkBig);
-            set
-            {
-                float Clamped = Mathf.Max(JudgeGood, value);
-                PlayerPrefs.SetFloat(KeyJudgeOkBig, Clamped);
                 PlayerPrefs.Save();
                 OnSettingsChanged?.Invoke();
             }
@@ -206,8 +191,7 @@ namespace TaikoAssist
             ScrollSpeed = DefaultScrollSpeed;
             AutoPlay = DefaultAutoPlay;
             JudgeGood = DefaultJudgeGood;
-            JudgeOkNormal = DefaultJudgeOk;
-            JudgeOkBig = DefaultJudgeOkBig;
+            JudgeOk = DefaultJudgeOk;
             TrackBlend = DefaultTrackBlend;
             LoadRange = DefaultLoadRange;
             LeftDonKeys = DefaultLeftDonKeys;

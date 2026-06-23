@@ -81,6 +81,7 @@ namespace TaikoAssist
             Sprite.DOFade(0f, 0.2f).SetEase(Ease.InQuad);
             int Sound = Index % 2;
             AudioSource.PlayOneShot(InputSounds[Sound]);
+            HitEvaluator.Instance.Evaluate(Index, Elapsed);
         }
 
         private void Update()
@@ -144,14 +145,12 @@ namespace TaikoAssist
             {
                 HitKat();
             }
-            Note.IsHit = true;
         }
         private void HitRenda(RC.PendingRenda Renda)
         {
             if (Renda.StartTimeSec > Timer.GetElapsedTime() || Renda.IsStarted)
                 return;
             HitDon();
-            Renda.IsStarted = true;
         }
 
         private int HitArea = 0;
@@ -159,17 +158,17 @@ namespace TaikoAssist
         private void HitDon()
         {
             if (HitArea++ % 2 == 0)
-                OnKeyPressed(0, 0);
+                OnKeyPressed(0, Timer.GetElapsedTime());
             else
-                OnKeyPressed(2, 0);
+                OnKeyPressed(2, Timer.GetElapsedTime());
         }
 
         private void HitKat()
         {
             if (HitArea++ % 2 == 0)
-                OnKeyPressed(1, 0);
+                OnKeyPressed(1, Timer.GetElapsedTime());
             else
-                OnKeyPressed(3, 0);
+                OnKeyPressed(3, Timer.GetElapsedTime());
         }
     }
 }

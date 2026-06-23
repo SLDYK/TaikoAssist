@@ -8,8 +8,8 @@ namespace TaikoAssist
 {
     public class ChartLoader : Singleton<ChartLoader>
     {
-        private string AudioPath = "TestCharts/VIVIVIVID.ogg";
-        private string TjaPath = "TestCharts/VIVIVIVID.tja";
+        private string AudioPath = "TestCharts/第六天魔王.ogg";
+        private string TjaPath = "TestCharts/第六天魔王.tja";
 
         public List<TaikoChartData> LoadedCharts;
         public int ChartIndex;

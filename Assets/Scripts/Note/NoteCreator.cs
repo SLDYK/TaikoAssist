@@ -21,8 +21,7 @@ namespace TaikoAssist
         // 缓存的 GlobalSettings 值，避免每帧 PlayerPrefs 读取
         private float _cachedScrollSpeed;
         private float _cachedLoadRange;
-        private float _cachedJudgeOkNormal;
-        private float _cachedJudgeOkBig;
+        private float _cachedJudgeOk;
 
         public IReadOnlyList<PendingNote> PendingNotes => ChartNotes;
 
@@ -52,8 +51,7 @@ namespace TaikoAssist
         {
             _cachedScrollSpeed = GlobalSettings.ScrollSpeed;
             _cachedLoadRange = GlobalSettings.LoadRange;
-            _cachedJudgeOkNormal = GlobalSettings.JudgeOkNormal;
-            _cachedJudgeOkBig = GlobalSettings.JudgeOkBig;
+            _cachedJudgeOk = GlobalSettings.JudgeOk;
         }
 
         private void Update()
@@ -185,11 +183,7 @@ namespace TaikoAssist
 
         private bool InTimeRange(PendingNote Note, float Elapsed)
         {
-            float JudgeWindow = Note.Type switch
-            {
-                NoteType.BigDon or NoteType.BigKat => _cachedJudgeOkBig,
-                _ => _cachedJudgeOkNormal,
-            };
+            float JudgeWindow = _cachedJudgeOk;
             return Mathf.Abs(Elapsed - Note.TimeSec) < JudgeWindow;
         }
 
