@@ -143,7 +143,7 @@ namespace TaikoAssist
                     renda.Head.sprite = BigRollSprite;
                     renda.Body.sprite = BigRollBodySprite;
                     renda.transform.localScale = BigScale;
-                    renda.Caption.text = "大连打";
+                    renda.Caption.text = "连打(大)";
                     break;
                 default:
                     renda.Caption.text = "";

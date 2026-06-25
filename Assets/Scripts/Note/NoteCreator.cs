@@ -126,12 +126,12 @@ namespace TaikoAssist
                 case NoteType.BigDon:
                     Note.Sprite.sprite = BigDonSprite;
                     Note.transform.localScale = BigScale;
-                    Note.Caption.text = "大咚";
+                    Note.Caption.text = "咚(大)";
                     break;
                 case NoteType.BigKat:
                     Note.Sprite.sprite = BigKatSprite;
                     Note.transform.localScale = BigScale;
-                    Note.Caption.text = "大咔";
+                    Note.Caption.text = "咔(大)";
                     break;
                 default:
                     Note.Caption.text = "";
